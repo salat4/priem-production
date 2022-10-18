@@ -1,3 +1,3 @@
-import { MobileMenu } from "./MobileMenu";
+import MobileMenuEn from "./mobileMenu_en/MobileMenuEN";
 
-export default MobileMenu;
+export { MobileMenuEn };
