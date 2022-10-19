@@ -1,12 +1,14 @@
 import MobileMenu from "../../../images/burger-menu.svg";
+import LogoHeader from "../../../images/Logo.png";
 import s from "./HeaderEn.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import MobileMenuEn from "../../mobileMenu/mobileMenu_en/MobileMenuEN";
 import Backdrop from "../../../General/Backdrop";
+import Link from "next/link";
 
 export default function HeaderEn() {
-  const [show, setFirst] = useState("close");
+  const [show, setFirst] = useState("one");
 
   const toggleShowMenu = (e) => {
     const { id } = e.currentTarget;
@@ -15,11 +17,15 @@ export default function HeaderEn() {
     }
   };
 
+  useEffect(() => {
+    console.log(document.documentElement.clientWidth);
+  }, []);
+
   return (
     <>
       {show === "show" && <Backdrop toggleShowMenu={toggleShowMenu} />}
       <section className={s.headerSection}>
-        <div className={s.containerStretch}>
+        <div className="containerStretch">
           <div className={s.headerContainer}>
             <button
               className={s.burgetMenuButton}
@@ -27,11 +33,29 @@ export default function HeaderEn() {
             >
               <Image src={MobileMenu} alt="Menu" />
             </button>
+            <div className={s.logoContainer}>
+              <Image
+                src={LogoHeader}
+                alt="Logo in header"
+                width="140"
+                height="140"
+              />
+            </div>
+            <ul className={s.navigationMenuList}>
+              <li>
+                <Link href="/works">Works</Link>
+              </li>
+              <li>
+                <a>About</a>
+              </li>
+              <li>
+                <a>Contacts</a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
       <MobileMenuEn toggleShowMenu={toggleShowMenu} show={show} />
-      {/* {first && <MobileMenuEn toggleShowMenu={toggleShowMenu} />} */}
     </>
   );
 }
