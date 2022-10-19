@@ -26,7 +26,6 @@ export default function Footer_en() {
             <ul className = {s.footer__list}>
                 <li className = {`${s.footer__item} ${s.footer__about}`}>
                     <p>About us</p>
-                    
                 </li>
                 <li className ={`${s.footer__item} ${s.footer__contacts}`}>
                     <p>Contacts</p>
