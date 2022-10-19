@@ -3,13 +3,10 @@ position: fixed;
     top: 0;
     bottom: 0;
     right: 0px;
-    width: 80vw;
+    width: 256px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* padding-left: 30px;
-  padding-right: 30px; */
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: black;
@@ -30,27 +27,25 @@ from {
     top: 0;
     bottom: 0;
     right: -256px;
-    width: 0vw;
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* padding-left: 30px;
-  padding-right: 30px; */
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: black;
     animation: .2s linear close;
 }
 
+.menuContainer--one {
+    display: none;
+}
+
 @keyframes close {
     from {
-        width: 80vw;
         right: 0;
     }
 
     to {
-        width: 0vw;
         right: -256px;
     }
 }
@@ -81,7 +76,7 @@ from {
 
 .menuItem > a {
     font-family: "Anton";
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 2px;

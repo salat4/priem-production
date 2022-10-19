@@ -1,16 +1,89 @@
+@media screen and (max-width: 767px) {
 .headerSection {
-    padding: 20px 20px 10px 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+        padding: 20px 20px 10px 10px;
+
+    }
+
+    .headerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .burgetMenuButton {
+        width: 30px;
+        margin-left: auto;
+    }
+
+    .navigationMenuList {
+        display: none;
+    }
+
+    .logoContainer {
+        display: none;
+    }
 }
 
-.headerContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@media screen and (min-width: 768px) {
+.headerSection {
+        padding: 30px 5px 20px 20px;
+
+    }
+        .headerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .burgetMenuButton {
+        width: 35px;
+        margin-left: auto;
+    }
+
+    .navigationMenuList {
+        display: none;
+    }
+
+    .logoContainer {
+        display: none;
+    }
 }
 
-.burgetMenuButton {
-    width: 30px;
-    margin-left: auto;
+@media screen and (min-width: 1280px) {
+    .headerSection {
+        padding: 10px 5px 10px 0px;
+    }
+
+    .headerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .burgetMenuButton {
+        display: none;
+    }
+
+    .navigationMenuList {
+        display: flex;
+        align-items: center;
+    }
+
+    .navigationMenuList > li:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .logoContainer {
+        display: block;
+    }
+    
+     .navigationMenuList > li > a {
+        font-family: "Anton";
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: var(--black);
+    }
+
+    
 }
