@@ -11,6 +11,7 @@ position: fixed;
     padding-bottom: 20px;
     background-color: black;
     animation: .2s linear menu;
+    z-index: 1;
 }
 
 @keyframes menu {
@@ -33,7 +34,8 @@ from {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: black;
-    animation: .2s linear close;
+    z-index: 1;
+    animation: 0.2s linear close;
 }
 
 .menuContainer--one {
