@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import s from "../footer.module.css"
-
-export default function Footer_en() {
-    return (
-        <div className={s.footer} >
-            <div>footer</div>
-        </div>
-    )
-}
-=======
 import Link from 'next/link';
 import React, { useState } from 'react';
 import s from "../footer.module.css"
@@ -28,14 +17,12 @@ export default function Footer_en() {
                     <p>About us</p>
                 </li>
                 <li className ={`${s.footer__item} ${s.footer__contacts}`}>
-                    <p>Contacts</p>
-                    
+                    <p>Contacts</p>   
                 </li>
                 <li className ={`${s.footer__item} ${s.footer__language}`} > 
                     <p id = "language" onClick={handleToggle} onMouseEnter = {handleToggle}>Language</p>
                     {active === "language" && 
                         <ul id = "language"  className={s.footer__modal__list} >
-                
                             <li id = "language">
                                 <Link id = "language" href = "/en">English</Link>
                                 
@@ -72,4 +59,3 @@ export default function Footer_en() {
         </div>
     )
 }
->>>>>>> footer
