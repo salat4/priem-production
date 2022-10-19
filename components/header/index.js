@@ -1,3 +1,5 @@
-import { Header } from "./Header";
+import HeaderEn from "./header_en/HeaderEN";
+import HeaderRus from "./header_ru/HeaderRUS";
+import HeaderUa from "./header_ua/HeaderUA";
 
-export default Header;
+export { HeaderEn, HeaderRus, HeaderUa };

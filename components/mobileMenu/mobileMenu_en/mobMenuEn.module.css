@@ -1,0 +1,103 @@
+.menuContainer--show {
+position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0px;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* padding-left: 30px;
+  padding-right: 30px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    animation: .2s linear menu;
+}
+
+@keyframes menu {
+from {
+        right: -256px;
+    }
+
+    to {
+        right: 0;    }
+}
+
+.menuContainer--close {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -256px;
+    width: 0vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* padding-left: 30px;
+  padding-right: 30px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: black;
+    animation: .2s linear close;
+}
+
+@keyframes close {
+    from {
+        width: 80vw;
+        right: 0;
+    }
+
+    to {
+        width: 0vw;
+        right: -256px;
+    }
+}
+
+.closeIcon {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+.menuList {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.menuSocList {
+    display: flex;
+        align-items: center;
+        flex-direction: column;
+            margin-bottom: 15px;
+}
+
+.menuItem:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.menuItem > a {
+    font-family: "Anton";
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    color: rgb(224, 220, 220);
+}
+
+.languageChangeContainer {
+    display: flex;
+    margin-top: auto;
+}
+
+.languageChangeButton:not(:last-child) {
+  margin-right: 20px;
+}
+
+.languageChangeButton > a {
+    color: rgb(224, 220, 220);
+    font-size: 19px;
+}
