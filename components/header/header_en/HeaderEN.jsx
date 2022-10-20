@@ -1,7 +1,7 @@
 import MobileMenu from "../../../images/burger-menu.svg";
 import LogoHeader from "../../../images/Logo.png";
 import s from "./HeaderEn.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import MobileMenuEn from "../../mobileMenu/mobileMenu_en/MobileMenuEN";
 import Backdrop from "../../../General/Backdrop";
@@ -16,10 +16,6 @@ export default function HeaderEn() {
       setFirst("close");
     }
   };
-
-  useEffect(() => {
-    console.log(document.documentElement.clientWidth);
-  }, []);
 
   return (
     <>
@@ -43,7 +39,7 @@ export default function HeaderEn() {
             </div>
             <ul className={s.navigationMenuList}>
               <li>
-                <Link href="/works">Works</Link>
+                <Link href="/en/works">Works</Link>
               </li>
               <li>
                 <a>About</a>
