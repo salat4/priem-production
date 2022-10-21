@@ -12,15 +12,22 @@ export const Hero = () => {
   // }, [width]);
 
   return (
-    <section>
-      <video
-        className={s.video}
-        playsInline
-        autoPlay
-        loop
-        muted
-        src={require("../../Video/Video3.mp4")}
-      />
+    <section className={s.heroSectionContainer}>
+      <div className={s.videoContainer}>
+        <video
+          className={s.video}
+          playsInline
+          autoPlay
+          loop
+          muted
+          src={require("../../Video/Video3.mp4")}
+        />
+        <p className={s.title}>
+          <span>P</span>
+          <span>R</span>
+          <span>I</span>ЁM PRODUCTION
+        </p>
+      </div>
     </section>
   );
 };
