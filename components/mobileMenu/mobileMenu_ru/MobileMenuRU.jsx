@@ -1,62 +1,71 @@
-// import {
-//   MenuContainer,
-//   NavigationContainer,
-//   MenuList,
-//   MenuItem,
-//   MenuLink,
-//   MenuLinkSoc,
-//   LanguageChangeContainer,
-//   LanguageChangeButton,
-//   SocContainerItem,
-// } from "./MobileMenu.styled";
-// import LogoMobile from "../../images/Logo.png";
-// import {
-//   TEL_IRA,
-//   TEL_GLEB,
-//   INSTAGRAM,
-//   EMAIL_PRODUCTION,
-// } from "../../Constants/Constants";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
+import {
+  TEL_IRA,
+  TEL_GLEB,
+  INSTAGRAM,
+  EMAIL_PRODUCTION,
+} from "../../../Constants/Constants";
+import LogoMobile from "../../../images/Logo.png";
+import CloseModalIcon from "../../../images/Close-icon.svg";
+import INST from "../../../images/instagram.svg";
+import s from "./mobMenuRu.module.css";
 
-// export const MobileMenu = () => {
-//   return (
-//     <MenuContainer>
-//       <MenuList>
-//         <MenuItem>
-//           <MenuLink path="/works">Works</MenuLink>
-//         </MenuItem>
-//         <MenuItem>
-//           <MenuLink path="/about">About</MenuLink>
-//         </MenuItem>
-//       </MenuList>
-//       <SocContainerItem>
-//         <MenuList>
-//           <MenuItem>
-//             <MenuLinkSoc href={`tel:${TEL_IRA}`}>{TEL_IRA}</MenuLinkSoc>
-//           </MenuItem>
-//           <MenuItem>
-//             <MenuLinkSoc href={`tel:${TEL_GLEB}`}>{TEL_GLEB}</MenuLinkSoc>
-//           </MenuItem>
+export default function MobileMenuRu({ toggleShowMenu, show }) {
+  useEffect(() => {
+    window.addEventListener("keydown", toggleShowMenu);
+    return () => {
+      window.removeEventListener("keydown", toggleShowMenu);
+    };
+  }, [toggleShowMenu]);
 
-//           <MenuItem>
-//             <MenuLinkSoc href={`mailto:${EMAIL_PRODUCTION}`}>
-//               {EMAIL_PRODUCTION}
-//             </MenuLinkSoc>
-//           </MenuItem>
-//           <MenuItem>
-//             <MenuLinkSoc target="_blank" href={`${INSTAGRAM}`}>
-//               INSTAGRAM
-//             </MenuLinkSoc>
-//           </MenuItem>
-//         </MenuList>
-//       </SocContainerItem>
+  return (
+    <div className={s[`menuContainer--${show}`]}>
+      <button className={s.closeIcon} id="close" onClick={toggleShowMenu}>
+        <Image src={CloseModalIcon} alt="close menu button" width="15" />
+      </button>
 
-//       <div>
-//         <img src={LogoMobile} alt="Logo" width="200" />
-//       </div>
-//       <LanguageChangeContainer>
-//         <LanguageChangeButton>ENG</LanguageChangeButton>
-//         <LanguageChangeButton>RUS</LanguageChangeButton>
-//       </LanguageChangeContainer>
-//     </MenuContainer>
-//   );
-// };
+      <ul className={s.menuList}>
+        <li className={s.menuItem}>
+          <Link href="/ru/works">Работы</Link>
+        </li>
+        <li className={s.menuItem}>
+          <a href="#">Про нас</a>
+        </li>
+      </ul>
+      <ul className={s.menuSocList}>
+        <li className={s.menuItem}>
+          <a href={`tel:${TEL_IRA}`}>{TEL_IRA}</a>
+        </li>
+        <li className={s.menuItem}>
+          <a href={`tel:${TEL_GLEB}`}>{TEL_GLEB}</a>
+        </li>
+
+        <li className={s.menuItem}>
+          <a href={`mailto:${EMAIL_PRODUCTION}`}>EMAIL</a>
+        </li>
+        <li className={s.menuItem}>
+          <a target="_blank" rel="noreferrer" href={`${INSTAGRAM}`}>
+            <Image src={INST} alt="inst" />
+          </a>
+        </li>
+      </ul>
+
+      <div className={s.LogoContainer}>
+        <Image src={LogoMobile} alt="Logo" width="170" height="170" />
+      </div>
+      <div className={s.languageChangeContainer}>
+        <button className={s.languageChangeButton}>
+          <Link href="/en">EN</Link>
+        </button>
+        <button className={s.languageChangeButton}>
+          <Link href="/ru">RU</Link>
+        </button>
+        <button className={s.languageChangeButton}>
+          <Link href="/ua">UA</Link>
+        </button>
+      </div>
+    </div>
+  );
+}

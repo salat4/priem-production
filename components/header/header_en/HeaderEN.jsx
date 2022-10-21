@@ -29,14 +29,16 @@ export default function HeaderEn() {
             >
               <Image src={MobileMenu} alt="Menu" />
             </button>
-            <div className={s.logoContainer}>
-              <Image
-                src={LogoHeader}
-                alt="Logo in header"
-                width="140"
-                height="140"
-              />
-            </div>
+            <button className={s.logoContainer}>
+              <Link href="/en">
+                <Image
+                  src={LogoHeader}
+                  alt="Logo in header"
+                  width="140"
+                  height="140"
+                />
+              </Link>
+            </button>
             <ul className={s.navigationMenuList}>
               <li>
                 <Link href="/en/works">Works</Link>

@@ -1,3 +1,5 @@
+import { HeaderRus } from "../../../components/header";
+
 export default function Works() {
-  return <div>Работы</div>;
+  return <HeaderRus />;
 }
