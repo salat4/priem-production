@@ -1,7 +1,7 @@
 import MobileMenu from "../../../images/burger-menu.svg";
 import LogoHeader from "../../../images/Logo.png";
 import s from "./HeaderEn.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import MobileMenuEn from "../../mobileMenu/mobileMenu_en/MobileMenuEN";
 import Backdrop from "../../../General/Backdrop";
@@ -17,10 +17,6 @@ export default function HeaderEn() {
     }
   };
 
-  useEffect(() => {
-    console.log(document.documentElement.clientWidth);
-  }, []);
-
   return (
     <>
       {show === "show" && <Backdrop toggleShowMenu={toggleShowMenu} />}
@@ -33,17 +29,19 @@ export default function HeaderEn() {
             >
               <Image src={MobileMenu} alt="Menu" />
             </button>
-            <div className={s.logoContainer}>
-              <Image
-                src={LogoHeader}
-                alt="Logo in header"
-                width="140"
-                height="140"
-              />
-            </div>
+            <button className={s.logoContainer}>
+              <Link href="/en">
+                <Image
+                  src={LogoHeader}
+                  alt="Logo in header"
+                  width="140"
+                  height="140"
+                />
+              </Link>
+            </button>
             <ul className={s.navigationMenuList}>
               <li>
-                <Link href="/works">Works</Link>
+                <Link href="/en/works">Works</Link>
               </li>
               <li>
                 <a>About</a>

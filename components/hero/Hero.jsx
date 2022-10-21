@@ -1,13 +1,24 @@
-// import VideoHero from "../../Video/Video2.mp4";
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
+  const [width, setWidth] = useState(0);
+  const handleResize = () => setWidth(document.documentElement.clientWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    setWidth(document.documentElement.clientWidth);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
   return (
     <section>
-      {/* <ReactPlayer src={VideoHero} /> */}
-      {/* <video src={VideoHero} type="video/mp4" autoPlay loop muted /> */}
-      {/* <source  /> */}
-      {/* </video> */}
-      {/* <h1>Hero</h1> */}
+      <video
+        width={width}
+        autoPlay
+        loop
+        muted
+        src={require("../../Video/Video3.mp4")}
+      />
     </section>
   );
 };
