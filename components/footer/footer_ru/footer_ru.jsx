@@ -29,13 +29,13 @@ export default function Footer_en() {
         <div className={`${s.footer} ${container.container__stretch} ${s.footer__uk}`}  onClick = {handleToggle}>
             <ul className = {s.footer__list}>
                 <li className = {`${s.footer__item} ${s.footer__about}`}>
-                    <p>Про нас</p>
+                    <p>О нас</p>
                 </li>
                 <li className ={`${s.footer__item} ${s.footer__contacts}`}>
-                    <p>Контакти</p>   
+                    <p>Контакты</p>   
                 </li>
                 <li className ={`${s.footer__item} ${s.footer__language}`} > 
-                    <p id = "language" onClick={handleToggle} onMouseEnter = {handleToggle}>Мова</p>
+                    <p id = "language" onClick={handleToggle} onMouseEnter = {handleToggle}>язык</p>
                     {language && 
                         <ul id = "language"  className={`${s.footer__modal__list} ${s.footer__model__list__ua}`} >
                             <li id = "language">
@@ -53,13 +53,13 @@ export default function Footer_en() {
                 </li>
                 <li className ={`${s.footer__item} ${s.footer__works}`} id = "work">
                     <p id = "work" onClick={handleToggle}  onMouseEnter = {handleToggle}>
-                        Роботи
+                        Работы
                     </p>
                     {work && 
-                     <ul className={`${s.footer__modal__list} ${s.footer__modal__list__work} ${s.footer__modal__list__work__ua}`} id = "work" >
-                        <li id = "work" >Всі роботи</li>
-                        <li id = "work">Комерційні</li>
-                        <li id = "work">Музичні</li>
+                     <ul className={`${s.footer__modal__list} ${s.footer__modal__list__work} ${s.footer__modal__list__work__ua} ${s.footer__modal__list__work__ru}`} id = "work" >
+                        <li id = "work" >Все работы</li>
+                        <li id = "work">Коммерческие</li>
+                        <li id = "work">Музыкальные</li>
                         <li id = "work">Features</li>
                     </ul>
             }
