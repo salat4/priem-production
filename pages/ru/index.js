@@ -1,4 +1,4 @@
-import Footer_en from "../../components/footer/footer_en/footer_en";
+import Footer_ru from "../../components/footer/footer_ru/footer_ru";
 import { HeaderRus } from "../../components/header";
 import { Hero } from "../../components/hero/Hero";
 
@@ -8,7 +8,7 @@ export default function Ua() {
       <HeaderRus />
       <Hero />
       <footer>
-        <Footer_en></Footer_en>
+        <Footer_ru></Footer_ru>
       </footer>
     </>
   );
