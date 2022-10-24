@@ -1,4 +1,4 @@
-import { HeaderEn } from "../../../components/header/header_en";
+import { HeaderEn } from "../../../components/header";
 
 export default function Works() {
   return <HeaderEn />;

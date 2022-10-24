@@ -31,7 +31,7 @@ export default function MobileMenuUa({ toggleShowMenu, show }) {
           <Link href="/ua/works">Роботи</Link>
         </li>
         <li className={s.menuItem}>
-          <a href="#">Про нас</a>
+          <a href="#about">О нас</a>
         </li>
       </ul>
       <ul className={s.menuSocList}>
