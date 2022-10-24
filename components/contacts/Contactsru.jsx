@@ -2,7 +2,7 @@ import s from "./contact.module.css";
 
 export const Contacts = () => {
   return (
-    <section>
+    <section className="contacts">
       <div className={s.wrap}>
         <div className={s.section}>
           <h2 className={s.title}>Как с нами связаться</h2>

@@ -31,7 +31,7 @@ export default function MobileMenuRu({ toggleShowMenu, show }) {
           <Link href="/ru/works">Работы</Link>
         </li>
         <li className={s.menuItem}>
-          <a href="#">Про нас</a>
+          <a href="#about">О нас</a>
         </li>
       </ul>
       <ul className={s.menuSocList}>

@@ -96,8 +96,9 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #514f4f;
+  background-color: #161414;
   opacity: .7;
+  z-index: 1;
 }
 footer{
   background-color: black;

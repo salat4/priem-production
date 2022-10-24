@@ -44,10 +44,10 @@ export default function HeaderEn() {
                 <Link href="/ua/works">Роботи</Link>
               </li>
               <li>
-                <a>Про нас</a>
+                <a href="#about">О нас</a>
               </li>
               <li>
-                <a>Контакти</a>
+                <a href="#contacts">Контакти</a>
               </li>
             </ul>
           </div>
