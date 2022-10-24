@@ -1,5 +1,6 @@
 import MobileMenu from "../../../images/burger-menu.svg";
-import LogoHeader from "../../../images/Logo.png";
+// import LogoHeader from "../../../images/Logo.png";
+import LogoHeader from "../../../images/LogoFix-removebg-preview.png";
 import s from "./HeaderEn.module.css";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -61,8 +62,8 @@ export default function HeaderEn() {
                 <Image
                   src={LogoHeader}
                   alt="Logo in header"
-                  width="140"
-                  height="140"
+                  width="70"
+                  height="70"
                 />
               </Link>
             </button>
