@@ -38,13 +38,6 @@ export const About = () => {
                   >
                     /Instagram
                   </a>
-
-                  <a
-                    className={s.social_link}
-                    href="mailto:priem.mih.production@gmail.com"
-                  >
-                    /Mail
-                  </a>
                 </div>
               </div>
             </li>
@@ -67,12 +60,6 @@ export const About = () => {
                   href="https://www.instagram.com/priem.production/?igshid=YmMyMTA2M2Y%3D"
                 >
                   /Instagram
-                </a>
-                <a
-                  className={s.social_link}
-                  href="mailto:priem.mih.production@gmail.com"
-                >
-                  /Mail
                 </a>
               </div>
             </li>

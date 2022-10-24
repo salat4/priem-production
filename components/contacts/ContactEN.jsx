@@ -28,6 +28,17 @@ export const Contacts = () => {
               </a>
             </p>
           </div>
+
+          <form className={s.subscribe_form} autoComplete="off">
+            <input
+              className={s.subscribe_form__input}
+              type="email"
+              placeholder="Your email"
+            />
+            <button className={s.btn} type="submit">
+              Subscribe
+            </button>
+          </form>
         </div>
       </div>
     </section>
