@@ -94,5 +94,9 @@
         color: var(--white);
     }
 
+        .navigationMenuList>li>a:hover {
+            color: rgb(196, 4, 4);
+        }
+
     
 }

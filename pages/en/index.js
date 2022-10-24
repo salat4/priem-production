@@ -8,8 +8,8 @@ export default function En() {
     <>
       <HeaderEn />
       <Hero />
-      <About/>
-      <Contacts/>
+      <About />
+      <Contacts />
       <footer>
         <Footer_en></Footer_en>
       </footer>

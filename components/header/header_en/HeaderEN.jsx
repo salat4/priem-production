@@ -44,10 +44,10 @@ export default function HeaderEn() {
                 <Link href="/en/works">Works</Link>
               </li>
               <li>
-                <a>About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a>Contacts</a>
+                <a href="#contacts">Contacts</a>
               </li>
             </ul>
           </div>

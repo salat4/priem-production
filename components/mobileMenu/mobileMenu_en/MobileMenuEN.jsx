@@ -31,7 +31,7 @@ export default function MobileMenuEn({ toggleShowMenu, show }) {
           <Link href="/en/works">Works</Link>
         </li>
         <li className={s.menuItem}>
-          <a href="#">About</a>
+          <a href="#about">About</a>
         </li>
       </ul>
       <ul className={s.menuSocList}>
