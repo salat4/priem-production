@@ -81,13 +81,13 @@
 
   .card_team:not(:last-child) {
     margin-right: 15px;
-    margin-top: 80px;
   }
 
-  .text_wrap {
-    position: absolute;
-    top: -99px;
+  .card_team:first-child {
+    display: flex;
+    flex-direction: column-reverse;
   }
+
   .name_p {
     font-size: 24px;
   }
@@ -100,13 +100,17 @@
     font-size: 22px;
   }
 
-  .card_team{
+  .card_team {
     max-width: 370px;
   }
 
-  .team_list{
+  .team_list {
     flex-wrap: nowrap;
     flex-direction: row;
+  }
+
+  .social_list {
+    width: 286px;
   }
 }
 
@@ -129,8 +133,10 @@
     justify-content: space-evenly;
   }
 
-  .card_team:not(:last-child) {
-    margin-top: 0;
+  .card_team:first-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .text_wrap {
@@ -151,11 +157,11 @@
     font-size: 30px;
   }
 
-  .card_team{
+  .card_team {
     max-width: 370px;
   }
 
-  .team_list{
+  .team_list {
     flex-wrap: wrap;
     flex-direction: row;
   }
