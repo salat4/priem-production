@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import scrollToSection from "../../../General/scrollToSection";
 import s from "../footer.module.css";
 import image from "../../../images/Logo.png";
 import container from "../../../styles/container.module.css";
@@ -30,10 +31,14 @@ export default function Footer_en() {
     >
       <ul className={s.footer__list}>
         <li className={`${s.footer__item} ${s.footer__about}`}>
-          <p>About us</p>
+          <p id="aboutButton" onClick={scrollToSection}>
+            About us
+          </p>
         </li>
         <li className={`${s.footer__item} ${s.footer__contacts}`}>
-          <p>Contacts</p>
+          <p id="contactsButton" onClick={scrollToSection}>
+            Contacts
+          </p>
         </li>
         <li className={`${s.footer__item} ${s.footer__language}`}>
           <p id="language" onClick={handleToggle} onMouseEnter={handleToggle}>
@@ -53,7 +58,6 @@ export default function Footer_en() {
               </li>
               <li id="language">
                 <Link id="language" href="/ru">
-                  {" "}
                   Росийская
                 </Link>
               </li>

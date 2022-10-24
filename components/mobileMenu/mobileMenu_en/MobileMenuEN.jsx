@@ -11,14 +11,18 @@ import LogoMobile from "../../../images/Logo.png";
 import CloseModalIcon from "../../../images/Close-icon.svg";
 import INST from "../../../images/instagram.svg";
 import s from "./mobMenuEn.module.css";
+import scrollToSection from "../../../General/scrollToSection";
 
 export default function MobileMenuEn({ toggleShowMenu, show }) {
   useEffect(() => {
+    if (show === "one") {
+      return;
+    }
     window.addEventListener("keydown", toggleShowMenu);
     return () => {
       window.removeEventListener("keydown", toggleShowMenu);
     };
-  }, [toggleShowMenu]);
+  }, [toggleShowMenu, show]);
 
   return (
     <div className={s[`menuContainer--${show}`]}>
@@ -31,7 +35,9 @@ export default function MobileMenuEn({ toggleShowMenu, show }) {
           <Link href="/en/works">Works</Link>
         </li>
         <li className={s.menuItem}>
-          <a href="#about">About</a>
+          <button id="aboutButton" onClick={scrollToSection}>
+            About
+          </button>
         </li>
       </ul>
       <ul className={s.menuSocList}>

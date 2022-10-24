@@ -11,7 +11,7 @@ export default function En() {
       <About />
       <Contacts />
       <footer>
-        <Footer_en></Footer_en>
+        <Footer_en />
       </footer>
     </>
   );

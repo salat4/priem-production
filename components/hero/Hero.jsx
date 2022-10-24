@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import s from "./Hero.module.css";
 
 export const Hero = () => {
-  const [first, setFirst] = useState(0);
+  const [scroll, setScroll] = useState(0);
   const router = useRouter();
 
-  const h = () => {
+  const visibleButtonLangeage = () => {
     let posTop =
       window.pageYOffset !== undefined
         ? window.pageYOffset
@@ -16,15 +16,15 @@ export const Hero = () => {
             document.body.parentNode ||
             document.body
           ).scrollTop;
-    setFirst(posTop);
+    setScroll(posTop);
   };
 
   useEffect(() => {
     if (window) {
-      window.addEventListener("scroll", h);
+      window.addEventListener("scroll", visibleButtonLangeage);
     }
     return () => {
-      window.removeEventListener("scroll", h);
+      window.removeEventListener("scroll", visibleButtonLangeage);
     };
   }, []);
 
@@ -46,8 +46,8 @@ export const Hero = () => {
           <span>Ё</span>
           <span>M</span> PRODUCTION
         </p>
-        <Link href={`${router.pathname}`}>Check out all works</Link>
-        {first < 2380 && (
+        <Link href={`${router.pathname}/works`}>Check out all works</Link>
+        {scroll < 2380 && (
           <div className={s.ChangeLangButtonContainer}>
             <button>
               <Link href={"/en"}>EN</Link>

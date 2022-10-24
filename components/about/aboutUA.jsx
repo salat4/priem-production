@@ -5,8 +5,8 @@ import pic1 from "../../images/pic1.jpg";
 
 export const About = () => {
   return (
-    <section className="about">
-      <div id="about" className={`${s.wrap}`}>
+    <section id="about" className="about">
+      <div className={`${s.wrap}`}>
         <div className={`${s.section}`}>
           <p className={`${s.p}`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
