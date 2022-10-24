@@ -65,7 +65,7 @@
 
     .headerContainer {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
     }
 
@@ -84,9 +84,70 @@
 
     .logoContainer {
         display: block;
+        animation: logoShow .3s linear;
+        animation-fill-mode: forwards;
+    }
+
+    .animationLogo {
+            animation: logo .3s linear;
+            animation-fill-mode: forwards;
+    }
+
+    @keyframes logoShow {
+        0% {
+    opacity: 0;
+}
+
+25% {
+    transform: rotate(-90deg);
+    opacity: .3;
+}
+50% {
+        transform: rotate(-180deg);
+    opacity: 0.5;
+}
+75% {
+        transform: rotate(-270deg);
+    opacity: .8;
+}
+100% {
+        transform: rotate(-360deg);
+    opacity: 1;
+}
+    }
+
+    @keyframes logo {
+0% {
+    opacity: 1;
+}
+
+25% {
+    transform: rotate(-90deg);
+    opacity: .8;
+}
+50% {
+        transform: rotate(-180deg);
+    opacity: 0.5;
+}
+75% {
+        transform: rotate(-270deg);
+    opacity: .3;
+}
+100% {
+        transform: rotate(-360deg);
+    opacity: 0;
+}
+    }
+
+         .navigationMenuList > li > a {
+        font-family: "Anton";
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: var(--white);
     }
     
-     .navigationMenuList > li > a {
+     .navigationMenuList > li > button {
         font-family: "Anton";
         font-size: 30px;
         font-weight: 400;
@@ -94,7 +155,11 @@
         color: var(--white);
     }
 
-        .navigationMenuList>li>a:hover {
+    .navigationMenuList>li>a:hover {
+            color: rgb(196, 4, 4);
+        }
+
+        .navigationMenuList>li>button:hover {
             color: rgb(196, 4, 4);
         }
 

@@ -9,10 +9,10 @@ export default function Ua() {
     <>
       <HeaderUa />
       <Hero />
-      <About/>
-      <Contacts/>
+      <About />
+      <Contacts />
       <footer>
-        <Footer_ua></Footer_ua>
+        <Footer_ua />
       </footer>
     </>
   );

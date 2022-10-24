@@ -5,7 +5,7 @@ import pic1 from "../../images/pic1.jpg";
 
 export const About = () => {
   return (
-    <section id="about">
+    <section>
       <div id="about" className={`${s.wrap}`}>
         <div className={`${s.section}`}>
           <p className={`${s.p}`}>
