@@ -1,0 +1,101 @@
+.menuContainer--show {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0px;
+    width: 256px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    animation: .2s linear menu;
+    z-index: 1;
+}
+
+@keyframes menu {
+    from {
+        right: -256px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+.menuContainer--close {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -256px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: black;
+    z-index: 1;
+    animation: 0.2s linear close;
+}
+
+.menuContainer--one {
+    display: none;
+}
+
+@keyframes close {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: -256px;
+    }
+}
+
+.closeIcon {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+.menuList {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.menuSocList {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.menuItem:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.menuItem>a {
+    font-family: "Anton";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    color: rgb(224, 220, 220);
+}
+
+.languageChangeContainer {
+    display: flex;
+    margin-top: auto;
+}
+
+.languageChangeButton:not(:last-child) {
+    margin-right: 20px;
+}
+
+.languageChangeButton>a {
+    color: rgb(224, 220, 220);
+    font-size: 19px;
+}
