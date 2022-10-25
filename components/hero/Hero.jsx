@@ -4,19 +4,23 @@ import { useEffect, useState } from "react";
 import s from "./Hero.module.css";
 
 export const Hero = () => {
-  const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState(false);
   const router = useRouter();
 
   const visibleButtonLangeage = () => {
-    let posTop =
-      window.pageYOffset !== undefined
-        ? window.pageYOffset
-        : (
-            document.documentElement ||
-            document.body.parentNode ||
-            document.body
-          ).scrollTop;
-    setScroll(posTop);
+    let target = document.getElementById("footer");
+    var targetPosition = {
+        top: window.pageYOffset + target.getBoundingClientRect().top,
+      },
+      windowPosition = {
+        bottom: window.pageYOffset + document.documentElement.clientHeight,
+      };
+
+    if (targetPosition.top > windowPosition.bottom) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
   };
 
   useEffect(() => {
@@ -47,7 +51,7 @@ export const Hero = () => {
           <span>M</span> PRODUCTION
         </p>
         <Link href={`${router.pathname}/works`}>Check out all works</Link>
-        {scroll < 2380 && (
+        {scroll && (
           <div className={s.ChangeLangButtonContainer}>
             <button>
               <Link href={"/en"}>EN</Link>

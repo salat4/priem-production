@@ -10,7 +10,7 @@ export default function En() {
       <Hero />
       <About />
       <Contacts />
-      <footer>
+      <footer id="footer">
         <Footer_en />
       </footer>
     </>

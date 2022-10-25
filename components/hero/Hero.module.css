@@ -38,9 +38,10 @@ position: absolute;
 }
 
 .ChangeLangButtonContainer>button > a {
+    font-family: "Anton";
     color: rgb(223, 218, 218);
-        font-size: 10px;
-        letter-spacing: 1px;
+        font-size: 12px;
+        letter-spacing: 2px;
 }
 
 .video {

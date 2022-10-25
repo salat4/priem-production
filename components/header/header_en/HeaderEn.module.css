@@ -25,6 +25,9 @@
     .logoContainer {
         display: none;
     }
+    .animationLogo {
+       display: none;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -52,6 +55,9 @@
 
     .logoContainer {
         display: none;
+    }
+     .animationLogo {
+       display: none;
     }
 }
 
@@ -89,6 +95,7 @@
     }
 
     .animationLogo {
+        display: block;
             animation: logo .1s linear;
             animation-fill-mode: forwards;
     }
@@ -145,6 +152,10 @@
         font-weight: 400;
         letter-spacing: 2px;
         color: var(--white);
+    }
+
+    .navigationMenuList > li > button::selection {
+        background-color: rgb(4, 4, 89);
     }
 
     .navigationMenuList>li>a:hover {

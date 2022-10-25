@@ -2,7 +2,7 @@ import MobileMenu from "../../../images/burger-menu.svg";
 // import LogoHeader from "../../../images/Logo.png";
 import LogoHeader from "../../../images/LogoFix-removebg-preview.png";
 import s from "./HeaderEn.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import MobileMenuEn from "../../mobileMenu/mobileMenu_en/MobileMenuEN";
 import Backdrop from "../../../General/Backdrop";
@@ -11,23 +11,24 @@ import scrollToSection from "../../../General/scrollToSection";
 
 export default function HeaderEn() {
   const [show, setShow] = useState("one");
-  const [animLogo, setAnimLogo] = useState(0);
+  const [animLogo, setAnimLogo] = useState(false);
 
-  const visibleLogo = () => {
-    let posTop =
-      window.pageYOffset !== undefined
-        ? window.pageYOffset
-        : (
-            document.documentElement ||
-            document.body.parentNode ||
-            document.body
-          ).scrollTop;
-    if (posTop > 2580) {
-      setAnimLogo(posTop);
+  const visibleLogo = useCallback(() => {
+    let target = document.getElementById("contacts");
+
+    var targetPosition = {
+        top: window.pageYOffset + target.getBoundingClientRect().bottom,
+      },
+      windowPosition = {
+        bottom: window.pageYOffset + document.documentElement.clientHeight,
+      };
+
+    if (targetPosition.top < windowPosition.bottom) {
+      setAnimLogo(true);
     } else {
-      setAnimLogo(0);
+      setAnimLogo(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     if (window) {
@@ -36,7 +37,7 @@ export default function HeaderEn() {
     return () => {
       window.removeEventListener("scroll", visibleLogo);
     };
-  }, []);
+  }, [visibleLogo]);
 
   const toggleShowMenu = (e) => {
     const { id } = e.currentTarget;

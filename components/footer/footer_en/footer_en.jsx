@@ -2,7 +2,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 import scrollToSection from "../../../General/scrollToSection";
 import s from "../footer.module.css";
-import image from "../../../images/Logo.png";
+// import image from "../../../images/Logo.png";
+import image from "../../../images/LogoFix-removebg-preview.png";
 import container from "../../../styles/container.module.css";
 import Image from "next/image";
 export default function Footer_en() {
@@ -53,12 +54,12 @@ export default function Footer_en() {
               </li>
               <li id="language">
                 <Link id="language" href="/ua">
-                  Українська
+                  Ukraine
                 </Link>
               </li>
               <li id="language">
                 <Link id="language" href="/ru">
-                  Росийская
+                  Russian
                 </Link>
               </li>
             </ul>
@@ -76,7 +77,6 @@ export default function Footer_en() {
               <li id="work">All works</li>
               <li id="work">Commercials</li>
               <li id="work">Music video</li>
-              <li id="work">Features</li>
             </ul>
           )}
         </li>
@@ -88,6 +88,7 @@ export default function Footer_en() {
           src={image}
           width={100}
           height={100}
+          alt="Logo footer"
         />
       </div>
     </div>
