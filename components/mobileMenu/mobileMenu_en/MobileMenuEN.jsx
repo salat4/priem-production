@@ -59,7 +59,7 @@ export default function MobileMenuEn({ toggleShowMenu, show }) {
       </ul>
 
       <div className={s.LogoContainer}>
-        <Image src={LogoMobile} alt="Logo" width="170" height="170" />
+        <Image src={LogoMobile} alt="Logo" width="150" height="150" />
       </div>
       <div className={s.languageChangeContainer}>
         <button className={s.languageChangeButton}>
