@@ -25,8 +25,8 @@ export const About = () => {
             <li className={s.card_team}>
               <Image src={pic1} alt="person" width={305} height={355} />
               <div className={s.text_wrap}>
-                <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
                 <p className={s.name_p}>Name Suname.</p>
+                <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
                 {/* <div className={s.social_list}>
                   <a className={s.social_link} href="tel:+380990432833">
                     Phone
