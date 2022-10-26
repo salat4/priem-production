@@ -46,7 +46,7 @@ export default function Footer_en() {
             Language
           </p>
           {language && (
-            <ul id="language" className={s.footer__modal__list}>
+            <ul id="language" className={`${s.footer__modal__list} ${s.footer__modal__list__language}`}>
               <li id="language">
                 <Link id="language" href="/en">
                   English

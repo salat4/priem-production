@@ -28,7 +28,12 @@
         left: 145px;
     }
     .footer__modal__list__work{
+        left: 175px;
         top: -50px;
+    }
+    .footer__modal__list__language{
+        top:0;
+        left:175px;
     }
 }
 
@@ -64,19 +69,23 @@
     }
     .footer__modal__list{
         top: 30px;
-        left: -5px;
+        left: 0px;
     }
     /* .footer__modal__list__work{
         left: -30px;
     } */
     .footer__model__list__ua{
-        left: -25px;
+        left: 0px;
     }
     .footer__modal__list__work__ua{
         left: -20px;
     }
    .footer__modal__list__work__ru{
         left: -33px;
+   }
+   .footer__modal__list__language{
+    left:0;
+    top:30px;
    }
     
 }
@@ -116,8 +125,6 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            left: 0;
-            top: 35px;
             text-decoration: none;
             font-family: "Anton";
                 font-weight: 100;
