@@ -4,11 +4,14 @@ import { useEffect, useState } from "react";
 import s from "./Hero.module.css";
 
 export const Hero = () => {
-  const [scroll, setScroll] = useState(false);
+  const [scroll, setScroll] = useState(true);
+  // const [pos, setPos] = useState("none");
+
   const router = useRouter();
 
   const visibleButtonLangeage = () => {
     let target = document.getElementById("footer");
+
     var targetPosition = {
         top: window.pageYOffset + target.getBoundingClientRect().top,
       },
@@ -16,10 +19,10 @@ export const Hero = () => {
         bottom: window.pageYOffset + document.documentElement.clientHeight,
       };
 
-    if (targetPosition.top > windowPosition.bottom) {
-      setScroll(true);
-    } else {
+    if (targetPosition.top < windowPosition.bottom) {
       setScroll(false);
+    } else {
+      setScroll(true);
     }
   };
 
@@ -33,7 +36,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className={s.heroSectionContainer}>
+    <section className={`${s.heroSectionContainer}`}>
       <div className={s.videoContainer}>
         <video
           className={s.video}
@@ -43,13 +46,13 @@ export const Hero = () => {
           muted
           src={require("../../Video/Video3.mp4")}
         />
-        <p className={s.title}>
+        <div className={s.title}>
           <span>P</span>
           <span>R</span>
           <span>I</span>
           <span>Ё</span>
           <span>M</span> PRODUCTION
-        </p>
+        </div>
         <Link href={`${router.pathname}/works`}>Check out all works</Link>
         {scroll && (
           <div className={s.ChangeLangButtonContainer}>

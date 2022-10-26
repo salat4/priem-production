@@ -16,6 +16,10 @@ export default function HeaderEn() {
   const visibleLogo = useCallback(() => {
     let target = document.getElementById("contacts");
 
+    if (!target) {
+      return;
+    }
+
     var targetPosition = {
         top: window.pageYOffset + target.getBoundingClientRect().bottom,
       },
