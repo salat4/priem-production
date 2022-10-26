@@ -1,6 +1,45 @@
 import s from "./contact.module.css";
 
+import {
+  INSTAGRAM,
+  EMAIL_PRODUCTION,
+  TEL_GLEB,
+  TEL_IRA,
+} from "../../Constants/Constants";
+// import { useCallback, useEffect, useState } from "react";
+
 export const Contacts = () => {
+  // const [fix, setFix] = useState("qwe");
+
+  // const styleAbout = useCallback(() => {
+  //   let target = document.getElementById("footer");
+
+  //   if (!target) {
+  //     return;
+  //   }
+  //   var targetPosition = {
+  //       top: window.pageYOffset + target.getBoundingClientRect().top,
+  //     },
+  //     windowPosition = {
+  //       bottom: window.pageYOffset + document.documentElement.clientHeight,
+  //     };
+
+  //   if (targetPosition.top < windowPosition.bottom) {
+  //     setFix("isFixed");
+  //   } else {
+  //     setFix("qwe");
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   if (window) {
+  //     window.addEventListener("scroll", styleAbout);
+  //   }
+  //   return () => {
+  //     window.removeEventListener("scroll", styleAbout);
+  //   };
+  // }, [styleAbout]);
+
   return (
     <section id="contacts">
       <div className={s.wrap}>
@@ -12,7 +51,9 @@ export const Contacts = () => {
               <br />
               <a
                 className={s.social_link}
-                href="https://www.instagram.com/priem.production/?igshid=YmMyMTA2M2Y%3D"
+                target="_blank"
+                rel="noreferrer"
+                href={INSTAGRAM}
               >
                 Instagram
               </a>
@@ -22,9 +63,22 @@ export const Contacts = () => {
               <br />
               <a
                 className={s.social_link}
-                href="mailto:priem.mih.production@gmail.com"
+                target="_blank"
+                href={`mailto:${EMAIL_PRODUCTION}`}
+                rel="noreferrer"
               >
-                priem.mih.production@gmail.com
+                {EMAIL_PRODUCTION}
+              </a>
+            </p>
+            <p className={s.text}>
+              Phones:
+              <br />
+              <a className={s.social_link} href={`tel:${TEL_GLEB}`}>
+                {TEL_GLEB}
+              </a>
+              <br />
+              <a className={s.social_link} href={`tel:${TEL_IRA}`}>
+                {TEL_IRA}
               </a>
             </p>
           </div>

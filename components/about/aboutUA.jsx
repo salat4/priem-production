@@ -27,7 +27,7 @@ export const About = () => {
               <div className={s.text_wrap}>
                 <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
                 <p className={s.name_p}>Name Suname.</p>
-                <div className={s.social_list}>
+                {/* <div className={s.social_list}>
                   <a className={s.social_link} href="tel:+380990432833">
                     Phone
                   </a>
@@ -38,7 +38,7 @@ export const About = () => {
                   >
                     /Instagram
                   </a>
-                </div>
+                </div> */}
               </div>
             </li>
             <li className={s.card_team}>
@@ -51,7 +51,7 @@ export const About = () => {
               />
               <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
               <p className={s.name_p}>Name Suname.</p>
-              <div className={s.social_list}>
+              {/* <div className={s.social_list}>
                 <a className={s.social_link} href="tel:+380635312215">
                   Phone
                 </a>
@@ -61,7 +61,7 @@ export const About = () => {
                 >
                   /Instagram
                 </a>
-              </div>
+              </div> */}
             </li>
           </ul>
         </div>

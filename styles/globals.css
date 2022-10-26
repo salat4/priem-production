@@ -137,3 +137,13 @@ footer{
      padding-right: 100px;
    }
  }
+
+   .isFixed {
+    position: fixed;
+    width: 100%;
+  }
+
+    .qwe {
+    position: relative;
+    padding-top: 100vh;
+  }
