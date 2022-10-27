@@ -16,14 +16,17 @@
   }
 
   .text {
+    font-family: "Anton";
+
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 2px;
   }
 
   .social_link {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 20px;
     text-decoration: none;
     color: #000;
@@ -53,12 +56,16 @@
 
   .subscribe_form__input::placeholder {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: uppercase;
     text-align: center;
+    font-family: "Anton";
+    letter-spacing: 2px;
   }
 
   .btn {
+    letter-spacing: 1.5px;
+    font-family: "Anton";
     cursor: pointer;
     margin: 0 auto;
     width: 154px;
@@ -87,9 +94,13 @@
     left: 0px;
     transform: rotate(270deg); */
   }
-
+/* 
   .text:last-child {
     margin-left: 135px;
+  } */
+
+  .text:nth-child(2){
+    text-align: end;
   }
 
   .text {
@@ -110,11 +121,27 @@
   }
 
   .btn {
-    margin-left: 39px;
+    font-size: 24px;
+    line-height: 24px;
+    width: fit-content;
     text-transform: uppercase;
-    color: white;
-    margin: 0 0 039px;
+    color: rgb(0, 0, 0);
+    margin: 0 0 0 9px;
   }
+
+  .subscribe_form__input::placeholder{
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .subscribe_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 66px;
+    
+  }
+
 }
 
 @media screen and (min-width: 1280px) {
@@ -122,12 +149,10 @@
     padding: 180px 50px 100px 50px;
   }
 
-  .text:last-child {
-    margin-left: 0px;
-    margin-top: 20px;
-  }
+
 
   .text {
+    text-align: end;
     font-family: "Anton";
     font-weight: 400;
     font-size: 35px;
@@ -136,10 +161,10 @@
     margin-bottom: 25px;
   }
 
-    .text > a {
-      display: inline-block;
-      margin-top: 15px;
-    }
+  .text > a {
+    display: inline-block;
+    margin-top: 15px;
+  }
 
   .social_link {
     font-size: 30px;
@@ -151,7 +176,7 @@
 
   .title {
     font-family: "Anton";
-        font-weight: 400;
+    font-weight: 400;
     display: block;
     font-size: 60px;
     color: #ffffff;
@@ -162,15 +187,21 @@
   }
 
   .subscribe_form {
-    margin-top: 115px;
+    margin-top: 168px;
   }
 
   .subscribe_form__input {
     width: 400px;
   }
 
+  .subscribe_form__input::placeholder{
+    font-size: 35px;
+    line-height: 35px;
+  }
+
   .btn {
     width: 217px;
-    font-size: 32px;
+    font-size: 35px;
+    line-height: 35px;
   }
 }
