@@ -74,11 +74,11 @@ export const Contacts = () => {
               Phones:
               <br />
               <a className={s.social_link} href={`tel:${TEL_GLEB}`}>
-                {TEL_GLEB}
+              Gleb {TEL_GLEB} 
               </a>
               <br />
               <a className={s.social_link} href={`tel:${TEL_IRA}`}>
-                {TEL_IRA}
+              Ira {TEL_IRA} 
               </a>
             </p>
           </div>
