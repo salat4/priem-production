@@ -5,12 +5,12 @@ import s from "./Hero.module.css";
 
 export const Hero = () => {
   const [scroll, setScroll] = useState(true);
-  // const [pos, setPos] = useState("none");
+  const [pos, setPos] = useState("none");
 
   const router = useRouter();
 
   const visibleButtonLangeage = () => {
-    let target = document.getElementById("footer");
+    let target = document.getElementById("about");
 
     var targetPosition = {
         top: window.pageYOffset + target.getBoundingClientRect().top,
@@ -20,8 +20,10 @@ export const Hero = () => {
       };
 
     if (targetPosition.top < windowPosition.bottom) {
+      setPos("isFixed");
       setScroll(false);
     } else {
+      setPos("none");
       setScroll(true);
     }
   };
@@ -36,7 +38,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className={`${s.heroSectionContainer}`}>
+    <section className={`${s.heroSectionContainer} ${pos}`}>
       <div className={s.videoContainer}>
         <video
           className={s.video}

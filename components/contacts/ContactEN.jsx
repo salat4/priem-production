@@ -41,7 +41,7 @@ export const Contacts = () => {
   // }, [styleAbout]);
 
   return (
-    <section id="contacts">
+    <section id="contacts" className="asd">
       <div className={s.wrap}>
         <div className={s.section}>
           <h2 className={s.title}>How to contact us</h2>
