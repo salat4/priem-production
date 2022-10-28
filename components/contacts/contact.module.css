@@ -1,13 +1,13 @@
 @media screen and (min-width: 320px) {
   .wrap {
-    position: relative;
+    /* position: relative; */
     background-color: #b00000;
-    padding: 90px 25px 80px 25px;
+    padding: 60px 0px 60px 0px;
     width: 100%;
   }
 
   .section {
-    max-width: 320px;
+    /* max-width: 320px; */
     margin: 0 auto;
   }
 
@@ -23,14 +23,17 @@
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 2px;
+    margin-bottom: 15px;
   }
 
   .social_link {
-    font-size: 20px;
+    display: inline-block;
+    font-size: 16px;
     line-height: 20px;
     text-decoration: none;
     color: #000;
     font-weight: 700;
+    margin-top: 5px;
   }
 
   .subscribe_form {
@@ -80,36 +83,97 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    max-width: 600px;
+    /* max-width: 600px; */
+  }
+
+    .wrap {
+    /* position: relative; */
+    background-color: #b00000;
+    padding: 40px 25px 40px 25px;
+    width: 100%;
   }
 
   .title {
-    display: none;
-    /* display: block;
-    font-size: 20px;
+    /* display: none; */
+    display: block;
+    font-size: 30px;
     text-transform: uppercase;
     color: #ffffff;
-    position: absolute;
+    text-align: center;
+    font-family: "Anton";
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    /* position: absolute;
     top: 113px;
-    left: 0px;
-    transform: rotate(270deg); */
+    left: 0px; */
+    /* transform: rotate(270deg); */
   }
+
+  .socialListContainer > p:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .socialListContainer .social_link {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .social_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .socialListContainer {
+    /* margin-right: 80px; */
+  }
+
+  .phonesContainer {
+    width: 170px;
+  }
+
+    .phonesContainer .social_link {
+    display: inline-block;
+   font-size: 22px;
+   margin-top: 10px;
+  }
+
+
+  /* .socialListContainer > p {
+    text-align: center;
+  }
+
+  .phonesContainer > p {
+   text-align: center;
+  }
+
+  .phonesContainer .social_link {
+    display: inline-block;
+   font-size: 22px;
+   margin-top: 15px;
+  }
+
+    .phonesContainer .social_link:not(:last-child) {
+      margin-right: 80px;
+    } */
 /* 
   .text:last-child {
     margin-left: 135px;
   } */
 
-  .text:nth-child(2){
+  /* .text:nth-child(2){
     text-align: end;
-  }
+  } */
 
   .text {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 24px;
+    margin-bottom: 0;
   }
 
   .social_link {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 20px;
     text-decoration: none;
     color: #000;
@@ -126,7 +190,7 @@
     width: fit-content;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
-    margin: 0 0 0 9px;
+    /* margin: 0 0 0 9px; */
   }
 
   .subscribe_form__input::placeholder{
@@ -136,8 +200,8 @@
 
   .subscribe_form {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    /* flex-direction: ; */
+    justify-content: center;
     margin-top: 66px;
     
   }
@@ -145,20 +209,30 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .wrap {
-    padding: 180px 50px 100px 50px;
+
+  .contactsSection {
+    position: relative;
   }
 
-
+  .wrap {
+    padding: 120px 50px 100px 50px;
+  }
 
   .text {
-    text-align: end;
     font-family: "Anton";
     font-weight: 400;
     font-size: 35px;
     line-height: 35px;
     letter-spacing: 2px;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
+  }
+
+    .social_list {
+    justify-content: space-evenly;
+  }
+
+  .socialListContainer > p:first-child {
+    margin-bottom: 50px;
   }
 
   .text > a {
@@ -167,12 +241,20 @@
   }
 
   .social_link {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 30px;
     text-decoration: none;
     color: #000;
     font-weight: 700;
   }
+
+  .phonesContainer .social_link {
+    font-size: 28px;
+  }
+
+    /* .phonesContainer .social_link:not(:last-child) {
+    margin-bottom: 5px;
+  } */
 
   .title {
     font-family: "Anton";
@@ -181,9 +263,10 @@
     font-size: 60px;
     color: #ffffff;
     position: absolute;
-    top: 50%;
-    left: 1%;
+    bottom: 50%;
+    left: -50px;
     transform: rotate(270deg);
+    margin-bottom: 0;
   }
 
   .subscribe_form {
@@ -195,13 +278,13 @@
   }
 
   .subscribe_form__input::placeholder{
-    font-size: 35px;
+    font-size: 28px;
     line-height: 35px;
   }
 
   .btn {
     width: 217px;
-    font-size: 35px;
+    font-size: 28px;
     line-height: 35px;
   }
 }

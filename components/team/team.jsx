@@ -1,49 +1,49 @@
 import Image from "next/image";
 import pic from "../../images/pic.jpg";
 import pic1 from "../../images/pic1.jpg";
-import { useCallback, useEffect, useState } from "react";
+// import { useCallback, useEffect, useState } from "react";
 import s from "../about/about.module.css";
 
 export default function Team() {
-  const [fix, setFix] = useState("asd");
+  // const [fix, setFix] = useState("asd");
 
-  const styleCon = useCallback(() => {
-    // let target = document.getElementById("contacts");
-    let target1 = document.getElementById("about");
+  // const styleCon = useCallback(() => {
+  //   // let target = document.getElementById("contacts");
+  //   let target1 = document.getElementById("about");
 
-    if (!target1) {
-      return;
-    }
-    // var targetPosition = {
-    //     top: window.pageYOffset + target.getBoundingClientRect().top,
-    //   },
-    //   windowPosition = {
-    //     bottom: window.pageYOffset + document.documentElement.clientHeight,
-    //   };
-    // console.log(targetPosition.top);
+  //   if (!target1) {
+  //     return;
+  //   }
+  //   // var targetPosition = {
+  //   //     top: window.pageYOffset + target.getBoundingClientRect().top,
+  //   //   },
+  //   //   windowPosition = {
+  //   //     bottom: window.pageYOffset + document.documentElement.clientHeight,
+  //   //   };
+  //   // console.log(targetPosition.top);
 
-    // if (targetPosition.top < windowPosition.bottom) {
-    //   setFix("isFixed");
-    // } else {
-    //   setFix("asd");
-    // }
-    if (target1.className === "qweBack") {
-      setFix("isFixed");
-    } else {
-      setFix("asd");
-    }
-  }, []);
+  //   // if (targetPosition.top < windowPosition.bottom) {
+  //   //   setFix("isFixed");
+  //   // } else {
+  //   //   setFix("asd");
+  //   // }
+  //   if (target1.className === "qweBack") {
+  //     setFix("isFixed");
+  //   } else {
+  //     setFix("asd");
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    if (window) {
-      window.addEventListener("scroll", styleCon);
-    }
-    return () => {
-      window.removeEventListener("scroll", styleCon);
-    };
-  }, [styleCon]);
+  // useEffect(() => {
+  //   if (window) {
+  //     window.addEventListener("scroll", styleCon);
+  //   }
+  //   return () => {
+  //     window.removeEventListener("scroll", styleCon);
+  //   };
+  // }, []);
   return (
-    <section id="team" className={fix}>
+    <section id="team">
       <div className={`${s.wrap}`}>
         <div className={`${s.section}`}>
           <ul className={s.team_list}>
