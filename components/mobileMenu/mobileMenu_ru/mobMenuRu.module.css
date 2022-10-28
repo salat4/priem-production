@@ -79,6 +79,15 @@
 
 .menuItem>a {
     font-family: "Anton";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    color: rgb(224, 220, 220);
+}
+
+.menuItem>button {
+    font-family: "Anton";
     font-size: 22px;
     font-weight: 400;
     line-height: 1.5;
@@ -96,6 +105,10 @@
 }
 
 .languageChangeButton>a {
+    font-family: "Anton";
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 3px;
     color: rgb(224, 220, 220);
-    font-size: 19px;
+    font-size: 14px;
 }

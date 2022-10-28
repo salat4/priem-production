@@ -12,6 +12,11 @@
     .footer__list{
         /* height: 170px; */
     }
+
+    .footer__modal__list>li {
+    width: 110px;
+    padding: 1px;
+}
     .footer{
         padding-bottom: 50px;
         justify-content: space-evenly;
@@ -35,12 +40,29 @@
         top:0;
         left:175px;
     }
+
+    .footer__item > ul{
+        position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none;
+            font-family: "Anton";
+            font-size: 11px;
+                font-weight: 100;
+                letter-spacing: 2px;
+                     
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
 }
 
 @media screen and (min-width: 768px) {
 
     .footer{
-        padding-bottom: 0;
+        padding-bottom: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -71,6 +93,11 @@
         top: 30px;
         left: 0px;
     }
+
+        .footer__modal__list>li {
+    width: 150px;
+    padding: 1px;
+}
     /* .footer__modal__list__work{
         left: -30px;
     } */
@@ -87,6 +114,23 @@
     left:0;
     top:30px;
    }
+
+   .footer__item>ul {
+       position: absolute;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+       text-decoration: none;
+       font-family: "Anton";
+       font-size: 12px;
+       font-weight: 100;
+       letter-spacing: 2px;
+
+       width: 100%;
+       list-style: none;
+       padding: 0;
+   }
     
 }
 @media screen and (min-width: 1280px) {
@@ -96,6 +140,28 @@
     .footer__list{
 
     }
+
+    .footer__modal__list>li {
+    width: 180px;
+    padding: 1px;
+}
+
+    .footer__item > ul{
+        position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none;
+            font-family: "Anton";
+            font-size: 18px;
+                font-weight: 100;
+                letter-spacing: 2px;
+                     
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
 
 }
 @media screen and (min-width: 1920px) {
@@ -119,21 +185,7 @@
     margin: 0px;
 }
 
-.footer__item > ul{
-        position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-decoration: none;
-            font-family: "Anton";
-                font-weight: 100;
-                letter-spacing: 2px;
-                     
-    width: 100%;
-    list-style: none;
-    padding: 0;
-}
+
 .footer__about{
     
 }
@@ -172,10 +224,7 @@ color:black
     margin-bottom: 3px;
 }
 
-.footer__modal__list>li {
-    width: 110px;
-    padding: 1px;
-}
+
 .footer__modal__list>li>a{
     color: #fff;
     text-decoration: none;

@@ -10,6 +10,10 @@
     margin: 0 auto;
   }
 
+      .section:first-child {
+    margin-bottom: 50px;
+  }
+
   .p {
     font-family: "Anton";
     text-align: center;
@@ -81,6 +85,11 @@
 }
 
 @media screen and (min-width: 768px) {
+
+        .section:first-child {
+    margin-bottom: 100px;
+  }
+
   .p {
     font-size: 40px;
     line-height: 42px;
@@ -116,11 +125,16 @@
 
 @media screen and (min-width: 1280px) {
   .wrap {
-    padding: 150px 180px;
+    /* height: 100vh; */
+    /* padding: 150px 180px; */
   }
 
   .section {
     max-width: 785px;
+  }
+
+    .section:first-child {
+    margin-bottom: 80px;
   }
 
   .p {

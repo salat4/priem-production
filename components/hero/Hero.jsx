@@ -20,8 +20,10 @@ export const Hero = () => {
       };
 
     if (targetPosition.top < windowPosition.bottom) {
+      // setPos("isFixed");
       setScroll(false);
     } else {
+      // setPos("none");
       setScroll(true);
     }
   };

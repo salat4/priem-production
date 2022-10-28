@@ -11,7 +11,7 @@ export default function Ua() {
       <Hero />
       <About />
       <Contacts />
-      <footer>
+      <footer id="footer">
         <Footer_ru />
       </footer>
     </>

@@ -5,36 +5,40 @@ import pic1 from "../../images/pic1.jpg";
 // import { useCallback, useEffect, useState } from "react";
 
 export const About = () => {
-  // const [fix, setFix] = useState("none");
+  // const [fix, setFix] = useState("qwe");
 
-  // const styleCon = useCallback(() => {
-  //   let target = document.getElementById("contacts");
+  // const styleTeam = useCallback(() => {
+  //   let target = document.getElementById("team");
+  //   let target1 = document.getElementById("about");
 
   //   if (!target) {
   //     return;
   //   }
   //   var targetPosition = {
   //       top: window.pageYOffset + target.getBoundingClientRect().top,
+  //       qwe: window.pageYOffset + target1.getBoundingClientRect().top,
   //     },
   //     windowPosition = {
   //       bottom: window.pageYOffset + document.documentElement.clientHeight,
   //     };
-
   //   if (targetPosition.top < windowPosition.bottom) {
   //     setFix("isFixed");
   //   } else {
   //     setFix("qwe");
   //   }
+  //   if (targetPosition.qwe === 0 && target1.className === "isFixed") {
+  //     setFix("qweBack");
+  //   }
   // }, []);
 
   // useEffect(() => {
   //   if (window) {
-  //     window.addEventListener("scroll", styleCon);
+  //     window.addEventListener("scroll", styleTeam);
   //   }
   //   return () => {
-  //     window.removeEventListener("scroll", styleCon);
+  //     window.removeEventListener("scroll", styleTeam);
   //   };
-  // }, [styleCon]);
+  // }, [styleTeam]);
 
   return (
     <section id="about">
@@ -49,9 +53,6 @@ export const About = () => {
             neque?
           </p>
         </div>
-      </div>
-
-      <div className={`${s.wrap}`}>
         <div className={`${s.section}`}>
           <ul className={s.team_list}>
             <li className={s.card_team}>
@@ -59,8 +60,8 @@ export const About = () => {
                 <Image src={pic1} alt="person" width={305} height={355} />
               </div>
               <div className={s.text_wrap}>
-                <p className={s.name_p}>Name Suname.</p>
                 <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
+                <p className={s.name_p}>Name Suname.</p>
                 {/* <div className={s.social_list}>
                   <a className={s.social_link} href="tel:+380990432833">
                     Phone
@@ -91,8 +92,8 @@ export const About = () => {
                 />
               </div>
               <div className={s.text_wrap}>
-                <p className={s.name_p}>Name Suname.</p>
                 <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
+                <p className={s.name_p}>Name Suname.</p>
                 {/* <div className={s.social_list}>
                 <a className={s.social_link} href="tel:+380635312215">
                   Phone

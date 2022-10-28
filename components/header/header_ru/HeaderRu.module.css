@@ -25,6 +25,10 @@
     .logoContainer {
         display: none;
     }
+
+    .animationLogo {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -54,12 +58,16 @@
     .logoContainer {
         display: none;
     }
+
+    .animationLogo {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1280px) {
     .headerSection {
         width: 100%;
-        padding: 10px 5px 10px 0px;
+        padding: 50px 5px 10px 0px;
         position: fixed;
         z-index: 1;
     }
@@ -77,6 +85,10 @@
     .navigationMenuList {
         display: flex;
         align-items: center;
+        background-color: black;
+        border-radius: 22px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .navigationMenuList>li:not(:last-child) {
@@ -85,12 +97,13 @@
 
     .logoContainer {
         display: block;
-        animation: logoShow .3s linear;
+        animation: logoShow .1s linear;
         animation-fill-mode: forwards;
     }
 
     .animationLogo {
-        animation: logo .3s linear;
+        display: block;
+        animation: logo .1s linear;
         animation-fill-mode: forwards;
     }
 
@@ -100,22 +113,18 @@
         }
 
         25% {
-            transform: rotate(-90deg);
             opacity: .3;
         }
 
         50% {
-            transform: rotate(-180deg);
             opacity: 0.5;
         }
 
         75% {
-            transform: rotate(-270deg);
             opacity: .8;
         }
 
         100% {
-            transform: rotate(-360deg);
             opacity: 1;
         }
     }
@@ -126,22 +135,18 @@
         }
 
         25% {
-            transform: rotate(-90deg);
             opacity: .8;
         }
 
         50% {
-            transform: rotate(-180deg);
             opacity: 0.5;
         }
 
         75% {
-            transform: rotate(-270deg);
             opacity: .3;
         }
 
         100% {
-            transform: rotate(-360deg);
             opacity: 0;
         }
     }
@@ -149,7 +154,7 @@
     .navigationMenuList>li>a {
         font-family: "Anton";
         font-size: 30px;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: 2px;
         color: var(--white);
     }
@@ -157,9 +162,13 @@
     .navigationMenuList>li>button {
         font-family: "Anton";
         font-size: 30px;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: 2px;
         color: var(--white);
+    }
+
+    .navigationMenuList>li>button::selection {
+        background-color: rgb(4, 4, 89);
     }
 
     .navigationMenuList>li>a:hover {
