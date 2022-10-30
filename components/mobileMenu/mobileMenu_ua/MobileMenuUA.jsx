@@ -11,14 +11,18 @@ import LogoMobile from "../../../images/Logo.png";
 import CloseModalIcon from "../../../images/Close-icon.svg";
 import INST from "../../../images/instagram.svg";
 import s from "./mobMenuUa.module.css";
+import scrollToSection from "../../../General/scrollToSection";
 
 export default function MobileMenuUa({ toggleShowMenu, show }) {
   useEffect(() => {
+    if (show === "one") {
+      return;
+    }
     window.addEventListener("keydown", toggleShowMenu);
     return () => {
       window.removeEventListener("keydown", toggleShowMenu);
     };
-  }, [toggleShowMenu]);
+  }, [toggleShowMenu, show]);
 
   return (
     <div className={s[`menuContainer--${show}`]}>
@@ -28,10 +32,12 @@ export default function MobileMenuUa({ toggleShowMenu, show }) {
 
       <ul className={s.menuList}>
         <li className={s.menuItem}>
-          <Link href="/ua/works">Роботи</Link>
+          <Link href="/en/works">Проекти</Link>
         </li>
         <li className={s.menuItem}>
-          <a href="#about">О нас</a>
+          <button id="aboutButton" onClick={scrollToSection}>
+            Про нас
+          </button>
         </li>
       </ul>
       <ul className={s.menuSocList}>
@@ -53,7 +59,7 @@ export default function MobileMenuUa({ toggleShowMenu, show }) {
       </ul>
 
       <div className={s.LogoContainer}>
-        <Image src={LogoMobile} alt="Logo" width="170" height="170" />
+        <Image src={LogoMobile} alt="Logo" width="150" height="150" />
       </div>
       <div className={s.languageChangeContainer}>
         <button className={s.languageChangeButton}>

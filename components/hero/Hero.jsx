@@ -4,19 +4,28 @@ import { useEffect, useState } from "react";
 import s from "./Hero.module.css";
 
 export const Hero = () => {
-  const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState(true);
+  // const [pos, setPos] = useState("none");
+
   const router = useRouter();
 
   const visibleButtonLangeage = () => {
-    let posTop =
-      window.pageYOffset !== undefined
-        ? window.pageYOffset
-        : (
-            document.documentElement ||
-            document.body.parentNode ||
-            document.body
-          ).scrollTop;
-    setScroll(posTop);
+    let target = document.getElementById("footer");
+
+    var targetPosition = {
+        top: window.pageYOffset + target.getBoundingClientRect().top,
+      },
+      windowPosition = {
+        bottom: window.pageYOffset + document.documentElement.clientHeight,
+      };
+
+    if (targetPosition.top < windowPosition.bottom) {
+      // setPos("isFixed");
+      setScroll(false);
+    } else {
+      // setPos("none");
+      setScroll(true);
+    }
   };
 
   useEffect(() => {
@@ -29,7 +38,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className={s.heroSectionContainer}>
+    <section className={`${s.heroSectionContainer}`}>
       <div className={s.videoContainer}>
         <video
           className={s.video}
@@ -39,15 +48,15 @@ export const Hero = () => {
           muted
           src={require("../../Video/Video3.mp4")}
         />
-        <p className={s.title}>
+        <div className={s.title}>
           <span>P</span>
           <span>R</span>
           <span>I</span>
           <span>Ё</span>
           <span>M</span> PRODUCTION
-        </p>
+        </div>
         <Link href={`${router.pathname}/works`}>Check out all works</Link>
-        {scroll < 2380 && (
+        {scroll && (
           <div className={s.ChangeLangButtonContainer}>
             <button>
               <Link href={"/en"}>EN</Link>

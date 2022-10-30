@@ -10,12 +10,17 @@
     margin: 0 auto;
   }
 
+      .section:first-child {
+    margin-bottom: 50px;
+  }
+
   .p {
-    line-height: 1.2;
-    text-align: left;
+    font-family: "Anton";
+    text-align: center;
+    letter-spacing: 2px;
     font-size: 24px;
     line-height: 28px;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
     transition: 0.3s ease;
     color: #fff;
@@ -42,15 +47,21 @@
   }
 
   .name_p {
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: "Anton";
     word-spacing: 100vw;
-    font-size: 20px;
+    font-size: 32px;
     line-height: 1;
     margin: 0 0 0 -1px;
-    display: table-caption;
+
     color: #fff;
   }
 
   .role_p {
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: "Anton";
     font-size: 20px;
     line-height: 1.2;
     color: #fff;
@@ -74,6 +85,11 @@
 }
 
 @media screen and (min-width: 768px) {
+
+        .section:first-child {
+    margin-bottom: 100px;
+  }
+
   .p {
     font-size: 40px;
     line-height: 42px;
@@ -88,21 +104,14 @@
     flex-direction: column-reverse;
   }
 
-  .name_p {
-    font-size: 24px;
-  }
-
-  .role_p {
-    font-size: 22px;
-  }
 
   .social_link {
     font-size: 22px;
   }
 
-  .card_team {
+  /* .card_team {
     max-width: 370px;
-  }
+  } */
 
   .team_list {
     flex-wrap: nowrap;
@@ -116,16 +125,21 @@
 
 @media screen and (min-width: 1280px) {
   .wrap {
-    padding: 150px 180px;
+    /* height: 100vh; */
+    /* padding: 150px 180px; */
   }
 
   .section {
     max-width: 785px;
   }
 
+    .section:first-child {
+    margin-bottom: 80px;
+  }
+
   .p {
     font-size: 48px;
-    line-height: 48px;
+    line-height: 50px;
     text-transform: uppercase;
   }
 
@@ -142,15 +156,21 @@
   .text_wrap {
     position: relative;
     top: 0;
+    margin-top: 5px;
+    width: 100%;
+        text-align: center;
   }
 
   .name_p {
-    font-size: 35px;
-    text-transform: uppercase;
+        font-family: "Anton";
+        display: block;
+    /* text-transform: uppercase; */
   }
 
   .role_p {
-    font-size: 30px;
+    text-align: center;
+    font-family: "Anton";
+    margin-bottom: 5px;
   }
 
   .social_link {
@@ -158,7 +178,7 @@
   }
 
   .card_team {
-    max-width: 370px;
+    /* max-width: 370px; */
   }
 
   .team_list {

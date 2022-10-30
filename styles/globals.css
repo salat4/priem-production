@@ -1,7 +1,22 @@
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+        /* scrollbar-color: #6969dd #e0e0e0;
+          scrollbar-width: thin; */
   }
+
+  /* ::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(169, 169, 169);
+}
+
+::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      background-color: rgb(51, 0, 255);
+} */
 
   *,
   *:before,
@@ -137,3 +152,27 @@ footer{
      padding-right: 100px;
    }
  }
+
+   .isFixed {
+    position: fixed;
+    width: 100%;
+  }
+
+    .qwe {
+    position: relative;
+    padding-top: 100vh;
+  }
+
+      .qweBack {
+    position: relative;
+    padding-bottom: 200vh;
+  }
+
+  .asd {
+    position: relative;
+    padding-top: 200vh;
+  }
+
+    video::-webkit-media-controls {
+      display: none !important;
+    }
