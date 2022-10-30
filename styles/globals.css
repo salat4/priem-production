@@ -172,3 +172,7 @@ footer{
     position: relative;
     padding-top: 200vh;
   }
+
+    video::-webkit-media-controls {
+      display: none !important;
+    }

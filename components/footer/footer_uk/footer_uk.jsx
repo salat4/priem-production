@@ -79,14 +79,14 @@ export default function Footer_en() {
           id="work"
         >
           <p id="work" onClick={handleToggle}>
-            Проєкти
+            Проекти
           </p>
           {work && (
             <ul
               className={`${s.footer__modal__list} ${s.footer__modal__list__work}`}
               id="work"
             >
-              <li id="work">Всі проєкти</li>
+              <li id="work">Всі проекти</li>
               <li id="work">Комерційні</li>
               <li id="work">Музичні відео</li>
             </ul>

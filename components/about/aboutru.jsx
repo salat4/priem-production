@@ -45,12 +45,10 @@ export const About = () => {
       <div className={`${s.wrap}`}>
         <div className={`${s.section}`}>
           <p className={`${s.p}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            voluptates ea enim velit sequi maiores ex. Rerum porro voluptatum,
-            aperiam molestiae temporibus facere ut voluptatibus nihil explicabo
-            tempora deleniti impedit at officia! Laudantium delectus accusantium
-            itaque debitis eius, ratione nihil, aspernatur, minus nulla et
-            neque?
+            И тогда, наверняка, вдруг запляшут облака, И кузнечик запиликает на
+            скрипке... С голубого ручейка начинается река, Ну а дружба
+            начинается с улыбки... С голубого ручейка начинается река, Ну а
+            дружба начинается с улыбки...
           </p>
         </div>
         <div className={`${s.section}`}>
