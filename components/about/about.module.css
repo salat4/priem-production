@@ -10,14 +10,15 @@
     margin: 0 auto;
   }
 
-      .section:first-child {
+  .section:first-child {
     margin-bottom: 50px;
   }
 
   .p {
-    font-family: "Anton";
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-size: 24px;
     line-height: 28px;
     font-weight: 400;
@@ -48,8 +49,9 @@
 
   .name_p {
     text-align: center;
-    letter-spacing: 2px;
-    font-family: "Anton";
+    letter-spacing: 3px;
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
     word-spacing: 100vw;
     font-size: 32px;
     line-height: 1;
@@ -61,7 +63,8 @@
   .role_p {
     text-align: center;
     letter-spacing: 2px;
-    font-family: "Anton";
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
     font-size: 20px;
     line-height: 1.2;
     color: #fff;
@@ -86,7 +89,7 @@
 
 @media screen and (min-width: 768px) {
 
-        .section:first-child {
+  .section:first-child {
     margin-bottom: 100px;
   }
 
@@ -133,11 +136,13 @@
     max-width: 785px;
   }
 
-    .section:first-child {
+  .section:first-child {
     margin-bottom: 80px;
   }
 
   .p {
+    font-family: 'Bebas Neue', cursive;
+    /* font-family: 'Sulphur Point', sans-serif; */
     font-size: 48px;
     line-height: 50px;
     text-transform: uppercase;
@@ -158,19 +163,23 @@
     top: 0;
     margin-top: 5px;
     width: 100%;
-        text-align: center;
+    text-align: center;
   }
 
   .name_p {
-        font-family: "Anton";
-        display: block;
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
+    display: block;
+    letter-spacing: 3px;
     /* text-transform: uppercase; */
   }
 
   .role_p {
     text-align: center;
-    font-family: "Anton";
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
     margin-bottom: 5px;
+    letter-spacing: 2px;
   }
 
   .social_link {
