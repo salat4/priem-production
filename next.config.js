@@ -4,7 +4,7 @@ const withPlugins = require('next-compose-plugins');
 module.exports = withPlugins(
   [withVideos],{
     images:{
-      domains:[`i.ibb.co`]
+      domains:[`ibb.co`, 'i.ibb.co']
     }
   }
 )
