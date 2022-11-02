@@ -73,7 +73,7 @@ export default function HeaderEn() {
             </button>
             <ul className={s.navigationMenuList}>
               <li>
-                <Link href="/en/works">Проєкти</Link>
+                <Link href="/en/works">Проекти</Link>
               </li>
               <li>
                 <button id="aboutButton" onClick={scrollToSection}>

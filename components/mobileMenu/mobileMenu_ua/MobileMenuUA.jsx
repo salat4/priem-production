@@ -32,7 +32,7 @@ export default function MobileMenuUa({ toggleShowMenu, show }) {
 
       <ul className={s.menuList}>
         <li className={s.menuItem}>
-          <Link href="/en/works">Проєкти</Link>
+          <Link href="/en/works">Проекти</Link>
         </li>
         <li className={s.menuItem}>
           <button id="aboutButton" onClick={scrollToSection}>

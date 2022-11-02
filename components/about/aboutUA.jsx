@@ -45,12 +45,11 @@ export const About = () => {
       <div className={`${s.wrap}`}>
         <div className={`${s.section}`}>
           <p className={`${s.p}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            voluptates ea enim velit sequi maiores ex. Rerum porro voluptatum,
-            aperiam molestiae temporibus facere ut voluptatibus nihil explicabo
-            tempora deleniti impedit at officia! Laudantium delectus accusantium
-            itaque debitis eius, ratione nihil, aspernatur, minus nulla et
-            neque?
+            Якось спитала ти так: Чому ж я з тобою?.. Сказав, що більш такої на
+            світі не знайти. Думав, ходив, аж ось, декілька слів знайшлось -
+            Скажи поміж сестер, що ці слова твої тепер... Люди ми тільки тоді,
+            Як дуже сильно любимо! Тільки тоді, коли любимо ми, Можемо зватись
+            людьми!
           </p>
         </div>
         <div className={`${s.section}`}>

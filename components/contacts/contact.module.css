@@ -1,7 +1,7 @@
 @media screen and (min-width: 320px) {
   .wrap {
     /* position: relative; */
-    background-color: #b00000;
+    /* background-color: #b00000; */
     padding: 60px 0px 60px 0px;
     width: 100%;
   }
@@ -16,7 +16,8 @@
   }
 
   .text {
-    font-family: "Anton";
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
 
     color: #ffffff;
     text-transform: uppercase;
@@ -62,13 +63,15 @@
     font-size: 18px;
     text-transform: uppercase;
     text-align: center;
-    font-family: "Anton";
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
     letter-spacing: 2px;
   }
 
   .btn {
     letter-spacing: 1.5px;
-    font-family: "Anton";
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
     cursor: pointer;
     margin: 0 auto;
     width: 154px;
@@ -86,9 +89,9 @@
     /* max-width: 600px; */
   }
 
-    .wrap {
+  .wrap {
     /* position: relative; */
-    background-color: #b00000;
+    /* background-color: #b00000; */
     padding: 40px 25px 40px 25px;
     width: 100%;
   }
@@ -100,7 +103,8 @@
     text-transform: uppercase;
     color: #ffffff;
     text-align: center;
-    font-family: "Anton";
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
     font-weight: 400;
     letter-spacing: 1.5px;
     margin-bottom: 20px;
@@ -110,7 +114,7 @@
     /* transform: rotate(270deg); */
   }
 
-  .socialListContainer > p:not(:last-child) {
+  .socialListContainer>p:not(:last-child) {
     margin-bottom: 30px;
   }
 
@@ -133,10 +137,10 @@
     width: 170px;
   }
 
-    .phonesContainer .social_link {
+  .phonesContainer .social_link {
     display: inline-block;
-   font-size: 22px;
-   margin-top: 10px;
+    font-size: 22px;
+    margin-top: 10px;
   }
 
 
@@ -157,7 +161,7 @@
     .phonesContainer .social_link:not(:last-child) {
       margin-right: 80px;
     } */
-/* 
+  /* 
   .text:last-child {
     margin-left: 135px;
   } */
@@ -193,7 +197,7 @@
     /* margin: 0 0 0 9px; */
   }
 
-  .subscribe_form__input::placeholder{
+  .subscribe_form__input::placeholder {
     font-size: 24px;
     line-height: 24px;
   }
@@ -203,7 +207,7 @@
     /* flex-direction: ; */
     justify-content: center;
     margin-top: 66px;
-    
+
   }
 
 }
@@ -212,6 +216,21 @@
 
   .contactsSection {
     position: relative;
+    /* background-color: red; */
+    background-image: url('../../images/back-one.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /* width: 100%; */
+      height: 100vh;
+      font-family: "Bebas Neue";
+      /* padding-top: 50px;
+      padding-bottom: 100px;
+      padding-left: 10%;
+      padding-right: 10%; */
+      font-size: 24px;
+      letter-spacing: 2px;
+      color: rgb(220, 23, 23);
   }
 
   .wrap {
@@ -219,23 +238,24 @@
   }
 
   .text {
-    font-family: "Anton";
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
     font-weight: 400;
     font-size: 35px;
     line-height: 35px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     /* margin-bottom: 25px; */
   }
 
-    .social_list {
+  .social_list {
     justify-content: space-evenly;
   }
 
-  .socialListContainer > p:first-child {
+  .socialListContainer>p:first-child {
     margin-bottom: 50px;
   }
 
-  .text > a {
+  .text>a {
     display: inline-block;
     margin-top: 15px;
   }
@@ -252,12 +272,14 @@
     font-size: 28px;
   }
 
-    /* .phonesContainer .social_link:not(:last-child) {
+  /* .phonesContainer .social_link:not(:last-child) {
     margin-bottom: 5px;
   } */
 
   .title {
-    font-family: "Anton";
+    /* font-family: "Anton"; */
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
     font-weight: 400;
     display: block;
     font-size: 60px;
@@ -277,7 +299,7 @@
     width: 400px;
   }
 
-  .subscribe_form__input::placeholder{
+  .subscribe_form__input::placeholder {
     font-size: 28px;
     line-height: 35px;
   }

@@ -2,6 +2,7 @@ import s from "./about.module.css";
 import Image from "next/image";
 import pic from "../../images/pic.jpg";
 import pic1 from "../../images/pic1.jpg";
+import bg from "../../images/back-one.jpg";
 // import { useCallback, useEffect, useState } from "react";
 
 export const About = () => {
@@ -41,7 +42,7 @@ export const About = () => {
   // }, [styleTeam]);
 
   return (
-    <section id="about">
+    <section id="about" className={s.zxc}>
       <div className={`${s.wrap}`}>
         <div className={`${s.section}`}>
           <p className={`${s.p}`}>
@@ -61,7 +62,7 @@ export const About = () => {
               </div>
               <div className={s.text_wrap}>
                 <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
-                <p className={s.name_p}>Name Suname.</p>
+                <p className={s.name_p}>Name Surname.</p>
                 {/* <div className={s.social_list}>
                   <a className={s.social_link} href="tel:+380990432833">
                     Phone
@@ -93,7 +94,7 @@ export const About = () => {
               </div>
               <div className={s.text_wrap}>
                 <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
-                <p className={s.name_p}>Name Suname.</p>
+                <p className={s.name_p}>Name Surname.</p>
                 {/* <div className={s.social_list}>
                 <a className={s.social_link} href="tel:+380635312215">
                   Phone

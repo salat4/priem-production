@@ -53,7 +53,7 @@ export const Contacts = () => {
             <div className={s.social_list}>
               <div className={s.socialListContainer}>
                 <p className={s.text}>
-                  Наші проєкти
+                  Наші проекти
                   <br />
                   <a
                     className={s.social_link}
@@ -65,7 +65,7 @@ export const Contacts = () => {
                   </a>
                 </p>
                 <p className={s.text}>
-                  mail
+                  Пошта
                   <br />
                   <a
                     className={s.social_link}
@@ -99,7 +99,7 @@ export const Contacts = () => {
                 placeholder="Your email"
               />
               <button className={s.btn} type="submit">
-                Запросити запит
+                Subscribe
               </button>
             </form>
           </div>

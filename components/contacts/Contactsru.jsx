@@ -65,7 +65,7 @@ export const Contacts = () => {
                   </a>
                 </p>
                 <p className={s.text}>
-                  Mail
+                  Почта
                   <br />
                   <a
                     className={s.social_link}
@@ -99,7 +99,7 @@ export const Contacts = () => {
                 placeholder="Your email"
               />
               <button className={s.btn} type="submit">
-                Оставить заявку
+                Subscribe
               </button>
             </form>
           </div>
