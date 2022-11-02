@@ -2,6 +2,7 @@ import s from "./about.module.css";
 import Image from "next/image";
 import pic from "../../images/pic.jpg";
 import pic1 from "../../images/pic1.jpg";
+import bg from "../../images/back-one.jpg";
 // import { useCallback, useEffect, useState } from "react";
 
 export const About = () => {
@@ -41,7 +42,7 @@ export const About = () => {
   // }, [styleTeam]);
 
   return (
-    <section id="about">
+    <section id="about" className={s.zxc}>
       <div className={`${s.wrap}`}>
         <div className={`${s.section}`}>
           <p className={`${s.p}`}>

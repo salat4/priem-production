@@ -1,6 +1,8 @@
-  html {
+  html, body {
     box-sizing: border-box;
     scroll-behavior: smooth;
+        margin: 0;
+       
         /* scrollbar-color: #6969dd #e0e0e0;
           scrollbar-width: thin; */
   }
@@ -22,10 +24,6 @@
   *:before,
   *:after {
     box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
   }
 
   h1,
