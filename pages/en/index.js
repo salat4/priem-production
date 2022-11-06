@@ -13,8 +13,26 @@ export default function En() {
       {/* <Team /> */}
       <Contacts />
       <footer id="footer">
-        <Footer_en />
+        <Footer_en/>
       </footer>
     </>
   );
 }
+
+
+// export async function getStaticProps() {
+//   // const res = await fetch('https://drive.google.com/drive/folders/1fxqd9hhnhPNHuUQ70r_1nXqoH4lt8AXO?usp=share_link')
+//   // const snapshot = await res.json()
+//   // console.log(res);
+//   // if (!res) {
+//   //   return {
+//   //     notFound:true
+//   //   }
+//   // }
+//   // return {
+//   //   props: {
+//   //     res
+//   //   }
+//   // }
+// }
+

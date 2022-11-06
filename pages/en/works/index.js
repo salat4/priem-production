@@ -16,6 +16,9 @@ import Footer_en from "../../../components/footer/footer_en/footer_en";
 export default Works
 
 
+
+
+
 // export async function getStaticProps(){
 //   const res = await fetch('http://localhost:8080/snapshot')
 //   const snapshot = await res.json()
