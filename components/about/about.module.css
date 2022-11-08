@@ -190,10 +190,6 @@
     font-size: 30px;
   }
 
-  .card_team {
-    /* max-width: 370px; */
-  }
-
   .team_list {
     flex-wrap: wrap;
     flex-direction: row;
