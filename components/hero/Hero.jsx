@@ -46,6 +46,7 @@ export const Hero = () => {
           autoPlay
           loop
           muted
+          type="video/mp4"
           src={require("../../Video/Video3.mp4")}
         />
         <div className={s.title}>
@@ -73,3 +74,14 @@ export const Hero = () => {
     </section>
   );
 };
+
+{
+  /* <iframe
+  src="https://player.vimeo.com/video/767582772?h=6a89bce21d"
+  width="640"
+  height="564"
+  frameborder="0"
+  allow="autoplay; fullscreen"
+  allowfullscreen
+></iframe>; */
+}
