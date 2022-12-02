@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import "../styles/globals.css";
+import Script from "next/script";
+
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
@@ -37,7 +39,7 @@ function MyApp({ Component, pageProps }) {
           title="{video_title}"
         />
       </Head>
-
+      <Script src="https://player.vimeo.com/api/player.js" />
       <Component {...pageProps} />
     </>
   );
