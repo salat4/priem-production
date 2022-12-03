@@ -1,20 +1,25 @@
 import s from "../HmM.module.css";
-import container from "../../../styles/container.module.css";
-import { useState } from "react";
-import dynamic from "next/dynamic";
-const Animator = dynamic(
-  import("react-scroll-motion").then((it) => it.Animator),
-  { ssr: false }
-);
+// import container from "../../../styles/container.module.css";
+// import { useMediaQuery } from 'react-responsive'
+import ReactPlayer from 'react-player'
 
+import { useEffect, useState } from "react";
+// import dynamic from "next/dynamic";
+// const Animator = dynamic(
+//   import("react-scroll-motion").then((it) => it.Animator),
+//   { ssr: false }
+// );
 
-import { ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+// // import Media from 'react-media';
+// import { ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
 
 export default function HmM_en() {
     const [id,setId] = useState(0)
-    const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
-    const FadeUp = batch(Fade(), Sticky(), MoveOut(0, -200),MoveIn(0,200));
+    const [size,setSize] = useState("")
+    
+    // const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+    // const FadeUp = batch(Fade(), Sticky(), MoveOut(0, -200),MoveIn(0,200));
 
     const handleUpId = () => {
         setId(id-1)
@@ -22,29 +27,164 @@ export default function HmM_en() {
     const handleDownId = () => {
         setId(id++)
     }
+    // const isDesktopOrLaptop = useMediaQuery({
+    //     query: '(min-width: 1240px)'
+    //   })
+    // const isMobile = useMediaQuery({
+    //     query:'(min-width:320px)'
+    // })
+    // const isTablet = useMediaQuery({
+    //     query:'(min-width:760px)'
+    // })
+    useEffect(()=>{
+       const userHeight = window.innerHeight
+       const  userWidth = window.innerWidth
+       if (userHeight / userWidth <= 0.59){
+        setSize("Three")
+        }   
+       else if (userHeight / userWidth <= 0.88) {
+            setSize("Two")
+       }
+        else{
+            setSize("One")
+        }
+    },[])
     return (
         <>
-            <section className={`${container.container__stretch} ${s.HmM}`}>
-                 <div className={s.videoContainer}>
-                    <video className={s.video}
+            <section className={`${s.HmM}`}>
+
+
+                {size === "One" && <>
+                    <div className={s.videoContainer__1}>
+                    <video className={s.video__1}
+                            playsInline
+                            autoPlay
+                            loop
+                            muted
+                            src={require("../../../Video/IMG_5834.mp4")}
+                        />
+                    </div>
+                </>}
+                {size === "Two" && <>
+                    <div className={s.videoBox__2}>
+                        <div className={s.videoContainer__2__1}>
+                            <video className={s.video__2__1}
+                                playsInline
+                                autoPlay
+                                loop
+                                muted
+                                src={require("../../../Video/IMG_5834.mp4")}
+                            />
+                        </div>
+                        <div className={s.videoContainer__2__2}>
+                            <video className={s.video__2__2}
+                                playsInline
+                                autoPlay
+                                loop
+                                muted
+                                src={require("../../../Video/IMG_5834.mp4")}
+                            />
+                        </div>
+                    </div>
+                </>}
+                {size === "Three" && <>
+                    <div className={s.videoBox__3}>
+                        <div className={s.videoContainer__3__1}>
+                            <video className={s.video__3__1}
+                                    playsInline
+                                    autoPlay
+                                    loop
+                                    muted
+                                    src={require("../../../Video/IMG_5834.mp4")}
+                                /> 
+                        </div>
+                        <div className={s.videoContainer__3__2}>
+                            <video className={s.video__3__2}
+                                    playsInline
+                                    autoPlay
+                                    loop
+                                    muted
+                                    src={require("../../../Video/IMG_5834.mp4")}
+                                /> 
+                        </div>
+                        <div className={s.videoContainer__3__3}>
+                            <video className={s.video__3__3}
+                                    playsInline
+                                    autoPlay
+                                    loop
+                                    muted
+                                    src={require("../../../Video/IMG_5834.mp4")}
+                                /> 
+                        </div>
+                    </div>
+                </>}
+                {/* {console.log(window.screen.width)} */}
+                {/* <div className={s.zxc1}>
+                    <video className={s.asd1}
+                        playsInline
+                        autoPlay
+                        loop
+                        muted
+                        src={require("../../../Video/IMG_5834.mp4")}></video>
+                </div> */}
+                {/* <div className={s.zxc2}>
+                    <video className={s.asd2}
+                        playsInline
+                        autoPlay
+                        loop
+                        muted
+                        src={require("../../../Video/IMG_5834.mp4")}></video>
+                </div>
+                <div className={s.zxc3}>
+                    <video className={s.asd3}
+                        playsInline
+                        autoPlay
+                        loop
+                        muted
+                        src={require("../../../Video/IMG_5834.mp4")}></video>
+                </div> */}
+                {/* <div className={s.zxcasd}>
+                <div className={s.videoContainer1}>
+                <video className={s.video1}
                         playsInline
                         autoPlay
                         loop
                         muted
                         src={require("../../../Video/IMG_5834.mp4")}
                     />
-                </div>
+                </div> */}
+                 {/* <div className={s.videoContainer}>
+
+                    <ReactPlayer src={require("../../../Video/IMG_5834.mp4")}></ReactPlayer>
+                    <video className={s.video}
+                        playsInline
+                        autoPlay
+                        loop
+                        muted
+                        src={require("../../../Video/IMG_5834.mp4")}
+                    /> */}
+                     {/* <video className={s.video__1}
+                        playsInline
+                        autoPlay
+                        loop
+                        muted
+                        src={require("../../../Video/IMG_5834.mp4")}
+                    />
+                     <video className={s.video__2}
+                        playsInline
+                        autoPlay
+                        loop
+                        muted
+                        src={require("../../../Video/IMG_5834.mp4")}
+                    /> */}
+                   
+                {/* </div> */}
+
+                {/* </div> */}
+                
                 
                 <div className={s.HmM__box}>
-                    <ScrollContainer>
-                        {/* <ScrollPage></ScrollPage>
-                        <ScrollPage></ScrollPage>
-                        <ScrollPage></ScrollPage>
-                        <ScrollPage></ScrollPage> */}
-            <ScrollPage>
-                            <Animator animation={FadeUp}>
-
-                     < div className={`${s.HmM__item} `}>
+                < div className={`${s.HmM__item} `}>
                     <p className={s.HmM__title}>SCRIPT WRITING</p>
                     <ul className={s.HmM__about}>
                         <li className={s.HmM__description}>
@@ -61,12 +201,7 @@ export default function HmM_en() {
                         </li>
                     </ul>
                         </div>
-                </Animator>
-            </ScrollPage>
-                <ScrollPage>
-                            <Animator animation={FadeUp}>
-                               
-                         <div className={s.HmM__item} >
+                        <div className={s.HmM__item} >
                             <p className={s.HmM__title}>TRITMENT WRITING</p>
                             <ul className={s.HmM__about}>
                                 <li className={s.HmM__description}>
@@ -92,13 +227,7 @@ export default function HmM_en() {
                                 </li>
                             </ul>
                         </div>
-                    </Animator>
-                     
-            </ScrollPage>
-            <ScrollPage>
-                            <Animator animation={FadeUp}>
-                              
-                                <div className={s.HmM__item} >
+                        <div className={s.HmM__item} >
                     <p className={s.HmM__title}>TEAM</p>                    
                     <ul className={s.HmM__about}>
                         <li className={s.HmM__description}>
@@ -109,12 +238,7 @@ export default function HmM_en() {
                         </li>
                     </ul>
                 </div>
-                </Animator>
-            </ScrollPage>
-            <ScrollPage>
-                            <Animator animation={FadeUp}>
-                            
-                                <div className={s.HmM__item} >
+                <div className={s.HmM__item} >
                     <p className={s.HmM__title}>CAMERA + LIGHT</p>
                     <p>
                         Have our 
@@ -142,12 +266,7 @@ export default function HmM_en() {
                         </li>
                     </ul>
                 </div>
-                </Animator>
-            </ScrollPage>
-            <ScrollPage>
-                            <Animator animation={FadeUp}>
-                               
-                                <div className={s.HmM__item}>
+                <div className={s.HmM__item}>
                     <p className={s.HmM__title}>STYLE</p>
                     <ul className={s.HmM__about}>
                         <li className={s.HmM__description}>
@@ -167,11 +286,7 @@ export default function HmM_en() {
                         </li>
                     </ul>
                 </div>
-                </Animator>
-            </ScrollPage>
-            <ScrollPage>
-                            <Animator animation={FadeUp}>
-                                 <div className={s.HmM__item}>
+                <div className={s.HmM__item}>
                     <p className={s.HmM__title}>ACTING COACHING</p>
                     <ul className={s.HmM__about}>
                         <li className={s.HmM__description}>
@@ -186,11 +301,7 @@ export default function HmM_en() {
                         </li>
                     </ul>
                 </div>
-                </Animator>
-            </ScrollPage>
-            <ScrollPage>
-                            <Animator animation={FadeUp}>
-                                <div className={s.HmM__item}>
+                <div className={s.HmM__item}>
                     <p className={s.HmM__title}>VIDEO EDIT / COLOR / SOUND DESIGN</p>
                     <ul className={s.HmM__about}>
                         <li className={s.HmM__description}>
@@ -200,11 +311,7 @@ export default function HmM_en() {
                         </li>
                     </ul>
                 </div>
-                </Animator>
-            </ScrollPage>
-            <ScrollPage>
-                            <Animator animation={FadeUp}>
-                                <div className={s.HmM__item}>
+                <div className={s.HmM__item}>
                     <p className={s.HmM__title}>OUR STUDIO</p>
                     <ul className={s.HmM__about}>
                         <li className={s.HmM__description}>
@@ -229,12 +336,7 @@ export default function HmM_en() {
                         </li>
                     </ul>
                 </div>
-                </Animator>
-            </ScrollPage>
-            {/* <ScrollPage>
-                <Animator animation={FadeUp}></Animator> */}
-            {/* </ScrollPage> */}
-        </ScrollContainer>
+                  
                 </div>
                     
                     
