@@ -1,6 +1,7 @@
 .HmM{
     /* position: relative; */
     /* padding-bottom: 30px; */
+    background-color: black;
 }
 .HmM__list{
 
@@ -103,6 +104,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-height: 100vh;
+
 }
 .videoBox__2{
     display: flex;
@@ -120,16 +123,21 @@
 .videoContainer__2__2{
     width: 50%;
     height: 100%;
+    
     min-height: 100vh;
 }
 .video__2__1{
     width: 100%;
     height: 100%;
+    min-height: 100vh;
+
     object-fit: cover;
 }
 .video__2__2{
     width: 100%;
     height: 100%;
+    min-height: 100vh;
+
     object-fit: cover;
 }
 .videoBox__3{
@@ -141,17 +149,17 @@
     flex-direction: row;
 }
 .videoContainer__3__1{
-    width: 33%;
+    width: calc(100vw/3);
     height: 100%;
     min-height: 100vh;
 }
 .videoContainer__3__2{
-    width: 33%;
+    width: calc(100vw/3);
     height: 100%;
     min-height: 100vh;
 }
 .videoContainer__3__3{
-    width: 33%;
+    width: calc(100vw/3);
     height: 100%;
     min-height: 100vh;
 }
@@ -159,15 +167,20 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-height: 100vh;
 }
 .video__3__2{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-height: 100vh;
+
 }
 .video__3__3{
     width: 100%;
     height: 100%;
+    min-height: 100vh;
+
     object-fit: cover;
 }
 .HmM__box{

@@ -1,54 +1,32 @@
 import s from "../HmM.module.css";
-// import container from "../../../styles/container.module.css";
-// import { useMediaQuery } from 'react-responsive'
 import ReactPlayer from 'react-player'
-
 import { useEffect, useState } from "react";
-// import dynamic from "next/dynamic";
-// const Animator = dynamic(
-//   import("react-scroll-motion").then((it) => it.Animator),
-//   { ssr: false }
-// );
-
-// // import Media from 'react-media';
-// import { ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
-
-
 export default function HmM_en() {
-    const [id,setId] = useState(0)
     const [size,setSize] = useState("")
-    
-    // const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
-    // const FadeUp = batch(Fade(), Sticky(), MoveOut(0, -200),MoveIn(0,200));
-
-    const handleUpId = () => {
-        setId(id-1)
+    const [width , setWidth] = useState();
+    const [height , setHeight] = useState();
+    const [orientation , setOrientation] = useState()
+    const detect = () =>{
+        setOrientation(screen.orientation.type)
+        console.log(screen.orientation.type);
     }
-    const handleDownId = () => {
-        setId(id++)
-    }
-    // const isDesktopOrLaptop = useMediaQuery({
-    //     query: '(min-width: 1240px)'
-    //   })
-    // const isMobile = useMediaQuery({
-    //     query:'(min-width:320px)'
-    // })
-    // const isTablet = useMediaQuery({
-    //     query:'(min-width:760px)'
-    // })
+    useEffect (()=>{
+        const oriental = window.addEventListener("resize",detect)
+    },[])
     useEffect(()=>{
-       const userHeight = window.innerHeight
-       const  userWidth = window.innerWidth
-       if (userHeight / userWidth <= 0.59){
+        setHeight(window.innerHeight)
+        setWidth(window.innerWidth)
+        setOrientation(screen.orientation.type)
+       if (height / width <= 0.59){
         setSize("Three")
         }   
-       else if (userHeight / userWidth <= 0.88) {
+       else if (height / width <= 0.88) {
             setSize("Two")
        }
         else{
             setSize("One")
         }
-    },[])
+    }, [height, width,orientation])
     return (
         <>
             <section className={`${s.HmM}`}>
