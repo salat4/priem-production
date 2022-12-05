@@ -39,7 +39,7 @@ export default function Footer_en() {
         </li>
         <li className={`${s.footer__item} ${s.footer__contacts}`}>
           <p id="contactsButton" onClick={scrollToSection}>
-            Контакти
+            Контакты
           </p>
         </li>
         <li
@@ -87,7 +87,7 @@ export default function Footer_en() {
               id="work"
             >
               <li id="work">Все работы</li>
-              <li id="work">Комерческие</li>
+              <li id="work">Коммерческие</li>
               <li id="work">Музыкальные видео</li>
             </ul>
           )}

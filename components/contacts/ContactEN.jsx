@@ -44,7 +44,7 @@ export const Contacts = () => {
     <section
       id="contacts"
       className={s.contactsSection}
-      style={{ backgroundColor: "#b00000" }}
+      // style={{ backgroundColor: "#b00000" }}
     >
       <div className="containerStretch">
         <div className={s.wrap}>

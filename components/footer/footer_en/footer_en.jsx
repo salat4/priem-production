@@ -26,11 +26,7 @@ export default function Footer_en() {
       return;
     }
   };
-
-
-
- 
-  // console.log(res);
+  
   return (
     // <div
     //   onMouseMove={handleToggle}

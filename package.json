@@ -19,8 +19,14 @@
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-media": "^1.10.0",
+    "react-player": "^2.11.0",
+    "react-responsive": "^9.0.2",
     "react-router-dom": "^6.4.2",
+    "react-scroll-motion": "^0.3.0",
     "react-scroll-parallax": "^3.3.1",
+    "react-slick": "^0.29.0",
+    "slick-slider": "^1.8.2",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
