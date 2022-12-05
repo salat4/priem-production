@@ -115,6 +115,8 @@
 }
 footer{
   background-color: black;
+  color: white;
+  text-transform: uppercase;
 }
 
  @media screen and (max-width: 767px) {
@@ -142,14 +144,14 @@ footer{
      padding-right: 50px;
    }
  }
-
+/* 
  @media screen and (min-width: 1920px) {
    .containerStretch {
      min-width: 1920px;
      padding-left: 100px;
      padding-right: 100px;
    }
- }
+ } */
 
    .isFixed {
     position: fixed;

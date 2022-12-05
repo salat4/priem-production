@@ -27,4 +27,21 @@ export default Works;
 //         snapshot
 //     }
 // }
+
+
+
+
+// export async function getStaticProps(){
+//   const res = await fetch('http://localhost:8080/snapshot')
+//   const snapshot = await res.json()
+//   if (!snapshot){
+//       return{ 
+//           notFound: true
+//       }
+//   }
+//   return{
+//       props:{
+//           snapshot
+//       }
+//   }   
 // }
