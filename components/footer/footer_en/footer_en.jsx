@@ -24,7 +24,6 @@ export default function Footer_en() {
       return;
     }
   };
-  // onClick = {()=>{console.log(":zxc")}}
   return (
     <div
       onMouseMove={handleToggle}

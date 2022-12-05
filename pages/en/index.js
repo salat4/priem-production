@@ -3,24 +3,26 @@ import { HeaderEn } from "../../components/header";
 import { Hero } from "../../components/hero/Hero";
 import { About } from "../../components/about/aboutEN";
 import { Contacts } from "../../components/contacts/ContactEN";
-// import Team from "../../components/team/team";
-import  HmM_en  from "../../components/HmM/HmM_en/HmM_en";
-import { Partners } from "../../components/partners";
+
+import Team from "../../components/team/team";
+import { HmM } from "../../components/HmM";
+import  Partners_en  from "../../components/partners/partners_en/partners_en";
+
 import { PresWorks } from "../../components/PresentWork";
 export default function En() {
   return (
     <>
-      <HeaderEn />
+      {/* <HeaderEn />
       <Hero />
       <About />
-      <HmM_en />
-      <Partners />
-      <PresWorks />
-      {/* <Team /> */}
+      <HmM /> */}
+      <Partners_en />
+       {/* <PresWorks /> 
+      <Team />
       <Contacts />
       <footer id="footer">
         <Footer_en />
-      </footer>
+      </footer>  */}
     </>
   );
 }
