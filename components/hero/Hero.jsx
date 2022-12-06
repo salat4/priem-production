@@ -12,6 +12,10 @@ export const Hero = () => {
   const visibleButtonLangeage = () => {
     let target = document.getElementById("footer");
 
+    if (!target) {
+      return;
+    }
+
     var targetPosition = {
         top: window.pageYOffset + target.getBoundingClientRect().top,
       },

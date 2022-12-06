@@ -5,29 +5,27 @@ import { About } from "../../components/about/aboutEN";
 import { Contacts } from "../../components/contacts/ContactEN";
 
 import Team from "../../components/team/team";
-import { HmM } from "../../components/HmM";
-import  Partners_en  from "../../components/partners/partners_en/partners_en";
+import { HmM_en } from "../../components/HmM";
+import Partners_en from "../../components/partners/partners_en/partners_en";
 
 import { PresWorks } from "../../components/PresentWork";
 export default function En() {
   return (
     <>
-      {/* <HeaderEn />
+      <HeaderEn />
       <Hero />
       <About />
-      <HmM /> */}
+      {/* <HmM_en /> */}
       <Partners_en />
-       {/* <PresWorks /> 
+      <PresWorks />
       <Team />
       <Contacts />
-      <footer id="footer">
-
+      {/* <footer id="footer">
         <Footer_en />
-      </footer>  */}
+      </footer> */}
     </>
   );
 }
-
 
 // export async function getStaticProps() {
 //   // const res = await fetch('https://drive.google.com/drive/folders/1fxqd9hhnhPNHuUQ70r_1nXqoH4lt8AXO?usp=share_link')
@@ -44,4 +42,3 @@ export default function En() {
 //   //   }
 //   // }
 // }
-
