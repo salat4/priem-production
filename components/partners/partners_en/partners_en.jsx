@@ -15,7 +15,7 @@ import Vadim_Lysak from "../../../images/partners/Vadim_Lysak.png";
 import Vladimir_Akulov from "../../../images/partners/Vladimir_Akulov.png";
 import Yura_Katynsky from "../../../images/partners/Yura_Katynsky.png";
 import Yurii_Konovalskyi from "../../../images/partners/Yurii_Konovalskyi.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Partners_en() {
   const [allShow, setAllShow] = useState(null);
