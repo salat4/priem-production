@@ -12,6 +12,7 @@
     background-color: black;
     animation: .2s linear menu;
     z-index: 1;
+    overflow-y: scroll;
 }
 
 @keyframes menu {

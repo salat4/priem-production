@@ -1,6 +1,6 @@
 import Footer_en from "../../components/footer/footer_en/footer_en";
 import { HeaderEn } from "../../components/header";
-import { Hero } from "../../components/hero/Hero";
+import Hero from "../../components/hero";
 import { About } from "../../components/about/aboutEN";
 import { Contacts } from "../../components/contacts/ContactEN";
 
@@ -15,7 +15,6 @@ export default function En() {
       <HeaderEn />
       <Hero />
       <About />
-      {/* <HmM_en /> */}
       <Partners_en />
       <PresWorks />
       <Team />
