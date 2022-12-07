@@ -15,6 +15,7 @@ export default function En() {
       <HeaderEn />
       <Hero />
       <About />
+      <HmM_en />
       <Partners_en />
       <PresWorks />
       <Team />
