@@ -209,11 +209,11 @@
 
   .social_link {
         padding: 5px;
-        transition: all 1s;
+        transition: all .5s;
   }
 
     .social_link:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
 
   .social_link > a {
@@ -227,7 +227,11 @@
     font-weight: 700;
   }
 
-     .social_link > a:hover::after {
+    .social_link > a:hover {
+    color: #fff;
+  }
+
+     /* .social_link > a:hover::after {
     content: "";
     position: absolute;
     top: -6px;
@@ -239,9 +243,9 @@
     transform: translateX(-15px);
     animation: corner-after .5s linear;
         animation-fill-mode: forwards;
-  }
+  } */
 
-    .social_link > a:hover::before {
+    /* .social_link > a:hover::before {
     content: "";
     position: absolute;
     bottom: -3px;
@@ -253,10 +257,10 @@
     transform: translateX(16px);
     animation: corner-before .5s linear;
      animation-fill-mode: forwards;
-  }
+  } */
 
-   @keyframes corner-after {
-    0% {
+   /* @keyframes corner-after { */
+    /* 0% {
       width: 0%;
     }
     25% {
@@ -275,7 +279,7 @@
      border-right: none;
     left: 6px;
     right: auto; 
-    }
+    } */
   /* from {
     height: 0;
     width: 0;
@@ -287,9 +291,9 @@
     border-bottom: 2px solid #fff;
     border-right: none;
   } */
- }
+ /* } */
 
- @keyframes corner-before {
+ /* @keyframes corner-before {
       0% {
       width: 0%;
     }
@@ -309,7 +313,7 @@
      border-left: none;
     right: 6px;
     left: auto; 
-    }
+    } */
   /* from {
     height: 0;
     width: 0;
@@ -319,7 +323,7 @@
     height: 16px;
     width: 27px;
   } */
- }
+ /* } */
 
   .phonesContainer .social_link {
     font-size: 28px;

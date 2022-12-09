@@ -12,13 +12,13 @@ import { PresWorks } from "../../components/PresentWork";
 export default function En() {
   return (
     <>
-      {/* <HeaderEn /> */}
-      {/* <Hero /> */}
-      {/* <About /> */}
-      {/* <HmM_en /> */}
-      {/* <Partners_en /> */}
-      {/* <PresWorks /> */}
-      {/* <Team /> */}
+      <HeaderEn />
+      <Hero />
+      <About />
+      <HmM_en />
+      <Partners_en />
+      <PresWorks />
+      <Team />
       <Contacts />
       {/* <footer id="footer">
         <Footer_en />
