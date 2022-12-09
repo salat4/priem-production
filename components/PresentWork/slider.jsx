@@ -122,7 +122,7 @@ export default function SimpleSlider() {
     // autoplaySpeed: 4000,
     // cssEase: "linear",
 
-    dots: true,
+    // dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
