@@ -111,7 +111,7 @@ export default function Partners_en() {
           return (
             <li key={people.name} className={s.partners__item}>
               <span className={s.partners__iamge}>
-                <Image fill src={people.picture} alt={people.name} />
+                <Image fill="true" src={people.picture} alt={people.name} />
               </span>
               <div className={s.partners__text}>
                 <p className={s.partners__name}>{people.name}</p>
@@ -125,7 +125,7 @@ export default function Partners_en() {
             return (
               <li key={people.name} className={s.partners__item}>
                 <span className={s.partners__iamge}>
-                  <Image fill src={people.picture} alt={people.name} />
+                  <Image fill="true" src={people.picture} alt={people.name} />
                 </span>
                 <div className={s.partners__text}>
                   <p className={s.partners__name}>{people.name}</p>

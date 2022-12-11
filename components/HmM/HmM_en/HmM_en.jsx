@@ -8,7 +8,6 @@ export default function HmM_en() {
   const [orientation, setOrientation] = useState();
   const detect = () => {
     setOrientation(screen.orientation.type);
-    console.log(screen.orientation.type);
   };
   useEffect(() => {
     const oriental = window.addEventListener("resize", detect);
