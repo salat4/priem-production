@@ -32,7 +32,9 @@ export default function MobileMenuEn({ toggleShowMenu, show }) {
 
       <ul className={s.menuList}>
         <li className={s.menuItem}>
-          <Link href="/en/works">Works</Link>
+          <Link href="works" prefetch={false}>
+            Works
+          </Link>
         </li>
         <li className={s.menuItem}>
           <button id="aboutButton" onClick={scrollToSection}>

@@ -5,7 +5,6 @@ import s from "./Hero.module.css";
 
 export const Hero = () => {
   const [scroll, setScroll] = useState(true);
-  // const [pos, setPos] = useState("none");
 
   const router = useRouter();
 
@@ -24,10 +23,8 @@ export const Hero = () => {
       };
 
     if (targetPosition.top < windowPosition.bottom) {
-      // setPos("isFixed");
       setScroll(false);
     } else {
-      // setPos("none");
       setScroll(true);
     }
   };
@@ -53,14 +50,10 @@ export const Hero = () => {
           type="video/mp4"
           src={require("../../Video/Video3.mp4")}
         />
-        <div className={s.title}>
-          <span>P</span>
-          <span>R</span>
-          <span>I</span>
-          <span>Ё</span>
-          <span>M</span> PRODUCTION
-        </div>
-        <Link href={`${router.pathname}/works`}>Check out all works</Link>
+        <h1 className={s.title}>PRIЁM PRODUCTION</h1>
+        <Link href={`${router.pathname}/works`} prefetch={false} passHref>
+          <a>Check out all works</a>
+        </Link>
         {scroll && (
           <div className={s.ChangeLangButtonContainer}>
             <button>
