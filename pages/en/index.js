@@ -9,9 +9,13 @@ import { HmM_en } from "../../components/HmM";
 import Partners_en from "../../components/partners/partners_en/partners_en";
 
 import { PresWorks } from "../../components/PresentWork";
+import Head from "next/head";
 export default function En() {
   return (
     <>
+      <Head>
+        <title>Priem production</title>
+      </Head>
       <HeaderEn />
       <Hero />
       <About />

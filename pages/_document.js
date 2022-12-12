@@ -2,8 +2,13 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
+        <meta name="robots" content="index"></meta>
+        <meta
+          name="description"
+          content="Website for a professional video production studio"
+        ></meta>
         <link
           rel="stylesheet"
           type="text/css"
