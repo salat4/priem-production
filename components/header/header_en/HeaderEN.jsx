@@ -77,7 +77,7 @@ export default function HeaderEn() {
             </button>
             <ul className={s.navigationMenuList}>
               <li>
-                <Link href="works" prefetch={false} passHref>
+                <Link href="en/works" prefetch={false} passHref>
                   <a>Works</a>
                 </Link>
               </li>
