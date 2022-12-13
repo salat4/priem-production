@@ -29,7 +29,7 @@ export const About = () => {
               </div>
               <div className={s.text_wrap}>
                 <p className={s.role_p}>Producer</p>
-                <p className={s.name_p}>Irina Priemnitskaia</p>
+                <p className={s.name_p}>Irina Priemnitskaya</p>
               </div>
             </li>
             <li className={s.card_team}>
@@ -45,7 +45,7 @@ export const About = () => {
               </div>
               <div className={s.text_wrap}>
                 <p className={s.role_p}>Director</p>
-                <p className={s.name_p}>Gleb Mikhailichenko</p>
+                <p className={s.name_p}>Gleb Mikhaylichenko</p>
               </div>
             </li>
           </ul>
