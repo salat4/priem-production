@@ -1,8 +1,7 @@
 import Slider from "react-slick";
 import Image from "next/image";
-import pic from "../../images/pic.jpg";
-import pic1 from "../../images/pic1.jpg";
-import s from "./presWorks.module.css";
+
+// import s from "./presWorks.module.css";
 import Alexander_Lutchak from "../../images/partners/Alexander_Lutchak.png";
 import Alexandra_Degas from "../../images/partners/Alexandra_Degas.png";
 import Alisa_Ulyankina from "../../images/partners/Alisa_Ulyankina.png";

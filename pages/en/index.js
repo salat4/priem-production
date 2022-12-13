@@ -3,13 +3,11 @@ import { HeaderEn } from "../../components/header";
 import Hero from "../../components/hero";
 import { About } from "../../components/about/aboutEN";
 import { Contacts } from "../../components/contacts/ContactEN";
-
-import Team from "../../components/team/team";
 import { HmM_en } from "../../components/HmM";
 import Partners_en from "../../components/partners/partners_en/partners_en";
-
 import { PresWorks } from "../../components/PresentWork";
 import Head from "next/head";
+
 export default function En() {
   return (
     <>
@@ -22,7 +20,6 @@ export default function En() {
       <HmM_en />
       <Partners_en />
       <PresWorks />
-      <Team />
       <Contacts />
       {/* <footer id="footer">
         <Footer_en />
