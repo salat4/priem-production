@@ -4,6 +4,7 @@ import Gleb from "../../images/co-founders/Gleb-director.jpg";
 import Ira from "../../images/co-founders/Ira-producer.png";
 
 export const About = () => {
+  console.log("build");
   return (
     <section id="about" className={s.zxc}>
       <div className={`${s.wrap}`}>
