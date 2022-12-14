@@ -1,10 +1,9 @@
 import s from "./about.module.css";
 import Image from "next/image";
 import Gleb from "../../images/co-founders/Gleb-director.jpg";
-import Ira from "../../images/co-founders/Ira-producer.png";
+import Ira from "../../images/co-founders/Ira-producer.jpg";
 
 export const About = () => {
-  console.log("build");
   return (
     <section id="about" className={s.zxc}>
       <div className={`${s.wrap}`}>
