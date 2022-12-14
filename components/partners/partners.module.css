@@ -1,4 +1,5 @@
 .partners__list{
+        min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +24,7 @@
 
         .partnersButtonMore {
             width: 100%;
-            padding: 15px;
+            padding: 30px;
         }
     
         .arrowMore {
