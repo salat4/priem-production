@@ -87,6 +87,11 @@ export default function HeaderEn() {
                 </button>
               </li>
               <li>
+                <Link href="en/courses" prefetch={false} passHref>
+                  <a>Courses</a>
+                </Link>
+              </li>
+              <li>
                 <button id="contactsButton" onClick={scrollToSection}>
                   Contacts
                 </button>
