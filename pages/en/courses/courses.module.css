@@ -1,0 +1,125 @@
+        .coursesSection {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .pageTitle {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.cardContainer {
+    padding: 15px 15px 10px 20px;
+    background: #7db9e8;
+    background: -moz-linear-gradient(-45deg, #7db9e8 0%, #2989d8 45%, #1e5799 100%);
+    background: -webkit-linear-gradient(-45deg, #7db9e8 0%, #2989d8 45%, #1e5799 100%);
+    border-radius: 13px;
+}
+
+.cardContainer:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+.cardTitle {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    letter-spacing: 1.1px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.coursesList {
+    list-style: disc;
+}
+
+.coursesList>li {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 16px;
+    letter-spacing: 1.1px;
+    font-weight: normal;
+    color: #fff;
+    padding: 5px;
+}
+
+.coursesList>li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+        .coursesSection {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+        .pageTitle {
+    font-size: 32px;
+}
+
+.cardsContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.cardContainer {
+    min-width: 150px;
+    padding: 20px 15px 15px 20px;
+}
+
+.cardContainer:not(:last-child) {
+    margin-right: 20px;
+}
+
+.cardTitle {
+    font-size: 22px;
+}
+
+.coursesList>li {
+    font-size: 18px;
+}
+
+}
+     
+
+@media screen and (min-width: 1280px) {
+    .coursesSection {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.pageTitle {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cardContainer {
+    /* width: calc(1340px / 3 - 60px); */
+    min-width: 386px;
+    padding: 20px 20px 15px 20px;  
+}
+
+.cardContainer:not(:last-child) {
+    margin-right: 20px;
+}
+
+.cardTitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.coursesList > li {
+    font-size: 20px;
+}
+
+.coursesList>li:not(:last-child) {
+    margin-bottom: 10px;
+}
+}
+
