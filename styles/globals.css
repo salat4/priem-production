@@ -109,9 +109,9 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #161414;
-  opacity: .7;
+  background-color: rgba(22, 20, 20, 0.9);
   z-index: 1;
+      /* pointer-events: none; */
 }
 footer{
   background-color: black;
@@ -152,26 +152,6 @@ footer{
      padding-right: 100px;
    }
  } */
-
-   .isFixed {
-    position: fixed;
-    width: 100%;
-  }
-
-    .qwe {
-    position: relative;
-    padding-top: 100vh;
-  }
-
-      .qweBack {
-    position: relative;
-    padding-bottom: 200vh;
-  }
-
-  .asd {
-    position: relative;
-    padding-top: 200vh;
-  }
 
     video::-webkit-media-controls {
       display: none !important;

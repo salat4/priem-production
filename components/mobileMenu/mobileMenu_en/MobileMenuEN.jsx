@@ -13,21 +13,26 @@ import INST from "../../../images/instagram.svg";
 import s from "./mobMenuEn.module.css";
 import scrollToSection from "../../../General/scrollToSection";
 
-export default function MobileMenuEn({ toggleShowMenu, show }) {
+export default function MobileMenuEn({ toggleShowBackdrop, show }) {
   useEffect(() => {
     if (show === "one") {
       return;
     }
-    window.addEventListener("keydown", toggleShowMenu);
+    window.addEventListener("keydown", toggleShowBackdrop);
     return () => {
-      window.removeEventListener("keydown", toggleShowMenu);
+      window.removeEventListener("keydown", toggleShowBackdrop);
     };
-  }, [toggleShowMenu, show]);
+  }, [toggleShowBackdrop, show]);
 
   return (
     <div className={s[`menuContainer--${show}`]}>
-      <button className={s.closeIcon} id="close" onClick={toggleShowMenu}>
-        <Image src={CloseModalIcon} alt="close menu button" width="15" />
+      <button className={s.closeIcon} id="close" onClick={toggleShowBackdrop}>
+        <Image
+          src={CloseModalIcon}
+          id="close"
+          alt="close menu button"
+          width="15"
+        />
       </button>
 
       <ul className={s.menuList}>

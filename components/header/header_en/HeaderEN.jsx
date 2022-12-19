@@ -8,6 +8,8 @@ import MobileMenuEn from "../../mobileMenu/mobileMenu_en/MobileMenuEN";
 import Backdrop from "../../../General/Backdrop";
 import Link from "next/link";
 import scrollToSection from "../../../General/scrollToSection";
+import toggleBackdrop from "../../../General/toggleBackdrop";
+// import { throttle } from "throttle-debounce";
 
 export default function HeaderEn() {
   const [show, setShow] = useState("one");
@@ -34,25 +36,27 @@ export default function HeaderEn() {
     }
   }, []);
 
+  // const resizeWindow = () => {
+  //   console.log(window.innerWidth);
+  //   if (window.innerWidth > 1240) setShow(false);
+  // };
+
   useEffect(() => {
     if (window) {
       window.addEventListener("scroll", visibleLogo);
+      // window.addEventListener("resize", throttle(2000, resizeWindow));
     }
     return () => {
       window.removeEventListener("scroll", visibleLogo);
     };
   }, [visibleLogo]);
 
-  const toggleShowMenu = (e) => {
-    const { id } = e.currentTarget;
-    if (e.key === "Escape" || id === "close") {
-      setShow("close");
-    }
+  const toggleShowBackdrop = (e) => {
+    setShow(toggleBackdrop(e));
   };
 
   return (
     <>
-      {show === "show" && <Backdrop toggleShowMenu={toggleShowMenu} />}
       <section className={s.headerSection}>
         <div className="containerStretch">
           <div className={s.headerContainer}>
@@ -100,7 +104,11 @@ export default function HeaderEn() {
           </div>
         </div>
       </section>
-      <MobileMenuEn toggleShowMenu={toggleShowMenu} show={show} />
+      {show === "show" && (
+        <Backdrop toggleShowBackdrop={toggleShowBackdrop}>
+          <MobileMenuEn toggleShowBackdrop={toggleShowBackdrop} show={show} />
+        </Backdrop>
+      )}
     </>
   );
 }

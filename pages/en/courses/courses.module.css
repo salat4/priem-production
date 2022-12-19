@@ -14,7 +14,7 @@
 }
 
 .cardContainer {
-    padding: 15px 15px 10px 20px;
+    padding: 15px 15px 20px 20px;
     background: #7db9e8;
     background: -moz-linear-gradient(-45deg, #7db9e8 0%, #2989d8 45%, #1e5799 100%);
     background: -webkit-linear-gradient(-45deg, #7db9e8 0%, #2989d8 45%, #1e5799 100%);
@@ -52,6 +52,34 @@
     margin-bottom: 5px;
 }
 
+.buttonContainer {
+  text-align: center;
+}
+
+.buttonProposition {
+    font-family: 'Bebas Neue', cursive;
+        font-size: 18px;
+        letter-spacing: 1.2px;
+        font-weight: normal;
+        color: #002a5a;
+        padding: 10px 25px 10px 25px;
+   /* background-color: #002a5a; */
+   background-color: #fff;
+   /* border: 1px solid #002a5a; */
+   border-radius: 15px;
+   margin-top: 20px;
+   cursor: pointer; 
+}
+
+.buttonProposition:hover {
+    background: #fefcea;
+    background: -moz-linear-gradient(left, #fefcea 0%, #f1da36 100%);
+    background: -webkit-linear-gradient(left, #fefcea 0%, #f1da36 100%);
+    background: linear-gradient(to right, #fefcea 0%, #f1da36 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefcea', endColorstr='#f1da36', GradientType=1);
+    /* color: #002a5a; */
+}
+
 @media screen and (min-width: 768px) {
         .coursesSection {
     padding-top: 25px;
@@ -65,12 +93,12 @@
 .cardsContainer {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .cardContainer {
-    min-width: 150px;
-    padding: 20px 15px 15px 20px;
+    width: calc(100% / 3 - 40px);
+    padding: 20px 15px 20px 20px;
 }
 
 .cardContainer:not(:last-child) {
@@ -100,14 +128,12 @@
 }
 
 .cardContainer {
-    /* width: calc(1340px / 3 - 60px); */
-    min-width: 386px;
     padding: 20px 20px 15px 20px;  
 }
 
-.cardContainer:not(:last-child) {
+/* .cardContainer:not(:last-child) {
     margin-right: 20px;
-}
+} */
 
 .cardTitle {
     font-size: 24px;
@@ -121,5 +147,20 @@
 .coursesList>li:not(:last-child) {
     margin-bottom: 10px;
 }
+
+/* .buttonProposition {
+    margin-top: 20px;
+} */
+
+.formContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-color: rgb(248, 80, 80);
+}
+
 }
 
