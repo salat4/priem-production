@@ -28,6 +28,7 @@
     "react-scroll-parallax": "^3.3.1",
     "react-slick": "^0.29.0",
     "slick-slider": "^1.8.2",
+    "throttle-debounce": "^5.0.0",
     "uuid": "^9.0.0",
     "vimeo": "^2.1.1"
   },
