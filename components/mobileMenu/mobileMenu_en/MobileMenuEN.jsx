@@ -46,6 +46,11 @@ export default function MobileMenuEn({ toggleShowBackdrop, show }) {
             About
           </button>
         </li>
+        <li className={s.menuItem}>
+          {/* <button> */}
+          <Link href="/en/courses">Courses</Link>
+          {/* </button> */}
+        </li>
       </ul>
       <ul className={s.menuSocList}>
         <li className={s.menuItem}>

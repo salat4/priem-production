@@ -9,7 +9,7 @@ import Backdrop from "../../../General/Backdrop";
 import Link from "next/link";
 import scrollToSection from "../../../General/scrollToSection";
 import toggleBackdrop from "../../../General/toggleBackdrop";
-// import { throttle } from "throttle-debounce";
+import { throttle } from "throttle-debounce";
 
 export default function HeaderEn() {
   const [show, setShow] = useState("one");
@@ -36,15 +36,14 @@ export default function HeaderEn() {
     }
   }, []);
 
-  // const resizeWindow = () => {
-  //   console.log(window.innerWidth);
-  //   if (window.innerWidth > 1240) setShow(false);
-  // };
+  const resizeWindow = () => {
+    if (window.innerWidth > 1280) setShow(false);
+  };
 
   useEffect(() => {
     if (window) {
       window.addEventListener("scroll", visibleLogo);
-      // window.addEventListener("resize", throttle(2000, resizeWindow));
+      window.addEventListener("resize", throttle(1000, resizeWindow));
     }
     return () => {
       window.removeEventListener("scroll", visibleLogo);
@@ -52,12 +51,15 @@ export default function HeaderEn() {
   }, [visibleLogo]);
 
   const toggleShowBackdrop = (e) => {
+    if (typeof toggleBackdrop(e) === "undefined") {
+      return;
+    }
     setShow(toggleBackdrop(e));
   };
 
   return (
     <>
-      <section className={s.headerSection}>
+      <header className={s.headerSection}>
         <div className="containerStretch">
           <div className={s.headerContainer}>
             <button
@@ -103,7 +105,7 @@ export default function HeaderEn() {
             </ul>
           </div>
         </div>
-      </section>
+      </header>
       {show === "show" && (
         <Backdrop toggleShowBackdrop={toggleShowBackdrop}>
           <MobileMenuEn toggleShowBackdrop={toggleShowBackdrop} show={show} />

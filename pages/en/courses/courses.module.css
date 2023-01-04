@@ -1,6 +1,7 @@
         .coursesSection {
-            padding-top: 15px;
+            padding-top: 100px;
             padding-bottom: 15px;
+            /* margin-top: 134px; */
         }
 
         .pageTitle {
@@ -82,7 +83,7 @@
 
 @media screen and (min-width: 768px) {
         .coursesSection {
-    padding-top: 25px;
+    padding-top: 100px;
     padding-bottom: 25px;
 }
 
@@ -118,7 +119,7 @@
 
 @media screen and (min-width: 1280px) {
     .coursesSection {
-    padding-top: 30px;
+    padding-top: 140px;
     padding-bottom: 30px;
 }
 

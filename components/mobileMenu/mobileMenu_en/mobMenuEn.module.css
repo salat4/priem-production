@@ -2,6 +2,12 @@
     display: none;
 }
 
+        .closeIcon {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+        }
+
 @media screen and (max-width: 1240px) {
 .menuContainer--show {
         position: fixed;
@@ -57,12 +63,6 @@
         to {
             right: -256px;
         }
-    }
-
-    .closeIcon {
-        position: absolute;
-        top: 5px;
-        right: 15px;
     }
 
     .menuList {
