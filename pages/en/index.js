@@ -19,7 +19,7 @@ export default function En() {
       <About />
       <HmM_en />
       <Partners_en />
-      <PresWorks />
+      {/* <PresWorks /> */}
       <Contacts />
       {/* <footer id="footer">
         <Footer_en />
