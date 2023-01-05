@@ -21,9 +21,9 @@ export default function En() {
       <Partners_en />
       {/* <PresWorks /> */}
       <Contacts />
-      {/* <footer id="footer">
+      <footer id="footer">
         <Footer_en />
-      </footer> */}
+      </footer>
     </>
   );
 }
