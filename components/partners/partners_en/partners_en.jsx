@@ -106,6 +106,7 @@ export default function Partners_en() {
       className={`${container.container__stretch} ${s.partners}`}
       id="partners"
     >
+      <p className={s.partnersTitle}>Our partners</p>
       <ul className={s.partners__list}>
         {arr.slice(0, 4).map((people) => {
           return (
