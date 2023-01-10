@@ -13,29 +13,29 @@ function Works_en({ snapshot }) {
   // const [vid, setVid] = useState(null);
   const [video, setVideo] = useState(null);
   const [snapshots, setSnapshots] = useState(null);
-  const [backdrop, setBackdrop] = useState(false)
+  const [backdrop, setBackdrop] = useState(false);
   // const router = useRouter();
   const getVideo = (str) => {
     setVideo(str);
-    document.body.classList.add("no-scroll")
+    document.body.classList.add("no-scroll");
   };
-  const toggleBackdrop = () =>{
-    setBackdrop(!backdrop)
-  }
-  useEffect(() =>{
-    const exitBackdrop = (e) =>{
-      if (e.key === "Escape"){
-        setBackdrop(!backdrop)
-      }
+  const toggleBackdrop = () => {
+    setBackdrop(!backdrop);
+  };
+
+  const exitBackdrop = (e) => {
+    if (e.key === "Escape") {
+      setBackdrop(!backdrop);
     }
-    if (backdrop){
-      document.addEventListener('keydown',exitBackdrop)
+  };
+  useEffect(() => {
+    if (backdrop) {
+      document.addEventListener("keydown", exitBackdrop);
     }
-    return() =>{
-      document.removeEventListener('keydown',exitBackdrop)
-    }
-    
-  },[backdrop])
+    return () => {
+      document.removeEventListener("keydown", exitBackdrop);
+    };
+  }, [backdrop]);
   useEffect(() => {
     axios
       .get("http://localhost:8080/video")
@@ -85,20 +85,27 @@ function Works_en({ snapshot }) {
               {snapshots.map((it, inx) => {
                 return (
                   <>
-                  <li key={inx} className = {s.works__item} onClick={() => getVideo(it.player_embed_url)}>
-                    <Image
-                      src={it.pictures.base_link}
-                      onClick = {toggleBackdrop}
-                      alt="Stroka"
-                      
-                      layout="fill"
-                    />
-                    <div className={s.works__description}>
-                        <p className={s.works__directed}>{it.description.directed}</p>
-                        <p className={s.works__director}>{it.description.director}</p>
-                    </div>
-                  </li>
-                  {/* <li key={inx} className = {s.works__item} onClick={() => getVideo(it.player_embed_url)}>
+                    <li
+                      key={inx}
+                      className={s.works__item}
+                      onClick={() => getVideo(it.player_embed_url)}
+                    >
+                      <Image
+                        src={it.pictures.base_link}
+                        onClick={toggleBackdrop}
+                        alt="Stroka"
+                        layout="fill"
+                      />
+                      <div className={s.works__description}>
+                        <p className={s.works__directed}>
+                          {it.description.directed}
+                        </p>
+                        <p className={s.works__director}>
+                          {it.description.director}
+                        </p>
+                      </div>
+                    </li>
+                    {/* <li key={inx} className = {s.works__item} onClick={() => getVideo(it.player_embed_url)}>
                     <Image
                       src={it.pictures.base_link}
                       onClick = {toggleBackdrop}
@@ -130,21 +137,20 @@ function Works_en({ snapshot }) {
               })}
             </ul>
             {backdrop && (
-              <div className = {s.backdrop} onClick = {toggleBackdrop}>
-               {video &&
-               <ReactPlayer 
-               url={video}
-               className={s.worksVideoQwe}
-               
-               config={{
-                 vimeo: {
-                   playerOptions: { 
-                     playsinline: true,
-                   },
-                 },
-               }}
-             />
-               } 
+              <div className={s.backdrop} onClick={toggleBackdrop}>
+                {video && (
+                  <ReactPlayer
+                    url={video}
+                    className={s.worksVideoQwe}
+                    config={{
+                      vimeo: {
+                        playerOptions: {
+                          playsinline: true,
+                        },
+                      },
+                    }}
+                  />
+                )}
               </div>
             )}
           </>

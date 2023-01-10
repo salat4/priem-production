@@ -54,7 +54,7 @@ export const Hero = () => {
         <Link href={`${router.pathname}/works`} prefetch={false} passHref>
           <a>Check out all works</a>
         </Link>
-        {scroll && (
+        {/* {scroll && (
           <div className={s.ChangeLangButtonContainer}>
             <button>
               <Link href={"/en"}>EN</Link>
@@ -66,7 +66,7 @@ export const Hero = () => {
               <Link href={"/ua"}>UA</Link>
             </button>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );
