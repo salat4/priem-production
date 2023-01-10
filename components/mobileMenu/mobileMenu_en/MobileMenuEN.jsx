@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 import {
   TEL_IRA,
   TEL_GLEB,
@@ -11,9 +12,11 @@ import LogoMobile from "../../../images/LogoFix-removebg-preview.png";
 import CloseModalIcon from "../../../images/Close-icon.svg";
 import INST from "../../../images/instagram.svg";
 import s from "./mobMenuEn.module.css";
-import scrollToSection from "../../../General/scrollToSection";
 
 export default function MobileMenuEn({ toggleShowBackdrop, show }) {
+  const { pathname } = useRouter();
+  const location = pathname.slice(0, 3);
+
   useEffect(() => {
     if (show === "one") {
       return;
@@ -37,19 +40,17 @@ export default function MobileMenuEn({ toggleShowBackdrop, show }) {
 
       <ul className={s.menuList}>
         <li className={s.menuItem}>
-          <Link href="works" prefetch={false}>
+          <Link href={`${location}`} prefetch={false}>
+            Home
+          </Link>
+        </li>
+        <li className={s.menuItem}>
+          <Link href={`${location}/works`} prefetch={false}>
             Works
           </Link>
         </li>
         <li className={s.menuItem}>
-          <button id="aboutButton" onClick={scrollToSection}>
-            About
-          </button>
-        </li>
-        <li className={s.menuItem}>
-          {/* <button> */}
-          <Link href="/en/courses">Courses</Link>
-          {/* </button> */}
+          <Link href={`${location}/courses`}>Courses</Link>
         </li>
       </ul>
       <ul className={s.menuSocList}>

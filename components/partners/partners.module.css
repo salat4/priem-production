@@ -33,6 +33,9 @@
     }
 
 @media screen and (min-width: 320px) {
+    .partners__list {
+        padding: 0 40px;
+        }
     .partners__item{
         max-width: 300px;
         margin: 0 auto;
