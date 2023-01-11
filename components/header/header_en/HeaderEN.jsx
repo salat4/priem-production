@@ -7,34 +7,38 @@ import Image from "next/image";
 import MobileMenuEn from "../../mobileMenu/mobileMenu_en/MobileMenuEN";
 import Backdrop from "../../../General/Backdrop";
 import Link from "next/link";
-import scrollToSection from "../../../General/scrollToSection";
+// import scrollToSection from "../../../General/scrollToSection";
 import toggleBackdrop from "../../../General/toggleBackdrop";
 import { throttle } from "throttle-debounce";
+import { useRouter } from "next/router";
 
 export default function HeaderEn() {
   const [show, setShow] = useState("one");
   const [animLogo, setAnimLogo] = useState(false);
 
-  const visibleLogo = useCallback(() => {
-    let target = document.getElementById("contacts");
+  const { pathname } = useRouter();
+  const location = pathname.slice(0, 3);
 
-    if (!target) {
-      return;
-    }
+  // const visibleLogo = useCallback(() => {
+  //   let target = document.getElementById("contacts");
 
-    var targetPosition = {
-        top: window.pageYOffset + target.getBoundingClientRect().bottom,
-      },
-      windowPosition = {
-        bottom: window.pageYOffset + document.documentElement.clientHeight,
-      };
+  //   if (!target) {
+  //     return;
+  //   }
 
-    if (targetPosition.top < windowPosition.bottom) {
-      setAnimLogo(true);
-    } else {
-      setAnimLogo(false);
-    }
-  }, []);
+  //   var targetPosition = {
+  //       top: window.pageYOffset + target.getBoundingClientRect().bottom,
+  //     },
+  //     windowPosition = {
+  //       bottom: window.pageYOffset + document.documentElement.clientHeight,
+  //     };
+
+  //   if (targetPosition.top < windowPosition.bottom) {
+  //     setAnimLogo(true);
+  //   } else {
+  //     setAnimLogo(false);
+  //   }
+  // }, []);
 
   const resizeWindow = () => {
     if (window.innerWidth > 1280) setShow(false);
@@ -42,13 +46,13 @@ export default function HeaderEn() {
 
   useEffect(() => {
     if (window) {
-      window.addEventListener("scroll", visibleLogo);
+      // window.addEventListener("scroll", visibleLogo);
       window.addEventListener("resize", throttle(1000, resizeWindow));
     }
-    return () => {
-      window.removeEventListener("scroll", visibleLogo);
-    };
-  }, [visibleLogo]);
+    // return () => {
+    //   window.removeEventListener("scroll", visibleLogo);
+    // };
+  }, []);
 
   const toggleShowBackdrop = (e) => {
     if (typeof toggleBackdrop(e) === "undefined") {
@@ -83,25 +87,25 @@ export default function HeaderEn() {
             </button>
             <ul className={s.navigationMenuList}>
               <li>
-                <Link href="en/works" prefetch={false} passHref>
-                  <a>Works</a>
+                <Link href="/en" prefetch={false} passHref>
+                  Home
                 </Link>
               </li>
               <li>
-                <button id="aboutButton" onClick={scrollToSection}>
-                  About
-                </button>
-              </li>
-              <li>
-                <Link href="en/courses" prefetch={false} passHref>
-                  <a>Courses</a>
+                <Link href={`${location}/works`} prefetch={false} passHref>
+                  Works
                 </Link>
               </li>
               <li>
+                <Link href={`${location}/courses`} prefetch={false} passHref>
+                  Courses
+                </Link>
+              </li>
+              {/* <li>
                 <button id="contactsButton" onClick={scrollToSection}>
                   Contacts
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
