@@ -40,26 +40,16 @@ function PageCourses() {
           <h2 className={s.pageTitle}>Courses</h2>
           <div className={s.cardsContainer}>
             <div className={s.cardContainer}>
-              <h3 className={s.cardTitle}>courseName: Pro</h3>
+              <h3 className={s.cardTitle}>courseName: Basic</h3>
               <ul className={s.coursesList}>
                 <li>Визитка хронометраж 1 минута. 2 видео на 2 языках</li>
-                <li>Сцена из кино/пьесы (с возможностью партнера в кадре)</li>
-                <li>Монолог (из кино/пьесы)</li>
-                <li>
-                  Шоурил из оговорённых работ (снятых сцен с нами + материалы
-                  актера)
-                </li>
                 <li>Хедшоты (6 основных фото для актёрского портфолио)</li>
-                <li>
-                  Личная консультация с коучем и преподавателем по актёрскому
-                  мастерству
-                </li>
               </ul>
               <div className={s.buttonContainer}>
                 <button
-                  onClick={openForm}
-                  id="courseName: Pro"
                   className={s.buttonProposition}
+                  onClick={openForm}
+                  id="courseName: Basic"
                 >
                   Leave your proposition
                 </button>
@@ -87,16 +77,26 @@ function PageCourses() {
               </div>
             </div>
             <div className={s.cardContainer}>
-              <h3 className={s.cardTitle}>courseName: Basic</h3>
+              <h3 className={s.cardTitle}>courseName: Pro</h3>
               <ul className={s.coursesList}>
                 <li>Визитка хронометраж 1 минута. 2 видео на 2 языках</li>
+                <li>Сцена из кино/пьесы (с возможностью партнера в кадре)</li>
+                <li>Монолог (из кино/пьесы)</li>
+                <li>
+                  Шоурил из оговорённых работ (снятых сцен с нами + материалы
+                  актера)
+                </li>
                 <li>Хедшоты (6 основных фото для актёрского портфолио)</li>
+                <li>
+                  Личная консультация с коучем и преподавателем по актёрскому
+                  мастерству
+                </li>
               </ul>
               <div className={s.buttonContainer}>
                 <button
-                  className={s.buttonProposition}
                   onClick={openForm}
-                  id="courseName: Basic"
+                  id="courseName: Pro"
+                  className={s.buttonProposition}
                 >
                   Leave your proposition
                 </button>

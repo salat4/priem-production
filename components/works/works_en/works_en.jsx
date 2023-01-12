@@ -5,37 +5,56 @@ import axios from "axios";
 import Backdrop from "../../../General/Backdrop";
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
-// import toggleBackdrop from "../../../General/toggleBackdrop";
-const BASE_URL_VIMEO = "https://player.vimeo.com";
-const acces = "bbcf126b704644bb50aea408d498767c";
+import toggleBackdrop from "../../../General/toggleBackdrop";
+import CloseModalIcon from "../../../images/Close-icon.svg";
+import ss from "../../../components/mobileMenu/mobileMenu_en/mobMenuEn.module.css";
+// const BASE_URL_VIMEO = "https://player.vimeo.com";
+// const acces = "bbcf126b704644bb50aea408d498767c";
 
-function Works_en({ snapshot }) {
+function Works_en() {
   // const [vid, setVid] = useState(null);
   const [video, setVideo] = useState(null);
   const [snapshots, setSnapshots] = useState(null);
-  const [backdrop, setBackdrop] = useState(false);
+  // const [backdrop, setBackdrop] = useState(false);
   // const router = useRouter();
   const getVideo = (str) => {
     setVideo(str);
+    console.log(str);
     document.body.classList.add("no-scroll");
   };
-  const toggleBackdrop = () => {
-    setBackdrop(!backdrop);
+
+  const toggleShowBackdrop = (e) => {
+    console.log(e);
+    const DoClose = toggleBackdrop(e);
+    if (`${DoClose}` === "false") {
+      setVideo(toggleBackdrop(e));
+    }
   };
 
-  const exitBackdrop = (e) => {
-    if (e.key === "Escape") {
-      setBackdrop(!backdrop);
-    }
-  };
   useEffect(() => {
-    if (backdrop) {
-      document.addEventListener("keydown", exitBackdrop);
-    }
+    window.addEventListener("keydown", toggleShowBackdrop);
     return () => {
-      document.removeEventListener("keydown", exitBackdrop);
+      window.removeEventListener("keydown", toggleShowBackdrop);
     };
-  }, [backdrop]);
+  }, []);
+  // const toggleBackdrop = () => {
+  //   setBackdrop(!backdrop);
+  //   console.log(backdrop);
+  // };
+
+  // useEffect(() => {
+  //   const exitBackdrop = (e) => {
+  //     if (e.key === "Escape") {
+  //       setBackdrop(!backdrop);
+  //     }
+  //   };
+  //   if (backdrop) {
+  //     document.addEventListener("keydown", exitBackdrop);
+  //   }
+  //   return () => {
+  //     document.removeEventListener("keydown", exitBackdrop);
+  //   };
+  // }, [backdrop]);
   useEffect(() => {
     axios
       .get("http://localhost:8080/video")
@@ -61,9 +80,7 @@ function Works_en({ snapshot }) {
 
   return (
     <>
-      <section
-        className={`${container.container__stretch} ${s.works__section}`}
-      >
+      <section className={`${s.works__section}`}>
         {snapshots && (
           <>
             {/* <ul className={s.works__list}>
@@ -90,20 +107,21 @@ function Works_en({ snapshot }) {
                       className={s.works__item}
                       onClick={() => getVideo(it.player_embed_url)}
                     >
-                      <Image
-                        src={it.pictures.base_link}
-                        onClick={toggleBackdrop}
-                        alt="Stroka"
-                        layout="fill"
-                      />
-                      <div className={s.works__description}>
-                        <p className={s.works__directed}>
-                          {it.description.directed}
-                        </p>
-                        <p className={s.works__director}>
-                          {it.description.director}
-                        </p>
-                      </div>
+                      <picture>
+                        <img
+                          className={s.imageItem}
+                          src={it.pictures.base_link}
+                          alt="Stroka"
+                        />
+                        <div className={s.works__description}>
+                          <p className={s.works__directed}>
+                            {it.description.directed}
+                          </p>
+                          <p className={s.works__director}>
+                            {it.description.director}
+                          </p>
+                        </div>
+                      </picture>
                     </li>
                     {/* <li key={inx} className = {s.works__item} onClick={() => getVideo(it.player_embed_url)}>
                     <Image
@@ -136,11 +154,24 @@ function Works_en({ snapshot }) {
                 );
               })}
             </ul>
-            {backdrop && (
-              <div className={s.backdrop} onClick={toggleBackdrop}>
-                {video && (
+            {video && (
+              <Backdrop>
+                <div id="close" className={s.backFromVideo}>
+                  <button
+                    className={ss.closeIcon}
+                    id="close"
+                    onClick={toggleShowBackdrop}
+                  >
+                    <Image
+                      src={CloseModalIcon}
+                      alt="close menu button"
+                      id="close"
+                      width="15"
+                    />
+                  </button>
                   <ReactPlayer
                     url={video}
+                    id="close"
                     className={s.worksVideoQwe}
                     config={{
                       vimeo: {
@@ -150,8 +181,8 @@ function Works_en({ snapshot }) {
                       },
                     }}
                   />
-                )}
-              </div>
+                </div>
+              </Backdrop>
             )}
           </>
         )}
