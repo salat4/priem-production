@@ -1,7 +1,7 @@
 // import Footer_en from "../../components/footer/footer_en/footer_en";
 import { HeaderEn } from "../../components/header";
 import Hero from "../../components/hero";
-// import { About } from "../../components/about/aboutEN";
+import { About } from "../../components/about/aboutEN";
 import { Contacts } from "../../components/contacts/ContactEN";
 // import { HmM_en } from "../../components/HmM";
 // import Partners_en from "../../components/partners/partners_en/partners_en";
@@ -18,7 +18,7 @@ export default function En() {
       <Hero />
 
       {/* <HmM_en /> */}
-      {/* <About /> */}
+      <About />
       {/* <Partners_en /> */}
       {/* <PresWorks /> */}
       <Contacts />

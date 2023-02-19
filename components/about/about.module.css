@@ -1,18 +1,4 @@
-@media screen and (min-width: 320px) {
-  .wrap {
-    padding: 40px 20px 30px 20px;
-    width: 100%;
-  }
-
-  /* .containerFotoCreators {
-    max-width: 630px;
-    margin: 0 auto;
-  }
-
-  .containerFotoCreators:first-child {
-    margin-bottom: 50px;
-  } */
-
+/* @media screen and (min-width: 320px) {
   .team_list {
     justify-content: center;
    display: flex;
@@ -63,7 +49,6 @@
     font-size: 28px;
     font-weight: bold;
     line-height: 28px;
-    max-width: 500px;
     margin: 0 auto; 
     padding: 0px 15px 0px 15px;
     color: #fff;
@@ -106,78 +91,37 @@
   .textAbout {
     font-size: 38px;
     line-height: 40px;
-    max-width: 650px;
   }
-}
+} */
 
 @media screen and (min-width: 1280px) {
-  .wrap {
-    z-index: 1;
-  }
 
-  .containerFotoCreators {
+    .contentContainer {
+        position: relative;
+      }
+
+  .contentContainer > p:nth-child(3) {
+    margin-top: 20px;
     margin-bottom: 40px;
   }
 
-  .team_list {
-    justify-content: space-evenly;
-  }
-
-    .card_team {
-    margin-bottom: 0px;
-  }
-
-  .card_team:first-child {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card_team:not(:last-child) {
-    margin-right: 0px;
-  }
-
-  .text_wrap {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .name_p {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 28px;
-      font-weight: bold;
-    letter-spacing: 4px;
-  }
-
-  .role_p {
-    text-align: center;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 26px;
-    margin-bottom: 2px;
-    letter-spacing: 2px;
-  }
-
-  .team_list {
-    flex-direction: row;
-  }
-
   .textAbout {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 48px;
-    line-height: 50px;
-    letter-spacing: 1px;
-    font-weight: normal;
-    color: #fff;
-    max-width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: start;
+  font-variant: small-caps;
+  color: #FFFFFF;
   }
 }
 
- .zxc {
-  background-image: url('../../images/back-three.jpg');
+ .aboutSection {
+  background-image: url('../../images/About-back.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-top: 117px;
+    padding-bottom: 117px;
 }

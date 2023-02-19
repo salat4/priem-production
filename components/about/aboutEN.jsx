@@ -1,46 +1,29 @@
-import Image from "next/image";
-import Gleb from "../../images/co-founders/Gleb-director.jpg";
-import Ira from "../../images/co-founders/Ira-producer.jpg";
 import s from "./about.module.css";
+import ss from "../../styles/container.module.css";
+import Button from "../../General/Button";
+import Title from "../../General/Title";
 
 export const About = () => {
   return (
-    <section id="about" className={s.zxc}>
-      <div className={`${s.wrap}`}>
-        <div className={`${s.containerFotoCreators}`}>
-          <ul className={s.team_list}>
-            <li className={s.card_team}>
-              <div>
-                <Image src={Ira} alt="person" />
-              </div>
-              <div className={s.text_wrap}>
-                <p className={s.role_p}>Producer</p>
-                <p className={s.name_p}>Irina Priemnitskaya</p>
-              </div>
-            </li>
-            <li className={s.card_team}>
-              <div>
-                <Image
-                  className={s.card_img}
-                  src={Gleb}
-                  alt="person"
-                  fill="true"
-                  width={370}
-                  height={550}
-                />
-              </div>
-              <div className={s.text_wrap}>
-                <p className={s.role_p}>Director</p>
-                <p className={s.name_p}>Gleb Mikhaylichenko</p>
-              </div>
-            </li>
-          </ul>
+    <section id="about" className={s.aboutSection}>
+      <div className={ss.container}>
+        <div className={`${s.contentContainer}`}>
+          <Title text={"About Us"} style={"title"} />
+          <p className={`${s.textAbout}`}>
+            Продакшн-компания по созданию творческих и коммерческих проектов.
+            Начиная от идеи до реализации на экране. От формата видео в минуту
+            до полнометражных картин. Своя аппаратура, своя команда, свой стиль.
+          </p>
+          <p className={`${s.textAbout}`}>
+            Особенность нашей работы заключается в индивидуальном подходе к
+            нашему заказчику. Мы создаем уникальную идею и сценарий, исходя из
+            наполнения его замыслом. Полностью ведем предпродакшн, подбирая
+            команду под запрос. После чего создаем лучшую съемку, с уверенностью
+            на каждом этапе. И доводим проект до его финального конца - монтаж,
+            цветокоррекция, саунд дизайн и выход на экраны.
+          </p>
+          <Button text={"Оставить заявку"} />
         </div>
-        <p className={`${s.textAbout}`}>
-          Production company for the creation of creative and commercial
-          projects. From idea to implementation on screen. From video per minute
-          to full-length pictures. Your equipment, your team, your style.
-        </p>
       </div>
     </section>
   );
