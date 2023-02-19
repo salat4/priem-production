@@ -111,6 +111,44 @@ footer{
   text-transform: uppercase;
 }
 
+.buttonForm {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  width: 163px;
+  background-color: #B00000;
+font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+    .title {
+      position: absolute;
+      text-transform: uppercase;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 37px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      left: -170px;
+      top: 45px;
+      transform: rotate(-90deg);
+    }
+  
+    .title::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      border: 1px solid #B00000;
+      bottom: -11px;
+      left: 0;
+    }
+
  @media screen and (max-width: 767px) {
    .containerStretch {
      margin-left: auto;
