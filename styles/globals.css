@@ -95,14 +95,6 @@
     --white: #ffffff;
   }
 
-
-@font-face {
-  font-family: "Anton";
-  src: url('../fonts/Anton/Anton-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -139,9 +131,9 @@ footer{
 
  @media screen and (min-width: 1280px) {
    .containerStretch {
-     min-width: 1280px;
-     padding-left: 50px;
-     padding-right: 50px;
+     min-width: 1170px;
+     padding-left: 15px;
+     padding-right: 15px;
    }
  }
 /* 

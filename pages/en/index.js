@@ -1,10 +1,10 @@
-import Footer_en from "../../components/footer/footer_en/footer_en";
+// import Footer_en from "../../components/footer/footer_en/footer_en";
 import { HeaderEn } from "../../components/header";
 import Hero from "../../components/hero";
-import { About } from "../../components/about/aboutEN";
+// import { About } from "../../components/about/aboutEN";
 import { Contacts } from "../../components/contacts/ContactEN";
-import { HmM_en } from "../../components/HmM";
-import Partners_en from "../../components/partners/partners_en/partners_en";
+// import { HmM_en } from "../../components/HmM";
+// import Partners_en from "../../components/partners/partners_en/partners_en";
 // import { PresWorks } from "../../components/PresentWork";
 import Head from "next/head";
 
@@ -17,9 +17,9 @@ export default function En() {
       <HeaderEn />
       <Hero />
 
-      <HmM_en />
-      <About />
-      <Partners_en />
+      {/* <HmM_en /> */}
+      {/* <About /> */}
+      {/* <Partners_en /> */}
       {/* <PresWorks /> */}
       <Contacts />
       {/* <footer id="footer">

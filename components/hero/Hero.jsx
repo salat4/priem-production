@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import HeroText from "../../images/HeroText.png";
 import s from "./Hero.module.css";
 
 export const Hero = () => {
@@ -50,10 +52,10 @@ export const Hero = () => {
           type="video/mp4"
           src={require("../../Video/Video3.mp4")}
         />
-        <h1 className={s.title}>PRIЁM PRODUCTION</h1>
-        <Link href={`${router.pathname}/works`} prefetch={false} passHref>
-          <a>Check out all works</a>
-        </Link>
+        <div className={s.title}>
+          <Image src={HeroText} alt="Text main screen: Priem production" />
+        </div>
+        {/* <h1 className={s.title}>PRIЁM PRODUCTION</h1> */}
         {/* {scroll && (
           <div className={s.ChangeLangButtonContainer}>
             <button>

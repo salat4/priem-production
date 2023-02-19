@@ -17,9 +17,9 @@
 
 @media screen and (min-width: 1280px) {
     .container{
-        width: 1280px;
-    padding-left: 50px;
-    padding-right: 50px;
+min-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
     }   
 }
 
@@ -47,9 +47,11 @@
         }
     
         @media screen and (min-width: 1280px) {
-            .container-stretch  {min-width: 1280px;
-            padding-left: 50px;
-            padding-right: 50px;}
+            .container-stretch  {
+            min-width: 1170px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
         }
     
         @media screen and (min-width: 1920px) {
