@@ -85,10 +85,8 @@
     .navigationMenuList {
         display: flex;
         align-items: center;
-        background-color: black;
-        border-radius: 22px;
-        padding-left: 15px;
-        padding-right: 15px;
+        background: #252525;      
+        padding: 20px 28px;
     }
 
     .navigationMenuList>li:not(:last-child) {
@@ -152,12 +150,13 @@
     }
 
     .navigationMenuList>li>a {
-        /* font-family: "Anton"; */
-        font-family: 'Bebas Neue', cursive;
-        font-size: 30px;
-        font-weight: 400;
-        letter-spacing: 3px;
-        color: var(--white);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
     }
 
 

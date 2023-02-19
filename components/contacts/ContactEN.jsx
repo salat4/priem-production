@@ -74,9 +74,6 @@ export const Contacts = () => {
             <button>
               <Link href={"/ru"}>RU</Link>
             </button>
-            <button>
-              <Link href={"/ua"}>UA</Link>
-            </button>
           </div>
           <Image src={Language} alt="Change language icon" />
         </li>

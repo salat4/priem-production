@@ -1,6 +1,6 @@
 import MobileMenu from "../../../images/burger-menu.svg";
 // import LogoHeader from "../../../images/Logo.png";
-import LogoHeader from "../../../images/LogoFix-removebg-preview.png";
+import LogoHeader from "../../../images/Logo.png";
 import s from "./HeaderEn.module.css";
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
@@ -11,6 +11,7 @@ import Link from "next/link";
 import toggleBackdrop from "../../../General/toggleBackdrop";
 import { throttle } from "throttle-debounce";
 import { useRouter } from "next/router";
+import ss from "../../../styles/container.module.css";
 
 export default function HeaderEn() {
   const [show, setShow] = useState("one");
@@ -40,31 +41,31 @@ export default function HeaderEn() {
   //   }
   // }, []);
 
-  const resizeWindow = () => {
-    if (window.innerWidth > 1280) setShow(false);
-  };
+  // const resizeWindow = () => {
+  //   if (window.innerWidth > 1280) setShow(false);
+  // };
 
-  useEffect(() => {
-    if (window) {
-      // window.addEventListener("scroll", visibleLogo);
-      window.addEventListener("resize", throttle(1000, resizeWindow));
-    }
-    // return () => {
-    //   window.removeEventListener("scroll", visibleLogo);
-    // };
-  }, []);
+  // useEffect(() => {
+  //   if (window) {
+  //     // window.addEventListener("scroll", visibleLogo);
+  //     window.addEventListener("resize", throttle(1000, resizeWindow));
+  //   }
+  //   // return () => {
+  //   //   window.removeEventListener("scroll", visibleLogo);
+  //   // };
+  // }, []);
 
-  const toggleShowBackdrop = (e) => {
-    if (typeof toggleBackdrop(e) === "undefined") {
-      return;
-    }
-    setShow(toggleBackdrop(e));
-  };
+  // const toggleShowBackdrop = (e) => {
+  //   if (typeof toggleBackdrop(e) === "undefined") {
+  //     return;
+  //   }
+  //   setShow(toggleBackdrop(e));
+  // };
 
   return (
     <>
       <header className={s.headerSection}>
-        <div className="containerStretch">
+        <div className={ss.container}>
           <div className={s.headerContainer}>
             <button
               className={s.burgetMenuButton}
@@ -75,30 +76,34 @@ export default function HeaderEn() {
             <button className={animLogo ? s.animationLogo : s.logoContainer}>
               <Link href="/en" passHref>
                 <a>
-                  <Image
-                    src={LogoHeader}
-                    alt="Logo in header"
-                    width="70"
-                    height="70"
-                    priority
-                  />
+                  <Image src={LogoHeader} alt="Logo in header" priority />
                 </a>
               </Link>
             </button>
             <ul className={s.navigationMenuList}>
               <li>
                 <Link href="/en" prefetch={false} passHref>
-                  Home
+                  HOME
                 </Link>
               </li>
               <li>
                 <Link href={`${location}/works`} prefetch={false} passHref>
-                  Works
+                  ABOUT US
                 </Link>
               </li>
               <li>
                 <Link href={`${location}/courses`} prefetch={false} passHref>
-                  Courses
+                  TEAM
+                </Link>
+              </li>
+              <li>
+                <Link href={`${location}/courses`} prefetch={false} passHref>
+                  FOR ACTORS
+                </Link>
+              </li>
+              <li>
+                <Link href={`${location}/courses`} prefetch={false} passHref>
+                  OUR WORKS
                 </Link>
               </li>
               {/* <li>
@@ -110,11 +115,11 @@ export default function HeaderEn() {
           </div>
         </div>
       </header>
-      {show === "show" && (
+      {/* {show === "show" && (
         <Backdrop toggleShowBackdrop={toggleShowBackdrop}>
           <MobileMenuEn toggleShowBackdrop={toggleShowBackdrop} show={show} />
         </Backdrop>
-      )}
+      )} */}
     </>
   );
 }
