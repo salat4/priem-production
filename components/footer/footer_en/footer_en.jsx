@@ -5,9 +5,9 @@ import s from "../footer.module.css";
 
 // import image from "../../../images/Logo.png";
 import image from "../../../images/LogoFix-removebg-preview.png";
-import container from "../../../styles/container.module.css";
 import Image from "next/image";
 import axios from "axios";
+
 export default function Footer_en() {
   const [work, setWork] = useState(false);
   const [language, setLanguage] = useState(false);
@@ -163,7 +163,7 @@ export default function Footer_en() {
     //   </div>
     // </div>
     // </div>
-    <div className={`${container.container__stretch} ${s.footer__standart}`}>
+    <div>
       <ul className={s.footer__standart__list}>
         <li>
           <p>About</p>

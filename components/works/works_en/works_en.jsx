@@ -1,6 +1,5 @@
 import Image from "next/image";
 import s from "../works.module.css";
-import container from "../../../styles/container.module.css";
 import axios from "axios";
 import Backdrop from "../../../General/Backdrop";
 import { useEffect, useState } from "react";
