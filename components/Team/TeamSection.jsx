@@ -3,9 +3,10 @@ import Ira from "../../images/teamIra.png";
 import Gleb from "../../images/teamGleb.png";
 import Title from "../../General/Title";
 import s from "./Team.module.css";
-
+import Partners_en from "../partners/partners_en/partners_en";
 export default function Team() {
   return (
+    <>
     <section className={s.teamSection}>
       <div className="container">
         <div className={s.contentContainer}>
@@ -42,7 +43,12 @@ export default function Team() {
             </p>
           </div>
         </div>
+        <Partners_en/>
+
       </div>
     </section>
+    </>
+    
+    
   );
 }

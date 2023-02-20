@@ -34,7 +34,7 @@ const Works_en = () => {
               src={portfolio}
               width={568}
               height={320}
-              alt="Course"
+              alt="portfolio"
             ></Image>
             <div className={s.works__list__item__description}>
               <p className={s.works__list__item__text}> Актерское порфолио</p>
@@ -46,7 +46,7 @@ const Works_en = () => {
               src={add}
               width={568}
               height={320}
-              alt="Course"
+              alt="add"
             ></Image>
             <div className={s.works__list__item__description}>
               <p className={s.works__list__item__text}>Реклама</p>
@@ -58,7 +58,7 @@ const Works_en = () => {
               src={poetry}
               width={568}
               height={320}
-              alt="Course"
+              alt="poetry"
             ></Image>
             <div className={s.works__list__item__description}>
               <p className={s.works__list__item__text}>Видео - поезия</p>
@@ -70,7 +70,7 @@ const Works_en = () => {
               src={meter}
               width={568}
               height={320}
-              alt="Course"
+              alt="meter"
             ></Image>
             <div className={s.works__list__item__description}>
               <p className={s.works__list__item__text}>Короткий метр</p>
@@ -82,7 +82,7 @@ const Works_en = () => {
               src={clip}
               width={568}
               height={320}
-              alt="Course"
+              alt="clip"
             ></Image>
             <div className={s.works__list__item__description}>
               <p className={s.works__list__item__text}>Клип</p>
