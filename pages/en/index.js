@@ -3,7 +3,7 @@ import { HeaderEn } from "../../components/header";
 import Hero from "../../components/hero";
 import { About } from "../../components/about/aboutEN";
 import { Contacts } from "../../components/contacts/ContactEN";
-import Team from "../../components/Team/team";
+import Team from "../../components/Team/Team";
 // import { HmM_en } from "../../components/HmM";
 // import Partners_en from "../../components/partners/partners_en/partners_en";
 // import { PresWorks } from "../../components/PresentWork";
