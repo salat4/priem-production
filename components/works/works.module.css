@@ -4,6 +4,9 @@
     padding-top: 100px;
     background: linear-gradient(180deg, #030502 69.17%, #222222 100%);
 }
+.works > div > div {
+    position: relative;
+}
 .works__list{
     display: flex;
     align-items: center;
