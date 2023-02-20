@@ -1,3 +1,7 @@
 export default function Title({ text, ...props }) {
-  return <p className={props.style}>{text}</p>;
+  return (
+    <div className={props.rotate ? "titleContainer" : "none"}>
+      <p className={props.style}>{text}</p>;
+    </div>
+  );
 }

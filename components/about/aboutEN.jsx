@@ -1,14 +1,13 @@
 import s from "./about.module.css";
-import ss from "../../styles/container.module.css";
 import Button from "../../General/Button";
 import Title from "../../General/Title";
 
 export const About = () => {
   return (
     <section id="about" className={s.aboutSection}>
-      <div className={ss.container}>
+      <div className="container">
         <div className={`${s.contentContainer}`}>
-          <Title text={"About Us"} style={"title"} />
+          <Title text={"About Us"} style={"title"} rotate={true} />
           <p className={`${s.textAbout}`}>
             Продакшн-компания по созданию творческих и коммерческих проектов.
             Начиная от идеи до реализации на экране. От формата видео в минуту

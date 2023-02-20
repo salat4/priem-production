@@ -1,111 +1,46 @@
 import Image from "next/image";
-import pic from "../../images/pic.jpg";
-import pic1 from "../../images/pic1.jpg";
-// import { useCallback, useEffect, useState } from "react";
-import s from "../about/about.module.css";
+import Ira from "../../images/teamIra.png";
+import Gleb from "../../images/teamGleb.png";
+import Title from "../../General/Title";
+import s from "./Team.module.css";
 
 export default function Team() {
-  // const [fix, setFix] = useState("asd");
-
-  // const styleCon = useCallback(() => {
-  //   // let target = document.getElementById("contacts");
-  //   let target1 = document.getElementById("about");
-
-  //   if (!target1) {
-  //     return;
-  //   }
-  //   // var targetPosition = {
-  //   //     top: window.pageYOffset + target.getBoundingClientRect().top,
-  //   //   },
-  //   //   windowPosition = {
-  //   //     bottom: window.pageYOffset + document.documentElement.clientHeight,
-  //   //   };
-  //   // console.log(targetPosition.top);
-
-  //   // if (targetPosition.top < windowPosition.bottom) {
-  //   //   setFix("isFixed");
-  //   // } else {
-  //   //   setFix("asd");
-  //   // }
-  //   if (target1.className === "qweBack") {
-  //     setFix("isFixed");
-  //   } else {
-  //     setFix("asd");
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   if (window) {
-  //     window.addEventListener("scroll", styleCon);
-  //   }
-  //   return () => {
-  //     window.removeEventListener("scroll", styleCon);
-  //   };
-  // }, []);
   return (
-    <section id="team">
-      <div className={`${s.wrap}`}>
-        <div className={`${s.section}`}>
-          <ul className={s.team_list}>
-            <li className={s.card_team}>
-              <div>
-                <Image src={pic1} alt="person" width={305} height={355} />
-              </div>
-              <div className={s.text_wrap}>
-                <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
-                <p className={s.name_p}>Name Suname.</p>
-                {/* <div className={s.social_list}>
-                  <a className={s.social_link} href="tel:+380990432833">
-                    Phone
-                  </a>
-                  <a
-                    className={s.social_link}
-                    href="https://www.instagram.com/priem.production/?igshid=YmMyMTA2M2Y%3D"
-                  >
-                    /Instagram
-                  </a>
-                  <a
-                    className={s.social_link}
-                    href="mailto:priem.mih.production@gmail.com"
-                  >
-                    /Mail
-                  </a>
-                </div> */}
-              </div>
-            </li>
-            <li className={s.card_team}>
-              <div>
-                <Image
-                  className={s.card_img}
-                  src={pic}
-                  alt="person"
-                  width={305}
-                  height={355}
-                />
-              </div>
-              <div className={s.text_wrap}>
-                <p className={s.role_p}>Lorem ipsum dolor sit amet.</p>
-                <p className={s.name_p}>Name Suname.</p>
-                {/* <div className={s.social_list}>
-                <a className={s.social_link} href="tel:+380635312215">
-                  Phone
-                </a>
-                <a
-                  className={s.social_link}
-                  href="https://www.instagram.com/priem.production/?igshid=YmMyMTA2M2Y%3D"
-                >
-                  /Instagram
-                </a>
-                <a
-                  className={s.social_link}
-                  href="mailto:priem.mih.production@gmail.com"
-                >
-                  /Mail
-                </a>
-              </div> */}
-              </div>
-            </li>
-          </ul>
+    <section className={s.teamSection}>
+      <div className="container">
+        <div className={s.contentContainer}>
+          <Title text="Team" style="title" rotate={true} />
+          <div className={s.imageContainer}>
+            <div style={{ position: "relative" }}>
+              <span>
+                <Image src={Ira} alt="team section: Ira" />
+              </span>
+              <p className={s.position}>Producer</p>
+              <p className={s.name}>Irina Priemnitskaya</p>
+            </div>
+            <div>
+              <span>
+                <Image src={Gleb} alt="team section: Gleb" />
+              </span>
+              <p className={s.position}>Director</p>
+              <p className={s.name}>Gleb Mikhaylichenko</p>
+            </div>
+          </div>
+          <div className={s.descriptionContainer}>
+            <p>
+              Мы семейная пара актеров с многолетним опытом работы в кадре.
+              Пара, которая из жажды к развитию, стала воплощать свои идеи и
+              творческие проекты самостоятельно, помимо основной работы в
+              индустрии , и получать большой отклик в зрителях. Теперь - начиная
+              с весны 2022 года мы выступаем в лице режиссера и продюсера
+              являясь создателями собственной Продакшн Компании.
+            </p>
+            <p>
+              И уже имеем за плечами успешные коммерческие проекты, не
+              останавливаясь учиться и пробовать новое, наполняя смыслом каждую
+              минуту отснятого материала.
+            </p>
+          </div>
         </div>
       </div>
     </section>

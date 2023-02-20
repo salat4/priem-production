@@ -1,44 +1,44 @@
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+// import Link from "next/link";
+// import { useRouter } from "next/router";
+// import { useEffect, useState } from "react";
 import HeroText from "../../images/HeroText.png";
 import s from "./Hero.module.css";
 
 export const Hero = () => {
-  const [scroll, setScroll] = useState(true);
+  // const [scroll, setScroll] = useState(true);
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  const visibleButtonLangeage = () => {
-    let target = document.getElementById("footer");
+  // const visibleButtonLangeage = () => {
+  //   let target = document.getElementById("footer");
 
-    if (!target) {
-      return;
-    }
+  //   if (!target) {
+  //     return;
+  //   }
 
-    var targetPosition = {
-        top: window.pageYOffset + target.getBoundingClientRect().top,
-      },
-      windowPosition = {
-        bottom: window.pageYOffset + document.documentElement.clientHeight,
-      };
+  //   var targetPosition = {
+  //       top: window.pageYOffset + target.getBoundingClientRect().top,
+  //     },
+  //     windowPosition = {
+  //       bottom: window.pageYOffset + document.documentElement.clientHeight,
+  //     };
 
-    if (targetPosition.top < windowPosition.bottom) {
-      setScroll(false);
-    } else {
-      setScroll(true);
-    }
-  };
+  //   if (targetPosition.top < windowPosition.bottom) {
+  //     setScroll(false);
+  //   } else {
+  //     setScroll(true);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (window) {
-      window.addEventListener("scroll", visibleButtonLangeage);
-    }
-    return () => {
-      window.removeEventListener("scroll", visibleButtonLangeage);
-    };
-  }, []);
+  // useEffect(() => {
+  //   if (window) {
+  //     window.addEventListener("scroll", visibleButtonLangeage);
+  //   }
+  //   return () => {
+  //     window.removeEventListener("scroll", visibleButtonLangeage);
+  //   };
+  // }, []);
 
   return (
     <section className={`${s.heroSectionContainer}`}>
