@@ -1,4 +1,4 @@
-import {Footer_en} from "../../components/footer/footer_en/footer_en";
+import Footer_en from "../../components/footer/footer_en/footer_en";
 import { HeaderEn } from "../../components/header";
 import Hero from "../../components/hero";
 import { About } from "../../components/about/aboutEN";

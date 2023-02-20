@@ -8,7 +8,7 @@ import instagram from "../../../images/instagram.png"
 import youtube from "../../../images/youtube.png"
 // import container from "../../../styles/globals.css"
 import Button from '../../../General/Button';
-export const Footer_en = () => {
+const Footer_en = () => {
   return (
       <div className= {`${s.background}` }>
         <div className='container'>
@@ -99,3 +99,4 @@ export const Footer_en = () => {
       </div>
   )
 }
+export default Footer_en
