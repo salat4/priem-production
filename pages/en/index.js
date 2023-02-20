@@ -5,7 +5,7 @@ import { About } from "../../components/about/aboutEN";
 import { Contacts } from "../../components/contacts/ContactEN";
 import Team from "../../components/Team/TeamSection";
 // import { HmM_en } from "../../components/HmM";
-// import Partners_en from "../../components/partners/partners_en/partners_en";
+import Partners_en from "../../components/partners/partners_en/partners_en";
 // import { PresWorks } from "../../components/PresentWork";
 import Head from "next/head";
 import Works_en from "../../components/works/works_en/works_en";

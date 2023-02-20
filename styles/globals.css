@@ -133,7 +133,14 @@ font-family: 'Inter';
   height: 160px;
   transform: rotate(-90deg);
 }
-
+.titleContainerRow{
+  position: absolute;
+  z-index: 1;
+  top: -25%;
+  width: 250px;
+  height: 160px;
+  margin-right: auto;
+}
 .title {
   z-index: 1;
   position: absolute;

@@ -1,144 +1,84 @@
-import Image from "next/image";
-import s from "../partners.module.css";
-import Alexander_Lutchak from "../../../images/partners/Alexander_Lutchak.png";
-import Alexandra_Degas from "../../../images/partners/Alexandra_Degas.png";
-import Alisa_Ulyankina from "../../../images/partners/Alisa_Ulyankina.png";
-import Anna_Dovbush from "../../../images/partners/Anna_Dovbush.png";
-import Anton_Kosenko from "../../../images/partners/Anton_Kosenko.png";
-import Denis_Shust from "../../../images/partners/Denis_Shust.png";
-import Dima_Vasylenko from "../../../images/partners/Dima_Vasylenko.png";
-import Kate_Esterlin from "../../../images/partners/Kate_Esterlin.png";
-import Mitya_Borodin from "../../../images/partners/Mitya_Borodin.png";
-import Ruslan_Bogdan from "../../../images/partners/Ruslan_Bogdan.png";
-import Vadim_Lysak from "../../../images/partners/Vadim_Lysak.png";
-import Vladimir_Akulov from "../../../images/partners/Vladimir_Akulov.png";
-import Yura_Katynsky from "../../../images/partners/Yura_Katynsky.png";
-import Yurii_Konovalskyi from "../../../images/partners/Yurii_Konovalskyi.png";
-import { useState } from "react";
-
-export default function Partners_en() {
-  const [allShow, setAllShow] = useState(null);
-  const arr = [
-    {
-      picture: Ruslan_Bogdan,
-      name: "Ruslan Bogdan",
-      position: "DOP",
-    },
-    {
-      picture: Vladimir_Akulov,
-      name: "Vladimir Akulov",
-      position: "Gafer",
-    },
-    {
-      picture: Denis_Shust,
-      name: "Denis Shust",
-      position: "Gafer",
-    },
-    {
-      picture: Yurii_Konovalskyi,
-      name: "Yurii Konovalskyi",
-      position: "1AC Focuspuller",
-    },
-    {
-      picture: Mitya_Borodin,
-      name: "Mitya Borodin",
-      position: "1st Assistant Director",
-    },
-    {
-      picture: Vadim_Lysak,
-      name: "Vadim Lysak",
-      position: "SFX",
-    },
-    {
-      picture: Alexander_Lutchak,
-      name: "Alexander Lutchak",
-      position: "Sound director",
-    },
-    {
-      picture: Anna_Dovbush,
-      name: "Anna Dovbush",
-      position: "Art director",
-    },
-    {
-      picture: Alexandra_Degas,
-      name: "Alexandra Degas",
-      position: "Art director",
-    },
-    {
-      picture: Alisa_Ulyankina,
-      name: "Alisa Ulyankina",
-      position: "Make up",
-    },
-    {
-      picture: Anton_Kosenko,
-      name: "Anton Kosenko",
-      position: "Location manager",
-    },
-    {
-      picture: Yura_Katynsky,
-      name: "Yura Katynsky",
-      position: "Edit",
-    },
-    {
-      picture: Dima_Vasylenko,
-      name: "Dima Vasylenko",
-      position: "Color",
-    },
-    {
-      picture: Kate_Esterlin,
-      name: "Kate Esterlin",
-      position: "BTS",
-    },
-  ];
-
-  const showMore = () => {
-    if (!allShow) {
-      const getAllPartners = arr.splice(4);
-      setAllShow(getAllPartners);
-      return;
-    }
-    document.getElementById("partners").scrollIntoView();
-    setAllShow(null);
-  };
+import Image from 'next/image'
+import React from 'react'
+import Title from "../../../General/Title"
+import s from "../partners.module.css"
+import Yuri from "../../../images/Yuri.png"
+import Alisa from "../../../images/Alisa.png"
+import Denis from "../../../images/Denis.png"
+import Ruslan from "../../../images/Ruslan.png"
+import Vladimir from "../../../images/Vladimir.png"
+const Partners_en = () => {
   return (
-    <section className={`${s.partners}`} id="partners">
-      <p className={s.partnersTitle}>Our partners</p>
-      <ul className={s.partners__list}>
-        {arr.slice(0, 4).map((people) => {
-          return (
-            <li key={people.name} className={s.partners__item}>
-              <span className={s.partners__iamge}>
-                <Image fill="true" src={people.picture} alt={people.name} />
-              </span>
-              <div className={s.partners__text}>
-                <p className={s.partners__name}>{people.name}</p>
-                <p className={s.partners__employment}>{people.position}</p>
-              </div>
-            </li>
-          );
-        })}
-        {allShow &&
-          allShow.map((people) => {
-            return (
-              <li key={people.name} className={s.partners__item}>
-                <span className={s.partners__iamge}>
-                  <Image fill="true" src={people.picture} alt={people.name} />
-                </span>
-                <div className={s.partners__text}>
-                  <p className={s.partners__name}>{people.name}</p>
-                  <p className={s.partners__employment}>{people.position}</p>
-                </div>
-              </li>
-            );
-          })}
-      </ul>
-      <button className={s.partnersButtonMore} onClick={showMore}>
-        {allShow ? (
-          <p className={s.arrowMore}>&uArr;</p>
-        ) : (
-          <p className={s.arrowMore}>&dArr;</p>
-        )}
-      </button>
-    </section>
-  );
+    // <section className={s.partners}> 
+      // <div className="container">
+        <div className={s.partners__content}>
+        <Title text = {"Our partners"} style={"title"} rotate={false}/>
+        <ul className={s.partners__list}>
+          <li className={s.partners__list__item}>
+            <Image
+            className={s.partners__list__item__image}
+            src={Yuri}
+            // width={220}
+            // height={240}
+            alt="Yuri Konovalsky"/>
+            <div className={s.partners__list__item__description}>
+              <p className={s.partners__list__item__names}>Yuri Konovalsky</p>
+              <p className={s.partners__list__item__job}>1AC Focuspuller </p>
+            </div>
+          </li>
+          <li className={s.partners__list__item}>
+            <Image
+            className={s.partners__list__item__image}
+            src={Alisa}
+            // width={220}
+            // height={240}
+            alt="Alisa Ulyankina"/>
+            <div className={s.partners__list__item__description}>
+              <p className={s.partners__list__item__names}>Alisa Ulyankina</p>
+              <p className={s.partners__list__item__job}>Make up  </p>
+            </div>
+          </li>
+          <li className={s.partners__list__item}>
+            <Image
+            className={s.partners__list__item__image}
+            src={Ruslan}
+            // width={220}
+            // height={240}
+            alt="Ruslan Bogdan"/>
+            <div className={s.partners__list__item__description}>
+              <p className={s.partners__list__item__names}>Ruslan Bogdan</p>
+              <p className={s.partners__list__item__job}>Dop</p>
+            </div>
+          </li>
+          <li className={s.partners__list__item}>
+            <Image
+            className={s.partners__list__item__image}
+            src={Vladimir}
+            // width={220}
+            // height={240}
+            alt="Vladimir Akulov"/>
+            <div className={s.partners__list__item__description}>
+              <p className={s.partners__list__item__names}>Vladimir Akulov</p>
+              <p className={s.partners__list__item__job}>Gafer  </p>
+            </div>
+          </li>
+          <li className={s.partners__list__item}>
+            <Image
+            className={s.partners__list__item__image}
+            src={Denis}
+            // width={220}
+            // height={240}
+            alt="Denis Shyst"/>
+            <div className={s.partners__list__item__description}>
+              <p className={s.partners__list__item__names}>Denis Shyst</p>
+              <p className={s.partners__list__item__job}>Gafer  </p>
+            </div>
+          </li>
+        </ul>
+        </div>
+      // </div>
+    // </section>
+  )
 }
+
+export default Partners_en
