@@ -11,7 +11,6 @@ import Link from "next/link";
 import toggleBackdrop from "../../../General/toggleBackdrop";
 import { throttle } from "throttle-debounce";
 import { useRouter } from "next/router";
-import ss from "../../../styles/container.module.css";
 
 export default function HeaderEn() {
   const [show, setShow] = useState("one");
@@ -65,7 +64,7 @@ export default function HeaderEn() {
   return (
     <>
       <header className={s.headerSection}>
-        <div className={ss.container}>
+        <div className="container">
           <div className={s.headerContainer}>
             <button
               className={s.burgetMenuButton}

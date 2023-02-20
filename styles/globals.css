@@ -103,8 +103,8 @@
   left: 0;
   background-color: rgba(22, 20, 20, 0.9);
   z-index: 20;
-      /* pointer-events: none; */
 }
+
 footer{
   background-color: black;
   color: white;
@@ -124,20 +124,30 @@ font-family: 'Inter';
   color: #FFFFFF;
 }
 
-    .title {
-      position: absolute;
-      text-transform: uppercase;
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 30px;
-      line-height: 37px;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      left: -170px;
-      top: 45px;
-      transform: rotate(-90deg);
-    }
+.titleContainer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -110px;
+  width: 160px;
+  height: 160px;
+  transform: rotate(-90deg);
+}
+
+.title {
+  z-index: 1;
+  position: absolute;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  right: 0;
+  top: 0;
+}
   
     .title::after {
       content: "";
@@ -149,39 +159,22 @@ font-family: 'Inter';
       left: 0;
     }
 
- @media screen and (max-width: 767px) {
-   .containerStretch {
-     margin-left: auto;
-     margin-right: auto;
-     padding-left: 20px;
-     padding-right: 20px;
-     min-width: 320px;
-   }
- }
+/* .container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+} */
 
- @media screen and (min-width: 768px) {
-   .containerStretch {
-     min-width: 768px;
-     padding-left: 25px;
-     padding-right: 25px;
-   }
- }
-
- @media screen and (min-width: 1280px) {
-   .containerStretch {
-     min-width: 1170px;
-     padding-left: 15px;
-     padding-right: 15px;
-   }
- }
-/* 
- @media screen and (min-width: 1920px) {
-   .containerStretch {
-     min-width: 1920px;
-     padding-left: 100px;
-     padding-right: 100px;
-   }
- } */
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1170px;
+      margin-left: auto;
+        margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
     video::-webkit-media-controls {
       display: none !important;

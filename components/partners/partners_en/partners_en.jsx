@@ -1,4 +1,3 @@
-import container from "../../../styles/container.module.css";
 import Image from "next/image";
 import s from "../partners.module.css";
 import Alexander_Lutchak from "../../../images/partners/Alexander_Lutchak.png";
@@ -102,10 +101,7 @@ export default function Partners_en() {
     setAllShow(null);
   };
   return (
-    <section
-      className={`${container.container__stretch} ${s.partners}`}
-      id="partners"
-    >
+    <section className={`${s.partners}`} id="partners">
       <p className={s.partnersTitle}>Our partners</p>
       <ul className={s.partners__list}>
         {arr.slice(0, 4).map((people) => {

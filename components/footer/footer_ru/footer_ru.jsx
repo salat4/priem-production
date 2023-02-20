@@ -4,8 +4,8 @@ import scrollToSection from "../../../General/scrollToSection";
 import s from "../footer.module.css";
 // import image from "../../../images/Logo.png";
 import image from "../../../images/LogoFix-removebg-preview.png";
-import container from "../../../styles/container.module.css";
 import Image from "next/image";
+
 export default function Footer_en() {
   const [work, setWork] = useState(false);
   const [language, setLanguage] = useState(false);
@@ -28,7 +28,7 @@ export default function Footer_en() {
   return (
     <div
       onMouseMove={handleToggle}
-      className={`${s.footer} ${container.container__stretch}`}
+      className={`${s.footer}`}
       // onClick={handleToggle}
     >
       <ul className={s.footer__list}>
