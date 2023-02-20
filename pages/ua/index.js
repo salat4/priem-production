@@ -1,4 +1,3 @@
-import Footer_ua from "../../components/footer/footer_uk/footer_uk";
 import { HeaderUa } from "../../components/header";
 import { Hero } from "../../components/hero/Hero";
 import { About } from "../../components/about/aboutUA";
@@ -11,9 +10,6 @@ export default function Ua() {
       <Hero />
       <About />
       <Contacts />
-      <footer id="footer">
-        <Footer_ua />
-      </footer>
     </>
   );
 }
