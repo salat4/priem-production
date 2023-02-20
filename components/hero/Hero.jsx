@@ -53,7 +53,11 @@ export const Hero = () => {
           src={require("../../Video/Video3.mp4")}
         />
         <div className={s.title}>
-          <Image src={HeroText} alt="Text main screen: Priem production" />
+          <Image
+            src={HeroText}
+            alt="Text main screen: Priem production"
+            priority
+          />
         </div>
         {/* <h1 className={s.title}>PRIЁM PRODUCTION</h1> */}
         {/* {scroll && (
