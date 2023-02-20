@@ -1,4 +1,4 @@
-// import Footer_en from "../../components/footer/footer_en/footer_en";
+import {Footer_en} from "../../components/footer/footer_en/footer_en";
 import { HeaderEn } from "../../components/header";
 import Hero from "../../components/hero";
 import { About } from "../../components/about/aboutEN";
@@ -24,9 +24,9 @@ export default function En() {
       {/* <Partners_en /> */}
       {/* <PresWorks /> */}
       <Contacts />
-      {/* <footer id="footer">
+      <footer id="footer">
         <Footer_en />
-      </footer> */}
+      </footer>
     </>
   );
 }

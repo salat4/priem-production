@@ -1,203 +1,101 @@
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import scrollToSection from "../../../General/scrollToSection";
+import React from 'react'
 import s from "../footer.module.css";
-
-// import image from "../../../images/Logo.png";
 import image from "../../../images/LogoFix-removebg-preview.png";
 import Image from "next/image";
-import axios from "axios";
-
-export default function Footer_en() {
-  const [work, setWork] = useState(false);
-  const [language, setLanguage] = useState(false);
-  const handleToggle = (e) => {
-    if (e.target.id.trim() === "language") {
-      setLanguage(true);
-      setWork(false);
-      return;
-    } else if (e.target.id === "work") {
-      setLanguage(false);
-      setWork(true);
-      return;
-    } else {
-      setLanguage(false);
-      setWork(false);
-      return;
-    }
-  };
-
+// import facebook from "../../../images/facebook.png"
+import facebook from "../../../images/facebook.png"
+import instagram from "../../../images/instagram.png"
+import youtube from "../../../images/youtube.png"
+// import container from "../../../styles/globals.css"
+import Button from '../../../General/Button';
+export const Footer_en = () => {
   return (
-    // <div
-    //   onMouseMove={handleToggle}
-    //   className={`${s.footer} ${container.container__stretch}`}
-    // >
-    //   <ul className={s.footer__list}>
-    //     <li>
-    //       <ul className={s.footer__list__disen}>
-    //         <li className={`${s.footer__item} ${s.footer__works}`} id="work">
-    //           <p id="work">works</p>
-    //           {work && (
-    //             <ul
-    //               className={`${s.footer__modal__list} ${s.footer__modal__list__work}`}
-    //               id="work"
-    //             >
-    //               <li id="work">All works</li>
-    //               <li id="work">Commercials</li>
-    //               <li id="work">Music video</li>
-    //             </ul>
-    //           )}
-    //         </li>
+      <div className= {`${s.background}` }>
+        <div className='container'>
+          <div className={s.footer__top}>
+            <ul className={s.footer__list}>
+              <li className={s.footer__list__item}>
+                <Image
+                className={s.footer__image}
+                src={image}
+                width={80}
+                height={89}
+                alt="Logo footer"
+                ></Image>
 
-    //         <li className={`${s.footer__item} ${s.footer__contacts}`}>
-    //           <p id="contactsButton" onClick={scrollToSection}>
-    //             Contacts
-    //           </p>
-    //         </li>
+                <Button text = {"Оставить заяку"}></Button>
+              </li>
+              <li className={s.footer__list__item}>
+                <ul className={s.footer__nav__list}>
+                  <li className={s.footer__nav__list__item}>
+                    <p>Home</p>
+                  </li>
+                  <li className={s.footer__nav__list__item}>
+                    <p>About us</p>
+                  </li>
+                  <li className={s.footer__nav__list__item}>
+                    <p>Team</p>
+                  </li>
+                  <li className={s.footer__nav__list__item}>
+                    <p>For actors</p>
+                  </li>
+                  <li className={s.footer__nav__list__item}>
+                    <p>Portfolio</p>
+                  </li>
+                </ul>
 
-    //         <li className={`${s.footer__item} ${s.footer__about}`}>
-    //           <p id="aboutButton" onClick={scrollToSection}>
-    //             About us
-    //           </p>
-    //         </li>
-    //       </ul>
-    //     </li>
-
-    //     <li
-    //       id="language"
-    //       // onMouseEnter={handleToggle}
-    //       className={`${s.footer__item} ${s.footer__language}`}
-    //     >
-    //       <p id="language" onClick={handleToggle}>
-    //         Language
-    //       </p>
-    //       {language && (
-    //         <ul
-    //           id="language"
-    //           className={`${s.footer__modal__list} ${s.footer__modal__list__language}`}
-    //         >
-    //           <li id="language">
-    //             <Link href="/en">
-    //               <a id="language">English</a>
-    //             </Link>
-    //           </li>
-    //           <li id="language">
-    //             <Link href="/ua">
-    //               <a id="language">Ukraine</a>
-    //             </Link>
-    //           </li>
-    //           <li id="language">
-    //             <Link href="/ru">
-    //               <a id="language">Russian</a>
-    //             </Link>
-    //           </li>
-    //         </ul>
-    //       )}
-    //     </li>
-    //     <li>
-    //       <ul className={s.footer__list__disen}>
-    //         <li className={`${s.footer__item} ${s.footer__about__1}`}>
-    //           <p id="aboutButton" onClick={scrollToSection}>
-    //             About us
-    //           </p>
-    //         </li>
-    //         <li className={`${s.footer__item} ${s.footer__contacts__1}`}>
-    //           <p id="contactsButton" onClick={scrollToSection}>
-    //             Contacts
-    //           </p>
-    //         </li>
-    //         <li className={`${s.footer__item} ${s.footer__about__1}`}>
-    //           <p id="aboutButton" onClick={scrollToSection}>
-    //             About us
-    //           </p>
-    //         </li>
-    //       </ul>
-    //     </li>
-    //   </ul>
-    // </div>
-    // <div className={`${s.footer__experiens} ${container.container__stretch}`}>
-    //   <ul className={s.footer__experiens__list}>
-    //     <li
-    //       className={`${s.footer__experiens__item} ${s.footer__experiens__works}`}
-    //     >
-    //       <p>Works</p>
-    //       <ul>
-    //         <li>ALL WORKS</li>
-    //         <li>comercials</li>
-    //         <li>music video</li>
-    //       </ul>
-    //     </li>
-    //     <li>
-    //       <ul className={s.footer__experiens__second}>
-    //         <li>PARTNERS</li>
-    //         <li className={s.footer__experiens__second__about}>ABOUT US</li>
-    //         <li>contacts</li>
-    //       </ul>
-    //     </li>
-    //     <li>
-    //       <p className={s.footer__experiens__filmmaking}>FILMMAKING</p>
-    //       <ul className={s.footer__experiens__follow__list}>
-    //         <li>INSTAGRAM</li>
-    //         <li>YOUTUBE</li>
-    //         <li>FACEBOOK</li>
-    //       </ul>
-    //       <p className={s.footer__experiens__follow}>fOLLOW US</p>
-    //     </li>
-    //     <li className={s.footer__experiens__lang}>
-    //       <p>LAnguageS</p>
-    //       <ul className={s.footer__experiens__lang__list}>
-    //         <li>english</li>
-    //         <li>UKRianian</li>
-    //         <li>russiaN</li>
-    //       </ul>
-    //     </li>
-    //   </ul>
-    //   <div className={s.footer__image}>
-    //     <Image
-    //       className={s.footer__image}
-    //       src={image}
-    //       width={100}
-    //       height={100}
-    //       alt="Logo footer"
-    //     />
-    //   </div>
-    // </div>
-    // </div>
-    <div>
-      <ul className={s.footer__standart__list}>
-        <li>
-          <p>About</p>
-          <ul>
-            <li>Partners</li>
-            <li>How we make?</li>
-            <li>Examples</li>
-          </ul>
-        </li>
-        {/* <li>
+                
+              </li>
+              <li className={s.footer__list__item}>
+                <p className={s.footer__list_contacts}>Contacts</p>
+                <p className={s.footer__list__mail}>
+                  <a target="_blank" href="mailto:priem.mih.production@gmail.com" rel="noreferrer">priem.mih.production@gmail.com</a>
+                </p>
+                <p className={s.footer__list__tel}>
+                <a target="_blank" href="tel:+38 063 531 22 15" rel="noreferrer">+38 063 531 22 15</a>
+                </p>
+                <ul className={s.footer__list__link}>
+                  <li className={s.footer__list__link__item}>                
+                    <Image
+                      className={s.footer__image}
+                      src={facebook}
+                      width={25}
+                      height={25}
+                      alt="Logo footer"
+                    ></Image>              
+                               
+                       
+                  </li>
+                  <li className={s.footer__list__link__item}>
+                    <Image
+                      className={s.footer__image}
+                      src={instagram}
+                      width={25}
+                      height={25}
+                      alt="Logo footer"
+                    ></Image>  
+                  </li>
+                  <li className={s.footer__list__link__item}>
+                    <Image
+                      className={s.footer__image}
+                      src={youtube}
+                      width={30}
+                      height={25}
+                      alt="Logo footer"
+                    ></Image>           
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div className={s.footer__bottom}>
           <p>
-            Contacts
+          PRIЁMproduction © 2023 Все права защищены
           </p>
-        </li> */}
-        <li>
-          <p>Works</p>
-          <ul className={s.footer__standart__works__list}>
-            <li>All works</li>
-            <li>COMMERCIALS</li>
-            <li>MUSIC VIDEOS</li>
-          </ul>
-        </li>
-        <li>
-          <p>Language</p>
-          <ul className={s.footer__standart__works__list}>
-            <li>english</li>
-            <li>UKRianian</li>
-            <li>russiaN</li>
-          </ul>
-        </li>
-      </ul>
-      <div className={s.footer__standart__priem}>
-        <p>PRIЁM PRODUCTION</p>
+        </div>
+        </div>
+        
+        
       </div>
-    </div>
-  );
+  )
 }

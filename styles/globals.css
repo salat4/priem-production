@@ -107,8 +107,8 @@
 
 footer{
   background-color: black;
-  color: white;
-  text-transform: uppercase;
+  /* color: white; */
+  /* text-transform: uppercase; */
 }
 
 .buttonForm {
