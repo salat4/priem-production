@@ -1,192 +1,98 @@
+import React from 'react'
+import Title from '../../../General/Title'
+import s from "../works.module.css"
 import Image from "next/image";
-import s from "../works.module.css";
-import axios from "axios";
-import Backdrop from "../../../General/Backdrop";
-import { useEffect, useState } from "react";
-import ReactPlayer from "react-player";
-import toggleBackdrop from "../../../General/toggleBackdrop";
-import CloseModalIcon from "../../../images/Close-icon.svg";
-import ss from "../../../components/mobileMenu/mobileMenu_en/mobMenuEn.module.css";
-// const BASE_URL_VIMEO = "https://player.vimeo.com";
-// const acces = "bbcf126b704644bb50aea408d498767c";
-
-function Works_en() {
-  // const [vid, setVid] = useState(null);
-  const [video, setVideo] = useState(null);
-  const [snapshots, setSnapshots] = useState(null);
-  // const [backdrop, setBackdrop] = useState(false);
-  // const router = useRouter();
-  const getVideo = (str) => {
-    setVideo(str);
-    console.log(str);
-    document.body.classList.add("no-scroll");
-  };
-
-  const toggleShowBackdrop = (e) => {
-    console.log(e);
-    const DoClose = toggleBackdrop(e);
-    if (`${DoClose}` === "false") {
-      setVideo(toggleBackdrop(e));
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("keydown", toggleShowBackdrop);
-    return () => {
-      window.removeEventListener("keydown", toggleShowBackdrop);
-    };
-  }, []);
-  // const toggleBackdrop = () => {
-  //   setBackdrop(!backdrop);
-  //   console.log(backdrop);
-  // };
-
-  // useEffect(() => {
-  //   const exitBackdrop = (e) => {
-  //     if (e.key === "Escape") {
-  //       setBackdrop(!backdrop);
-  //     }
-  //   };
-  //   if (backdrop) {
-  //     document.addEventListener("keydown", exitBackdrop);
-  //   }
-  //   return () => {
-  //     document.removeEventListener("keydown", exitBackdrop);
-  //   };
-  // }, [backdrop]);
-  useEffect(() => {
-    axios
-      .get("http://localhost:8080/video")
-      .then((res) => {
-        const dataWithChangedDeskription = res.data.data.map((el) => {
-          const koma = el.description && el.description.indexOf(",");
-          const firstStr = el.description && el.description.slice(0, koma);
-          const secondStr = el.description && el.description.slice(koma + 1);
-          if (firstStr && secondStr) {
-            return {
-              ...el,
-              description: {
-                director: firstStr,
-                directed: secondStr && secondStr.trim(),
-              },
-            };
-          }
-        });
-        setSnapshots(dataWithChangedDeskription);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-
+import course from "../../../images/course.png"
+import portfolio from "../../../images/portfolio.png"
+import add from "../../../images/add.png"
+import poetry from "../../../images/poetry.png"
+import meter from "../../../images/meter.png"
+import clip from "../../../images/clip.png"
+const Works_en = () => {
   return (
-    <>
-      <section className={`${s.works__section}`}>
-        {snapshots && (
-          <>
-            {/* <ul className={s.works__list}>
-              {snapshots.map((it, inx) => {
-                return (
-                  <li key={inx} className = {s.works__item} onClick={() => getVideo(it.player_embed_url)}>
-                    <Image
-                      src={it.pictures.base_link}
-                      onClick = {toggleBackdrop}
-                      alt="Stroka"
-                      
-                      layout="fill"
-                    />
-                  </li>
-                );
-              })}
-            </ul> */}
-            <ul className={s.works__list}>
-              {snapshots.map((it, inx) => {
-                return (
-                  <>
-                    <li
-                      key={inx}
-                      className={s.works__item}
-                      onClick={() => getVideo(it.player_embed_url)}
-                    >
-                      <picture>
-                        <img
-                          className={s.imageItem}
-                          src={it.pictures.base_link}
-                          alt="Stroka"
-                        />
-                        <div className={s.works__description}>
-                          <p className={s.works__directed}>
-                            {it.description.directed}
-                          </p>
-                          <p className={s.works__director}>
-                            {it.description.director}
-                          </p>
-                        </div>
-                      </picture>
-                    </li>
-                    {/* <li key={inx} className = {s.works__item} onClick={() => getVideo(it.player_embed_url)}>
-                    <Image
-                      src={it.pictures.base_link}
-                      onClick = {toggleBackdrop}
-                      alt="Stroka"
-                      
-                      layout="fill"
-                    />
-                  </li>
-                  <li key={inx} className = {s.works__item} onClick={() => getVideo(it.player_embed_url)}>
-                    <Image
-                      src={it.pictures.base_link}
-                      onClick = {toggleBackdrop}
-                      alt="Stroka"
-                      
-                      layout="fill"
-                    />
-                  </li>
-                  <li key={inx} className = {s.works__item} onClick={() => getVideo(it.player_embed_url)}>
-                    <Image
-                      src={it.pictures.base_link}
-                      onClick = {toggleBackdrop}
-                      alt="Stroka"
-                      
-                      layout="fill"
-                    />
-                  </li> */}
-                  </>
-                );
-              })}
-            </ul>
-            {video && (
-              <Backdrop>
-                <div id="close" className={s.backFromVideo}>
-                  <button
-                    className={ss.closeIcon}
-                    id="close"
-                    onClick={toggleShowBackdrop}
-                  >
-                    <Image
-                      src={CloseModalIcon}
-                      alt="close menu button"
-                      id="close"
-                      width="15"
-                    />
-                  </button>
-                  <ReactPlayer
-                    url={video}
-                    id="close"
-                    className={s.worksVideoQwe}
-                    config={{
-                      vimeo: {
-                        playerOptions: {
-                          playsinline: true,
-                        },
-                      },
-                    }}
-                  />
-                </div>
-              </Backdrop>
-            )}
-          </>
-        )}
-      </section>
-    </>
-  );
+    <section className={s.works}>
+      <div className='container'>
+        <div className={s.works__content}>
+        <Title text = {"our works"} style={"title"} rotate={true}/>
+
+        <ul className={s.works__list}>
+          <li className={s.works__list__item}>
+            <Image
+              className={s.works__list__item__image}
+              src={course}
+              width={568}
+              height={320}
+              alt="Course"
+            ></Image>
+            <div className={s.works__list__item__description}>
+              <p className={s.works__list__item__text}> Авторский курс</p>
+            </div>
+          </li>
+          <li className={s.works__list__item}>
+            <Image
+              className={s.works__list__item__image}
+              src={portfolio}
+              width={568}
+              height={320}
+              alt="Course"
+            ></Image>
+            <div className={s.works__list__item__description}>
+              <p className={s.works__list__item__text}> Актерское порфолио</p>
+            </div>
+          </li>
+          <li className={s.works__list__item}>
+            <Image
+              className={s.works__list__item__image}
+              src={add}
+              width={568}
+              height={320}
+              alt="Course"
+            ></Image>
+            <div className={s.works__list__item__description}>
+              <p className={s.works__list__item__text}>Реклама</p>
+            </div>
+          </li>
+          <li className={s.works__list__item}>
+            <Image
+              className={s.works__list__item__image}
+              src={poetry}
+              width={568}
+              height={320}
+              alt="Course"
+            ></Image>
+            <div className={s.works__list__item__description}>
+              <p className={s.works__list__item__text}>Видео - поезия</p>
+            </div>
+          </li>
+          <li className={s.works__list__item}>
+            <Image
+              className={s.works__list__item__image}
+              src={meter}
+              width={568}
+              height={320}
+              alt="Course"
+            ></Image>
+            <div className={s.works__list__item__description}>
+              <p className={s.works__list__item__text}>Короткий метр</p>
+            </div>
+          </li>
+          <li className={s.works__list__item}>
+            <Image
+              className={s.works__list__item__image}
+              src={clip}
+              width={568}
+              height={320}
+              alt="Course"
+            ></Image>
+            <div className={s.works__list__item__description}>
+              <p className={s.works__list__item__text}>Клип</p>
+            </div>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </section>
+  )
 }
-export default Works_en;
+
+export default Works_en
