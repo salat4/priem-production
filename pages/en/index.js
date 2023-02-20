@@ -4,7 +4,7 @@ import Hero from "../../components/hero";
 import { About } from "../../components/about/aboutEN";
 import { Contacts } from "../../components/contacts/ContactEN";
 import Team from "../../components/Team/TeamSection";
-// import { HmM_en } from "../../components/HmM";
+import { HmM_en } from "../../components/HmM";
 import Partners_en from "../../components/partners/partners_en/partners_en";
 // import { PresWorks } from "../../components/PresentWork";
 import Head from "next/head";
@@ -18,7 +18,7 @@ export default function En() {
       <HeaderEn />
       <Hero />
 
-      {/* <HmM_en /> */}
+      <HmM_en />
       <About />
       <Team />
       {/* <Partners_en /> */}

@@ -1,13 +1,24 @@
 import s from "../HmM.module.css";
 import ReactPlayer from "react-player";
 import { useEffect, useState } from "react";
+import {isMobileSafari} from 'react-device-detect';
+import { isSafari } from 'react-device-detect';
+
 export default function HmM_en() {
   const [size, setSize] = useState("");
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
   const [orientation, setOrientation] = useState();
   const detect = () => {
-    setOrientation(screen.orientation.type);
+    if(isMobileSafari){
+      setOrientation(window.orientation);
+    }
+    else if(isSafari){
+      setOrientation(90)
+    }
+    else{
+      setOrientation(screen.orientation.type)
+    }
   };
   useEffect(() => {
     const oriental = window.addEventListener("resize", detect);
@@ -15,15 +26,25 @@ export default function HmM_en() {
   useEffect(() => {
     setHeight(window.innerHeight);
     setWidth(window.innerWidth);
-    setOrientation(screen.orientation.type);
+    if(isMobileSafari){
+      setOrientation(window.orientation);
+    }
+    else if(isSafari){
+      setOrientation(90)
+    }
+    else{
+      setOrientation(screen.orientation.type)
+    }
     if (height / width <= 0.59) {
       setSize("Three");
-    } else if (height / width <= 0.88) {
+    } else if (height / width <= 0.88) {z
       setSize("Two");
     } else {
       setSize("One");
     }
   }, [height, width, orientation]);
+  
+  
   return (
     <>
       <section className={`${s.HmM}`}>

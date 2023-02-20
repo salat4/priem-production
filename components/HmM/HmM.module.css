@@ -1,6 +1,4 @@
 .HmM{
-    /* position: relative; */
-    /* padding-bottom: 30px; */
     background-color: black;
 }
 .HmM__list{
@@ -8,32 +6,13 @@
 }
 
 .HmM__item{
-    /* position: sta; */
-        /* margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: auto;
-        height: auto; */
-        text-align: center;
-        position: relative;
-        justify-content: center;
-        display: flex;
-        align-items:center;
-        color: white;
-        flex-direction: column;
-        /* width: 75vw; */
-        /* width: 160px; */
-        font-family: 'Bebas Neue', cursive;
-
-    color: #ffffff;
-    text-transform: uppercase;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
     font-size: 18px;
     line-height: 22px;
+    letter-spacing: -0.045em;
+    color: #FFFFFF;
 }
 .HmM__item:last-child{
     /* padding-bottom: 300px; */
@@ -194,7 +173,7 @@
 }
 @media screen and (min-width:768px){
     .HmM__item{
-        font-size: 40px;
+        /* font-size: 40px; */
     }
 
     .HmM__item:not(:last-child){
@@ -204,7 +183,7 @@
         margin-bottom: 20px;
     }
     .HmM__item>p{
-        font-size: 50px;
+        /* font-size: 50px; */
         margin-bottom: 30px; 
     }
 }
