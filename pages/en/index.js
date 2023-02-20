@@ -8,7 +8,7 @@ import Team from "../../components/Team/TeamSection";
 // import Partners_en from "../../components/partners/partners_en/partners_en";
 // import { PresWorks } from "../../components/PresentWork";
 import Head from "next/head";
-
+import Works_en from "../../components/works/works_en/works_en";
 export default function En() {
   return (
     <>
@@ -23,6 +23,7 @@ export default function En() {
       <Team />
       {/* <Partners_en /> */}
       {/* <PresWorks /> */}
+      <Works_en/>
       <Contacts />
       <footer id="footer">
         <Footer_en />
