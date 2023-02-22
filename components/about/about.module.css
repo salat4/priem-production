@@ -95,7 +95,6 @@
 } */
 
 @media screen and (min-width: 1280px) {
-
     .contentContainer {
         position: relative;
       }
@@ -124,4 +123,5 @@
     background-repeat: no-repeat;
     padding-top: 117px;
     padding-bottom: 117px;
+    background-color: black;
 }

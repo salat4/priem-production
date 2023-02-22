@@ -1,0 +1,18 @@
+.section {
+    background-color: black;
+    background-image: url("../../../images/forAct-backG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 115px;
+    padding-bottom: 115px;
+}
+
+.attentionText {
+    font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #B00000;
+}

@@ -1,3 +1,3 @@
-import { About } from "./About";
+import { About } from "./aboutEN";
 
 export default About;
