@@ -1,3 +1,30 @@
+.headerSection {
+    position: relative;
+    padding-top: 8px;
+    width: 100%;
+    z-index: 1;
+}
+
+    .headerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logoContainer {
+        width: 22px;
+        height: 29px;
+    }
+
+    .burgetMenuButton {
+        width: 21px;
+        height: 21px;
+    }
+
+.navigationMenuList {
+    display: none;
+}
+
 /* @media screen and (max-width: 767px) {
     .headerSection {
         width: 100%;
