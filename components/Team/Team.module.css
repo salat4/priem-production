@@ -1,4 +1,70 @@
 .teamSection {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(180deg, #050402 0%, #222222 99.84%);
+}
+
+.sectionContainer {
+    position: relative;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContainer {
+  margin-top: 16px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    font-variant: small-caps;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.position {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    text-transform: uppercase;
+    color: #B00000;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.descriptionContainer {
+   margin-top: 26px;
+}
+
+.descriptionContainer>p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-variant: small-caps;
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 1280px) {
+.teamSection {
     padding-top: 85px;
     padding-bottom: 122px;
     background: linear-gradient(180deg, #050402 0%, #222222 99.84%);
@@ -62,4 +128,7 @@ font-family: 'Inter';
 
 .descriptionContainer>p:first-child {
    margin-bottom: 20px;
+}
+
+    
 }

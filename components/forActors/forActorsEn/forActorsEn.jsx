@@ -11,20 +11,20 @@ export default function ForActorsEn() {
         <div className={`${s.contentContainer}`}>
           <Title text={"For actors"} style={"title"} rotate={true} />
           <p className={`${s.textAbout}`}>
-            Актёрское портфолио является основополагающим рабочим материалом при
-            сотрудничестве с кастинг-директорами, режиссерами и агентом. Ведь
-            это единственная возможность увидеть вас в кинокадре, прежде чем
-            познакомиться лично.
+            An actor’s portfolio is the fundamental working material when
+            cooperating with casting directors, directors and an agent. After
+            all, this is the only opportunity to see you on camera before
+            meeting you in person.
           </p>
           <p className={`${s.textAbout}`}>
-            <span className={ss.attentionText}>PRIËM PRODUCTION</span>{" "}
-            предоставляет пакеты услуг с частичным или полным портфолио. Мы
-            знаем рынок кинематографа изнутри и знаем, на что именно обращают
-            внимание кастинг-директора, и режиссеры на этапе отбора и готовы
-            поработать с тобой лично над твоей подачей, уверенностью в кадре и
-            создать качественные материалы.
+            <span className={ss.attentionText}>PRIËM PRODUCTION </span>
+            provides packages with partial or full portfolios. We know the
+            filmmaking market from the inside and know exactly what casting
+            directors and directors pay attention to at the casting stage and we
+            are willing to work with you personally on your presentation,
+            confidence on camera and create high-quality material.
           </p>
-          <Button text={"Оставить заявку"} />
+          <Button text={"Read more"} />
         </div>
       </div>
     </section>

@@ -1,61 +1,41 @@
-/* @media screen and (min-width: 320px) {
-  .team_list {
-    justify-content: center;
-   display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+ @media screen and (min-width: 360px) {
+.aboutSection {
+    background-image: url('../../images/About-back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
   }
 
-  .card_team {
-    width: 100%;
-    margin-bottom: 30px;
-    max-width: 302px;
-    padding-left: 16px;
-    padding-right: 16px;
+  .contentContainer {
+    position: relative;
   }
 
-  .text_wrap {
-    margin-top: 7px;
+  .contentContainer > p:nth-child(3) {
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 
-  .role_p {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 20px;
-    line-height: 1.2;
-    font-weight: normal;
-    text-align: center;
-    letter-spacing: 2px;
-    margin-bottom: 3px;
-    color: #fff;
-  }
-
-  .name_p {
-    font-family: 'Bebas Neue', cursive;
-    font-weight: bold;
-    word-spacing: 100vw;
-    font-size: 30px;
-    line-height: 1;
-    text-align: center;
-    letter-spacing: 3px;
-    margin: 0 0 0 -1px;
-    color: #fff;
+  .contentContainer > p:nth-child(2) {
+    margin-top: 26px;
   }
 
   .textAbout {
-    font-family: 'Bebas Neue', cursive;
-    text-align: center;
-    letter-spacing: 4px;
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 28px;
-    margin: 0 auto; 
-    padding: 0px 15px 0px 15px;
-    color: #fff;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: start;
+  font-variant: small-caps;
+  color: #FFFFFF;
   }
+  
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
 
   .containerFotoCreators {
     margin-bottom: 50px;
@@ -92,7 +72,7 @@
     font-size: 38px;
     line-height: 40px;
   }
-} */
+}  */
 
 @media screen and (min-width: 1280px) {
     .contentContainer {
@@ -114,14 +94,4 @@
   font-variant: small-caps;
   color: #FFFFFF;
   }
-}
-
- .aboutSection {
-  background-image: url('../../images/About-back.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 117px;
-    padding-bottom: 117px;
-    background-color: black;
 }

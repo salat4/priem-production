@@ -1,4 +1,4 @@
-import MobileMenu from "../../../images/burger-menu.svg";
+import MobileMenu from "../../../images/burger-menu.png";
 // import LogoHeader from "../../../images/Logo.png";
 import LogoHeader from "../../../images/Logo.png";
 import s from "./HeaderEn.module.css";
@@ -66,18 +66,18 @@ export default function HeaderEn() {
       <header className={s.headerSection}>
         <div className="container">
           <div className={s.headerContainer}>
-            <button
-              className={s.burgetMenuButton}
-              onClick={() => setShow("show")}
-            >
-              <Image src={MobileMenu} alt="Menu" />
-            </button>
-            <button className={animLogo ? s.animationLogo : s.logoContainer}>
+            <button className={s.logoContainer}>
               <Link href="/en" passHref>
                 <a>
                   <Image src={LogoHeader} alt="Logo in header" priority />
                 </a>
               </Link>
+            </button>
+            <button
+              className={s.burgetMenuButton}
+              onClick={() => setShow("show")}
+            >
+              <Image src={MobileMenu} alt="Menu" />
             </button>
             <ul className={s.navigationMenuList}>
               <li>
