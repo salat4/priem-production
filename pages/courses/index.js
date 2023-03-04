@@ -1,20 +1,21 @@
-import { FormSubscribe } from "@/general";
-import { Backdrop } from "@/general";
-import { toggleBackdrop } from "@/general";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import ss from "@/general/mobileMenu/mobMenu.module.css";
+// import Image from "next/image";
+// import ss from "@/generalFunc/mobileMenu/mobMenu.module.css";
 import s from "./courses.module.css";
-import { Header } from "@/general";
+import {
+  Header,
+  Button,
+  Title,
+  Contacts,
+  isSectionOutOfView,
+  toggleBackdrop,
+  FormSubscribe,
+} from "@/generalFunc";
 import "../../18next";
-import { Button } from "@/general";
-import { Title } from "@/general";
-import { Contacts } from "@/general";
 import { useTranslation } from "react-i18next";
 import BasicImage from "@/images/background/Basic.png";
 import ProImage from "@/images/background/Pro.png";
 import VipImage from "@/images/background/Vip.png";
-import { isSectionOutOfView } from "@/general";
 import {
   BasicCard,
   VipCard,

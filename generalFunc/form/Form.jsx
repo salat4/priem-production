@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Backdrop } from "@/general";
+import { Backdrop } from "@/generalFunc";
 import s from "./Form.module.css";
 
 function FormSubscribe({ toggleShowBackdrop, course }) {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import s from "../about/about.module.css";
 import ss from "./forActors.module.css";
-import { FormSubscribe, toggleBackdrop, Title, Button } from "@/general";
+import { FormSubscribe, toggleBackdrop, Title, Button } from "@/generalFunc";
 import { useTranslation } from "react-i18next";
 
 function ForActors() {

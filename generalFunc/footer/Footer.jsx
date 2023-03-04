@@ -7,7 +7,7 @@ import facebook from "@/images/icons/facebook.png";
 import instagram from "@/images/icons/instagram.png";
 import youtube from "@/images/icons/youtube.png";
 // import container from "../../../styles/globals.css"
-import { Button } from "@/general";
+import { Button } from "@/generalFunc";
 import { useTranslation } from "react-i18next";
 
 function Footer() {

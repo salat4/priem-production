@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import textCard from "@/locales/en/translation.json";
-import { Button } from "@/general";
+import { Button } from "@/generalFunc";
 import s from "./card.module.css";
 import "animate.css";
 import { useTranslation } from "react-i18next";

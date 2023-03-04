@@ -1,4 +1,4 @@
-import { Header } from "@/general";
+import { Header } from "@/generalFunc";
 // import Works_en from "../../components/works/works_en/works_en";
 // import Footer_en from "../../components/footer/footer_en/footer_en";
 // import { Contacts } from "../../components/contacts/ContactEN";

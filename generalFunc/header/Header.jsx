@@ -7,7 +7,7 @@ import {
   Backdrop,
   scrollToSection,
   toggleBackdrop,
-} from "@/general";
+} from "@/generalFunc";
 import LogoHeader from "@/images/background/Logo.png";
 import MobileBurgerMenu from "@/images/icons/burger-menu.png";
 import s from "./Header.module.css";

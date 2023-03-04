@@ -1,6 +1,6 @@
 import s from "./about.module.css";
 import { useTranslation } from "react-i18next";
-import { FormSubscribe, toggleBackdrop, Title, Button } from "@/general";
+import { FormSubscribe, toggleBackdrop, Title, Button } from "@/generalFunc";
 import { useState } from "react";
 
 function About() {

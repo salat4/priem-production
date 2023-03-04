@@ -1,5 +1,5 @@
 import React from "react";
-import { Title } from "@/general";
+import { Title } from "@/generalFunc";
 import s from "../works.module.css";
 import Image from "next/image";
 import course from "@/images/course.png";

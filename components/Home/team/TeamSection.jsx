@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Ira from "@/images/co-founders/teamIra.png";
 import Gleb from "@/images/co-founders/teamGleb.png";
-import { Title } from "@/general";
+import { Title } from "@/generalFunc";
 import s from "./Team.module.css";
 import Partners from "../partners/partners";
 import { useTranslation } from "react-i18next";

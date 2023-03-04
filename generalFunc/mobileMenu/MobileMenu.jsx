@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { scrollToSection } from "@/general";
+import { scrollToSection } from "@/generalFunc";
 import Text from "@/images/background/Text-rotate-mobile.png";
 import s from "./mobMenu.module.css";
 import Image from "next/image";

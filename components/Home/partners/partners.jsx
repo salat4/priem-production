@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Title } from "@/general";
+import { Title } from "@/generalFunc";
 import s from "./partners.module.css";
 import Yuri from "@/images/Yuri.png";
 import Alisa from "@/images/Alisa.png";
