@@ -1,7 +1,8 @@
   html, body {
     box-sizing: border-box;
+    overflow-y: scroll;
     scroll-behavior: smooth;
-        margin: 0;
+    margin: 0;
        
         /* scrollbar-color: #6969dd #e0e0e0;
           scrollbar-width: thin; */
@@ -124,11 +125,44 @@ font-family: 'Inter';
   font-size: 16px;
   line-height: 19px;
   color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.buttonUp {
+  opacity: 0;
+}
+
+.buttonUpActive {
+  position: fixed;
+  right: 5px;
+  border-radius: 50%;
+  background: rgba(227, 6, 19, 0.60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  width: 27px;
+  height: 27px;
+  padding: 5px;
+  margin-top: 2px;
+  animation: showUp .6s linear forwards;
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
   
 @media screen and (min-width: 360px) {
   .container {
-    width: 360px;
+    min-width: 360px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
@@ -157,7 +191,6 @@ font-family: 'Inter';
 .title {
   z-index: 1;
   position: relative;
-  /* position: absolute; */
   text-transform: uppercase;
   font-family: 'Montserrat';
   font-style: normal;
@@ -166,15 +199,13 @@ font-family: 'Inter';
   line-height: 22px;
   text-transform: uppercase;
   color: #FFFFFF;
-  /* right: 0;
-  top: 0; */
 }
 
 }
 
 @media screen and (min-width: 800px) {
   .container {
-    width: 800px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
@@ -184,18 +215,18 @@ font-family: 'Inter';
 
 @media screen and (min-width: 1280px) {
   .container {
-    width: 1170px;
+    max-width: 1450px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 
   .titleContainer {
   position: absolute;
   z-index: 1;
   top: 20px;
-  left: -110px;
+  left: -100px;
   width: 200px;
   height: 160px;
   transform: rotate(-90deg);
