@@ -8,6 +8,7 @@ import Denis from "@/images/Denis.png";
 import Ruslan from "@/images/Ruslan.png";
 import Vladimir from "@/images/Vladimir.png";
 import { useTranslation } from "react-i18next";
+
 function Partners() {
   const { t } = useTranslation("translation");
   return (

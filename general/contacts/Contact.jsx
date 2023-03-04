@@ -1,17 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import Backdrop from "../Backdrop";
-import toggleBackdrop from "../toggleBackdrop";
 import Phone from "@/images/icons/Telephone.svg";
 import Insta from "@/images/icons/instagram.svg";
-import Language from "@/images/icons/earth.svg";
 import EmailTwo from "@/images/icons/Email-hover.svg";
 import arrow from "@/images/icons/arrowUp.png";
 import isSectionOutOfView from "../viewSection";
 import s from "./contact.module.css";
 import { throttle } from "throttle-debounce";
-import ss from "@/general/mobileMenu/mobMenu.module.css";
 
 import {
   INSTAGRAM,

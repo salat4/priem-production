@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MobileMenu } from "@/general";
-import { Backdrop } from "@/general";
-import { scrollToSection } from "@/general";
-import { toggleBackdrop } from "@/general";
+import {
+  MobileMenu,
+  Backdrop,
+  scrollToSection,
+  toggleBackdrop,
+} from "@/general";
 import LogoHeader from "@/images/background/Logo.png";
 import MobileBurgerMenu from "@/images/icons/burger-menu.png";
 import s from "./Header.module.css";

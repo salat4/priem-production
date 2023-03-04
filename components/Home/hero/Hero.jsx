@@ -1,8 +1,6 @@
-import Image from "next/image";
 // import Link from "next/link";
 // import { useRouter } from "next/router";
 // import { useEffect, useState } from "react";
-import HeroText from "@/images/background/HeroText.png";
 import s from "./Hero.module.css";
 
 function Hero() {
