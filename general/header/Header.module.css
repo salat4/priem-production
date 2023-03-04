@@ -1,0 +1,145 @@
+.headerSection {
+    position: absolute;
+    padding: 20px 0px 0px 0px;
+    width: 100%;
+    z-index: 1;
+    scroll-behavior: smooth;
+}
+
+    .headerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logoContainer {
+        width: 22px;
+        height: 29px;
+    }
+
+    .burgetMenuButton {
+        width: 21px;
+        height: 21px;
+    }
+
+.navigationMenuList {
+    display: none;
+}
+
+/* --------- HEADER TABLET ----------- */
+
+@media screen and (min-width: 800px) {
+    .headerSection {
+        width: 100%;
+        padding: 30px 5px 20px 20px;
+        z-index: 1;
+    }
+
+    .navigationMenuList {
+        display: flex;
+        align-items: center;
+        background: #252525;      
+        padding: 20px 28px;
+    }
+
+    .navigationMenuList>li:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    .navigationMenuList>li>a {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    }
+
+    .navigationMenuList>li>button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    }
+
+    .burgetMenuButton {
+        display: none;
+    }
+
+    .logoContainer {
+        width: 38px;
+        height: 50px;
+    }
+
+    .animationLogo {
+        display: none;
+    }
+} 
+
+@media screen and (min-width: 1280px) {
+    .headerSection {
+        width: 100%;
+        padding: 30px 5px 10px 0px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .headerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .burgetMenuButton {
+        display: none;
+    }
+
+    .logoContainer {
+        width: 67px;
+        height: 89px;
+    }
+
+    .navigationMenuList {
+        display: flex;
+        align-items: center;
+        background: #252525;      
+        padding: 20px 28px;
+    }
+
+    .navigationMenuList>li:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    .navigationMenuList>li>a {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    }
+
+    .navigationMenuList>li>button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    }
+
+    .navigationMenuList>li>a:hover {
+        color: rgb(196, 4, 4);
+    }
+
+    .navigationMenuList>li>button:hover {
+        color: rgb(196, 4, 4);
+    }
+
+}

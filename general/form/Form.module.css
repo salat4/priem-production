@@ -1,0 +1,106 @@
+.formContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-color: #A6010B;
+    border-radius: 5px;
+    padding: 128px 89px 123px 89px;
+}
+
+.subscribe_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe_form__input {
+    background: transparent;
+    outline: none;
+    border: none;
+    height: 25px;
+border-bottom: 1px solid #fff;
+padding: 4px 6px;
+color: #fff;
+}
+
+.subscribe_form__input:first-child {
+    background: transparent;
+    max-width: 265px;
+    height: 25px;
+    outline: none;
+    border: none;
+    padding: 4px 6px;
+    border-bottom: 1px solid #fff;
+   margin-bottom: 26px;
+}
+
+.subscribe_form__input::placeholder {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: rgba(244, 244, 244, 0.4);
+}
+
+.buttonForm {
+background: #FFFFFF;
+    border-radius: 5px;
+    padding: 11px 61px;
+    margin-top: 43px;
+    width: 163px;
+}
+
+/* .btn {
+    letter-spacing: 1.5px;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 154px;
+    height: 52px;
+    background: transparent;
+    border-radius: -27px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.btn {
+    font-size: 24px;
+    line-height: 24px;
+    width: fit-content;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+} */
+
+/* .subscribe_form__input::placeholder {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.subscribe_form {
+    display: flex;
+    justify-content: center;
+    margin-top: 66px;
+}
+
+.subscribe_form {
+    margin-top: 168px;
+}
+
+.subscribe_form__input {
+    width: 400px;
+}
+
+.subscribe_form__input::placeholder {
+    font-size: 28px;
+    line-height: 35px;
+}
+
+.btn {
+    width: 217px;
+    font-size: 28px;
+    line-height: 35px;
+} */

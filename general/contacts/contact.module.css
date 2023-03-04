@@ -1,0 +1,78 @@
+.socialList {
+  position: fixed;
+  right: 5px;
+  bottom: 0;
+  animation: down .6s linear forwards;
+}
+
+.socialListAnim {
+  position: fixed;
+  right: 5px;
+  bottom: 0;
+  animation: up .4s linear forwards;
+}
+
+@keyframes down {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+      transform: translateY(-40px);
+  }
+}
+
+.socialItem {
+  margin-bottom: 10px;
+}
+
+.socialItem:hover > a {
+  transform: scale(1.2);
+}
+
+.socialItem > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  color: #fff;
+}
+
+.socialItemLang {
+  position: relative;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.socialItemLang:hover > span {
+  transform: scale(1.2);
+}
+
+.socialItemLang:hover  .ChangeLangButtonContainer {
+    position: absolute;
+      right: 30px;
+      top: 25%;
+      display: flex;
+      align-items: center;
+}
+
+.changeLangButton {
+      font-family: 'Intro';
+        color: rgb(223, 218, 218);
+        font-size: 16px;
+        letter-spacing: 2px;
+  padding: 5px;
+  text-transform: uppercase;
+}

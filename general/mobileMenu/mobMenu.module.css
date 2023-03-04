@@ -1,0 +1,108 @@
+.menuContainer--show {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+.menuContainer--show {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0px;
+        width: 224px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 30px;
+        padding-left: 60px;
+        background: #222222;
+        animation: .2s linear menu;
+        z-index: 10;
+        overflow-y: scroll;
+    }
+
+    @keyframes menu {
+        from {
+            right: -256px;
+        }
+
+        to {
+            right: 0;
+        }
+    }
+
+    .menuContainer--close {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -256px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: black;
+        z-index: 1;
+        animation: 0.2s linear close;
+    }
+
+    .menuContainer--one {
+        display: none;
+    }
+
+    @keyframes close {
+        from {
+            right: 0;
+        }
+
+        to {
+            right: -256px;
+        }
+    }
+
+    .menuList {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menuItem:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .menuItem>a {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    }
+
+    .menuItem>button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    }
+
+.textContainer {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    bottom: 0;
+    transform-origin: right top;
+}
+
+.textContainer > span {
+   width: 60px !important;
+   position: static !important;
+}
+
+.textImage {
+    width: 100%;
+    min-height: 100%;
+}
+}

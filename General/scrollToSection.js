@@ -2,12 +2,12 @@ export default function scrollToSection(e) {
   const { id } = e.target;
   if (document) {
     let hookForAboutSection = document.getElementById("about");
-    let hookForContactsSection = document.getElementById("contacts");
+    let hookForTeamSection = document.getElementById("team");
 
-    if (!hookForAboutSection || !hookForContactsSection) return;
+    if (!hookForAboutSection || !hookForTeamSection) return;
 
     switch (id) {
-      case "aboutButton":
+      case "toAbout":
         hookForAboutSection.scrollIntoView({
           block: "start",
           behavior: "smooth",
@@ -15,9 +15,9 @@ export default function scrollToSection(e) {
 
         break;
 
-      case "contactsButton":
-        hookForContactsSection.scrollIntoView({
-          block: "center",
+      case "toTeam":
+        hookForTeamSection.scrollIntoView({
+          block: "start",
           behavior: "smooth",
         });
 

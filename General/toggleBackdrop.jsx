@@ -1,7 +1,6 @@
 function toggleBackdrop(e) {
-  console.log(e);
-  const { id } = e.target;
-  if (e.key === "Escape" || id === "close") {
+  const { close } = e.target.dataset;
+  if (e.key === "Escape" || close === "close") {
     return false;
   }
 }

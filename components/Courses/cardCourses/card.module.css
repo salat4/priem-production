@@ -1,0 +1,202 @@
+/* ----- BASIC MOBILE -----  */
+
+.card {
+    margin-top: 20px;
+    width: 323px;
+    border: 1px solid rgba(252, 249, 249, 0.35);
+}
+
+.card:not(:first-child) {
+    margin-top: 15px;
+}
+
+.cardImageContainer {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: center;
+}
+
+.optionsForCard {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #D2D2D2;
+    padding: 5px 5px 32px 5px;
+    /* min-height: 786px; */
+}
+
+.activeBasic {
+    color: #D2D2D2;
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 12px;
+}
+
+.activeBasic::before {
+    content: url("../../../images/icons/BasicPlus.png");
+    position: absolute;
+    left: -25px;
+}
+
+.activeBasic>span:first-child {
+    color: #D2D2D2;
+}
+
+.hidden {
+    display: block;
+    position: relative;
+    color: #616161;
+    margin-left: 25px;
+}
+
+.hidden:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.hidden::before {
+    content: url("../../../images/icons/Minus.png");
+    position: absolute;
+    left: -25px;
+}
+
+.separatorBasic {
+    height: 1px;
+    background-color: #999;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.additionalBasic {
+    color: #D2D2D2;
+}
+
+.additionalBasic:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.additionalBasic>span {
+    color: #fff;
+}
+
+.additional {
+    margin-bottom: 28px;
+}
+
+.additionalPointHidden {
+opacity: 0;
+}
+
+/* ----- BASIC TABLET -----  */
+
+@media screen and (min-width: 800px) {
+.card {
+    width: 410px;
+    margin-top: 30px;
+}
+
+.card:not(:first-child) {
+    margin-top: 42px;
+}
+
+.optionsForCard {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.optionsForCard {
+    padding: 15px 12px 35px 12px;
+}
+}
+
+/* ----- BASIC DESKTOP -----  */
+
+@media screen and (min-width: 1280px) {
+.card {
+    position: relative;
+            margin-top: 0;
+        }
+.card:not(:first-child) {
+        margin-top: 0px;
+    }
+.card:not(:last-child) {
+    margin-right: 40px;
+}
+}
+
+/* ----- PRO MOBILE -----  */
+
+.activePro {
+    color: #D2D2D2;
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 12px;
+}
+
+.activePro::before {
+    content: url("../../../images/icons/ProPlus.png");
+    position: absolute;
+    left: -25px;
+}
+
+.activePro>span:first-child {
+    color: #0b20dd;
+}
+
+.separatorPro {
+    height: 1px;
+    background-color: #5681EF;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.additionalPro {
+    color: #D2D2D2;
+}
+
+.additionalPro:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.additionalPro>span {
+    color: #0b20dd;
+}
+
+/* ----- VIP MOBILE -----  */
+
+.activeVip {
+    color: #D2D2D2;
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 12px;
+}
+
+.activeVip::before {
+    content: url("../../../images/icons/VipPlus.png");
+    position: absolute;
+    left: -25px;
+}
+
+.activeVip>span:first-child {
+    color: #890801;
+}
+
+.separatorVip {
+    height: 1px;
+    background-color: #9E1821;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.additionalVip {
+    color: #D2D2D2;
+}
+
+.additionalVip:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.additionalVip>span {
+    color: #9E1821;
+}
