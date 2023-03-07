@@ -27,7 +27,7 @@ export default function Home() {
       {/* <Partners_en /> */}
       {/* <PresWorks /> */}
       {/* <Works_en /> */}
-      <Contacts />
+      {/* <Contacts /> */}
       {/* <footer id="footer">
         <Footer_en />
       </footer> */}

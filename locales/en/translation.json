@@ -75,6 +75,15 @@
     },
     "buttonLeave": "Leave a request",
     "buttonMore": "Read more ",
-    "form": {},
+    "form": {
+        "buttonSend": "Send",
+        "errorName": "Only letters",
+        "errorPhone": "Only numbers",
+        "errorPhoneCode": "Code country is required",
+        "placeholderName": "Name",
+        "requiredField": "This field is required",
+        "requestSuccessResult": "Thank you, we will call you back",
+        "requestRejectedResult": "Ooops, something is wrong. Please try again later"
+    },
     "worksPage": {}
 }
