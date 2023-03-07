@@ -2,26 +2,70 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Backdrop } from "@/generalFunc";
 import s from "./Form.module.css";
+import { useTranslation } from "react-i18next";
+import { leaverRequest } from "../../API/leaveRequest";
 
 function FormSubscribe({ toggleShowBackdrop, course }) {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userPhone, setUserPhone] = useState("");
+  const [errorMessageName, setErrorMessageName] = useState("");
+  const [errorMessagePhone, setErrorMessagePhone] = useState("");
+  const [requestResult, setRequestResult] = useState("");
 
-  const sendSubscribe = (e) => {
+  const { t } = useTranslation("translation");
+
+  const sendSubscribe = async (e) => {
     e.preventDefault();
-    if (!name || !phone) {
+    if (!userName) {
+      setErrorMessageName(t("form.requiredField"));
       return;
     }
-    // axios
-    //   .post("http://localhost:8080/submit", {
-    //     phone,
-    //     name,
-    //     course,
-    //   })
-    //   .then((res) => console.log(res));
-    setName("");
-    setPhone("");
-    toggleShowBackdrop(e);
+    if (!userPhone) {
+      setErrorMessagePhone(t("form.requiredField"));
+      return;
+    }
+    if (userPhone[0] !== "+") {
+      setErrorMessagePhone(t("form.errorPhoneCode"));
+      return;
+    }
+    try {
+      await leaverRequest({ userName, userPhone, course });
+      setRequestResult(t("form.requestSuccessResult"));
+    } catch (error) {
+      setRequestResult(t("form.requestRejectedResult"));
+    }
+    setUserName("");
+    setUserPhone("");
+  };
+
+  const handleChangeUserInfo = (e) => {
+    const { value, name } = e.target;
+    switch (name) {
+      case "name":
+        if (/^[а-яА-ЯёЁa-zA-ZіІїЇґҐєЄ]+$/.test(value) || !value) {
+          setUserName(value);
+          setErrorMessageName("");
+          return;
+        }
+        setErrorMessageName(t("form.errorName"));
+        break;
+      case "phone":
+        if (/^[+\d]+$/.test(value) || !value) {
+          setUserPhone(value);
+          if (value[0] !== "+") {
+            setErrorMessagePhone(t("form.errorPhoneCode"));
+            return;
+          }
+          setErrorMessagePhone("");
+          return;
+        }
+        setErrorMessagePhone(t("form.errorPhone"));
+
+        break;
+
+      default:
+        break;
+    }
   };
 
   useEffect(() => {
@@ -36,33 +80,41 @@ function FormSubscribe({ toggleShowBackdrop, course }) {
       <div className={s.formContainer}>
         <form
           onSubmit={sendSubscribe}
-          className={s.subscribe_form}
+          className={s.form}
           autoComplete="off"
           data-close="close"
         >
-          <input
-            className={s.subscribe_form__input}
-            type="text"
-            placeholder="Name"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-          />
-          <input
-            className={s.subscribe_form__input}
-            type="tel"
-            placeholder="Phone"
-            onChange={(e) => setPhone(e.target.value)}
-            value={phone}
-          />
-          <button
-            className={s.buttonForm}
-            type="submit"
-
-            // onClick={toggleShowBackdrop}
-          >
-            Send
+          <label className={s.labelForm}>
+            <input
+              className={`${s.formInput} ${s.formInputName}`}
+              type="text"
+              placeholder={t("form.placeholderName")}
+              onChange={handleChangeUserInfo}
+              value={userName}
+              name="name"
+            />
+            <span className={s.errorMessage}>
+              {errorMessageName && errorMessageName}
+            </span>
+          </label>
+          <label className={s.labelForm}>
+            <input
+              className={`${s.formInput} ${s.formInputPhone}`}
+              type="tel"
+              placeholder="+ xxx xxxxxxxx"
+              onChange={handleChangeUserInfo}
+              value={userPhone}
+              name="phone"
+            />
+            <span className={s.errorMessage}>
+              {errorMessagePhone && errorMessagePhone}
+            </span>
+          </label>
+          <button className={s.buttonForm} type="submit">
+            {t("form.buttonSend")}
           </button>
         </form>
+        <p className={s.resultRequestMessage}>{requestResult}</p>
       </div>
     </Backdrop>
   );

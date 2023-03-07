@@ -76,6 +76,15 @@
     },
     "buttonLeave": "Оставить заяку",
     "buttonMore": "Подробнее",
-    "form": {},
+    "form": {
+        "buttonSend": "Отправить",
+        "errorName": "Только буквы",
+        "errorPhone": "Только цифры",
+        "errorPhoneCode": "Код страны обязательно",
+        "placeholderName": "Имя",
+        "requiredField": "Это поле обязательно к заполнению",
+        "requestSuccessResult": "Спасибо, мы вам перезвоним",
+        "requestRejectedResult": "Что - то пошло не так:( Пожалуйста, попробуйте позже"
+    },
     "worksPage": {}
 }

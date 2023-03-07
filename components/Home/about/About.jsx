@@ -29,7 +29,9 @@ function About() {
           <p className={`${s.textAbout}`}>
             {t("homePage.section.about.text.secondary")}
           </p>
-          <Button showForm={() => setShowForm(true)} text={t("buttonLeave")} />
+          <Button style="buttonForm" showForm={() => setShowForm(true)}>
+            {t("buttonLeave")}
+          </Button>
         </div>
       </div>
       {showForm && <FormSubscribe toggleShowBackdrop={toggleShowBackdrop} />}

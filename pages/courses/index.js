@@ -68,7 +68,9 @@ function PageCourses() {
             rotate="false"
           />
           <p className={s.description}>{t("coursesPage.description")}</p>
-          <Button showForm={() => setShowForm(true)} text={t("buttonLeave")} />
+          <Button style={"buttonForm"} showForm={() => setShowForm(true)}>
+            {t("buttonLeave")}
+          </Button>
 
           <div className={s.cardContainer}>
             <BasicCard openForm={openForm} image={BasicImage} />

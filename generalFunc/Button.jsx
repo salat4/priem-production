@@ -1,7 +1,7 @@
-function Button({ text, showForm, id }) {
+function Button({ children, showForm, id, style }) {
   return (
-    <button id={id} onClick={showForm} className="buttonForm">
-      {text}
+    <button id={id} onClick={showForm} className={style}>
+      {children}
     </button>
   );
 }
