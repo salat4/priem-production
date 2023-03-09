@@ -14,6 +14,7 @@ function Team() {
         <div className="container">
           <div className={s.sectionContainer}>
             <Title
+              styleAll = {s}
               text={t("homePage.section.team.title")}
               style="title"
               rotate={true}

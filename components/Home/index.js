@@ -5,5 +5,5 @@ import Partners from "./partners/partners";
 import PresWorks from "./presentWork/PresWorks";
 import Team from "./team/TeamSection";
 import ForActors from "./forActors/forActors";
-
-export { About, Hero, HmM, Partners, PresWorks, Team, ForActors };
+import Works from "./Works/Works"
+export { About, Hero, HmM, Partners, PresWorks, Team, ForActors, Works };

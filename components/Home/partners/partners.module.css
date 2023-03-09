@@ -17,7 +17,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-wrap: wrap; */
 }
 .partners__list__item{
 display: flex;
@@ -58,4 +57,41 @@ flex-direction: column;
     text-transform: uppercase;
     
     color: #B00000;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    flex-direction: column;
+
+}
+.name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: justify;
+    font-variant: small-caps;
+
+    color: #FFFFFF;
+    margin-top: 11px;
+    margin-bottom: 6px;
+}
+.position{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    
+    text-align: justify;
+    text-transform: uppercase;
+    
+    color: #B00000;
+
 }
