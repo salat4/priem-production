@@ -1,16 +1,13 @@
-// import Footer_en from "@/components/footer/footer_en/footer_en";
 import { Hero } from "@/components/Home";
 import { About } from "@/components/Home";
 import { Contacts, Header } from "@/generalFunc";
 import { Team } from "@/components/Home";
 import { ForActors } from "@/components/Home";
-// import { HmM_en } from "@/components/HmM";
-// import Partners_en from "@/components/partners/partners_en/partners_en";
-// import { PresWorks } from "../../components/PresentWork";
+import {Works} from '@/components/Home'
+// import * as Home from "@/components/Home"
 import Head from "next/head";
-// import Works_en from "@/components/works/works_en/works_en";
 import "../18next";
-
+import {Footer} from "@/generalFunc"
 export default function Home() {
   return (
     // <I18nextProvider i18n={i18next}>
@@ -18,19 +15,19 @@ export default function Home() {
       <Head>
         <title>Priem production</title>
       </Head>
-      <Header />
-      <Hero />
-      {/* <HmM_en /> */}
-      <About />
+      {/* <Header /> */}
+      {/* <Hero /> */}
+      {/* <HmM/> */}
+      {/* <About /> */}
       <Team />
-      <ForActors />
+      {/* <ForActors /> */}
       {/* <Partners_en /> */}
       {/* <PresWorks /> */}
-      {/* <Works_en /> */}
-      <Contacts />
-      {/* <footer id="footer">
-        <Footer_en />
-      </footer> */}
+      <Works />
+      {/* <Contacts /> */}
+      <footer id="footer">
+        <Footer />
+      </footer>
     </>
     // </I18nextProvider>
   );

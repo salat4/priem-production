@@ -1,7 +1,7 @@
-function Title({ text, ...props }) {
+function Title({ text, style , styleAll}) {
   return (
-    <div className={props.rotate ? "titleContainer" : "titleContainerRow"}>
-      <span className={props.style}>{text}</span>
+    <div className={styleAll.container__tilte}>
+      <span className={style}>{text}</span>
     </div>
   );
 }
