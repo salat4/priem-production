@@ -28,6 +28,7 @@ export default function Home() {
       <footer id="footer">
         <Footer />
       </footer>
+
     </>
     // </I18nextProvider>
   );

@@ -100,11 +100,9 @@ export const BasicCard = ({ image, openForm }) => {
               - {t("coursesPage.card.23")}
             </p>
           </div>
-          <Button
-            id="Basic course"
-            showForm={openForm}
-            text={t("buttonLeave")}
-          />
+          <Button style={"buttonForm"} id="Basic course" showForm={openForm}>
+            {t("buttonLeave")}
+          </Button>
         </div>
       )}
     </div>
@@ -203,7 +201,9 @@ export const ProCard = ({ image, openForm }) => {
                 );
               })}
           </div>
-          <Button id="Pro course" showForm={openForm} text={t("buttonLeave")} />
+          <Button style={"buttonForm"} id="Pro course" showForm={openForm}>
+            {t("buttonLeave")}
+          </Button>
         </div>
       )}
     </div>
@@ -289,7 +289,9 @@ export const VipCard = ({ image, openForm }) => {
                 );
               })}
           </div>
-          <Button id="Vip course" showForm={openForm} text={t("buttonLeave")} />
+          <Button style={"buttonForm"} id="Vip course" showForm={openForm}>
+            {t("buttonLeave")}
+          </Button>
         </div>
       )}
     </div>

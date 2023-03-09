@@ -34,49 +34,25 @@
   
 }
 
-/* @media screen and (min-width: 768px) {
-
-  .containerFotoCreators {
-    margin-bottom: 50px;
+@media screen and (min-width: 800px) {
+.aboutSection {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
-
-  .team_list {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .card_team {
-    margin-bottom: 0px;
-  }
-
-  .card_team:first-child {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .text_wrap {
-    margin-top: 0px;
-  }
-
- .role_p {
-   font-size: 22px;
- }
-
-  .name_p {
-    margin-bottom: 10px;
-  }
-
-  .textAbout {
-    font-size: 38px;
-    line-height: 40px;
-  }
-}  */
+} 
 
 @media screen and (min-width: 1280px) {
+
+.aboutSection {
+    padding-top: 117px;
+    padding-bottom: 117px;
+  }
     .contentContainer {
         position: relative;
       }
+  .contentContainer > p:nth-child(2) {
+    margin-top: 0px;
+  }
 
   .contentContainer > p:nth-child(3) {
     margin-top: 20px;
