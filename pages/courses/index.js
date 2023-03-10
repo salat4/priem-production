@@ -63,9 +63,9 @@ function PageCourses() {
       <section className={s.coursesSection}>
         <div className="container">
           <Title
-            text={t("coursesPage.title")}
+            text={"For actors"}
             style={s.pageTitle}
-            rotate="false"
+            styleForContainer={s}
           />
           <p className={s.description}>{t("coursesPage.description")}</p>
           <Button style={"buttonForm"} showForm={() => setShowForm(true)}>

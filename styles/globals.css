@@ -168,25 +168,6 @@ font-family: 'Inter';
     padding-right: 20px;
   }
 
-  /* .titleContainer {
-  position: absolute;
-  z-index: 1;
-  top: 20px;
-  left: 0;
-  width: auto;
-  width: 200px;
-  height: 160px;
-} */
-
-.titleContainerRow{
-  position: absolute;
-  z-index: 1;
-  top: -25%;
-  width: 250px;
-  height: 160px;
-  margin-right: auto;
-}
-
 .title {
   z-index: 1;
   position: relative;
@@ -204,7 +185,7 @@ font-family: 'Inter';
 
 @media screen and (min-width: 800px) {
   .container {
-    max-width: 800px;
+    min-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
@@ -220,25 +201,6 @@ font-family: 'Inter';
     padding-left: 100px;
     padding-right: 100px;
   }
-
-  .titleContainer {
-  position: absolute;
-  z-index: 1;
-  top: 20px;
-  left: -100px;
-  width: 200px;
-  height: 160px;
-  transform: rotate(-90deg);
-}
-
-.titleContainerRow{
-  position: absolute;
-  z-index: 1;
-  top: -25%;
-  width: 250px;
-  height: 160px;
-  margin-right: auto;
-}
 
 .title {
   z-index: 1;

@@ -1,6 +1,6 @@
-function Title({ text, style , styleAll}) {
+function Title({ text, style, styleForContainer }) {
   return (
-    <div className={styleAll.container__tilte}>
+    <div className={styleForContainer.container__title}>
       <span className={style}>{text}</span>
     </div>
   );

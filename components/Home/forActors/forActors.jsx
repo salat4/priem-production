@@ -12,11 +12,7 @@ function ForActors() {
     <section className={ss.section}>
       <div className="container">
         <div className={`${s.contentContainer}`}>
-          <Title
-            text={t("homePage.section.actors.title")}
-            style={"title"}
-            rotate={true}
-          />
+          <Title text={"For actors"} style={"title"} styleForContainer={s} />
           <p className={`${s.textAbout}`}>
             {t("homePage.section.actors.text.first")}
           </p>

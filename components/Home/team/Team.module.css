@@ -61,10 +61,23 @@
     color: #FFFFFF;
 }
 
+.container__title {
+    z-index: 1;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
 @media screen and (min-width: 1280px) {
 .teamSection {
     padding-top: 85px;
-    padding-bottom: 122px;
+    padding-bottom: 10px;
     background: linear-gradient(180deg, #050402 0%, #222222 99.84%);
 }
 
@@ -133,5 +146,14 @@ font-family: 'Inter';
    margin-bottom: 20px;
 }
 
-    
+.container__title {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: -100px;
+    width: 200px;
+    height: 160px;
+    transform: rotate(-90deg);
+}
+   
 }

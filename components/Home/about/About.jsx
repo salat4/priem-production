@@ -6,7 +6,6 @@ import { useState } from "react";
 function About() {
   const { t } = useTranslation("translation");
   const [showForm, setShowForm] = useState(false);
-  console.log("first");
   const toggleShowBackdrop = (e) => {
     const DoClose = toggleBackdrop(e);
     if (`${DoClose}` === "false") {
@@ -18,11 +17,7 @@ function About() {
     <section id="about" className={s.aboutSection}>
       <div className="container">
         <div className={`${s.contentContainer}`}>
-          <Title
-            text={t("homePage.section.about.title")}
-            style={"title"}
-            rotate={true}
-          />
+          <Title text={"About us"} style={"title"} styleForContainer={s} />
           <p className={`${s.textAbout}`}>
             {t("homePage.section.about.text.first")}
           </p>

@@ -13,12 +13,7 @@ function Team() {
       <section id="team" className={s.teamSection}>
         <div className="container">
           <div className={s.sectionContainer}>
-            <Title
-              styleAll = {s}
-              text={t("homePage.section.team.title")}
-              style="title"
-              rotate={true}
-            />
+            <Title text={"Team"} style="title" styleForContainer={s} />
             <div className={s.contentContainer}>
               <div className={s.imageContainer}>
                 <div className={s.card}>
@@ -26,14 +21,14 @@ function Team() {
                     <Image src={Ira} alt="team section: Ira" />
                   </span>
                   <p className={s.position}>Producer</p>
-                  <p className={s.name}>Irina Priemnitskaya</p>
+                  <p className={s.name}>{t("homePage.section.team.Ira")}</p>
                 </div>
                 <div>
                   <span>
                     <Image src={Gleb} alt="team section: Gleb" />
                   </span>
                   <p className={s.position}>Director</p>
-                  <p className={s.name}>Gleb Mikhaylichenko</p>
+                  <p className={s.name}>{t("homePage.section.team.Gleb")}</p>
                 </div>
               </div>
               <div className={s.descriptionContainer}>
