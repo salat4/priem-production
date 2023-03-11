@@ -9,13 +9,17 @@ import Ruslan from "@/images/Ruslan.png";
 import Vladimir from "@/images/Vladimir.png";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
-import SimpleSlider from "../presentWork/slider.jsx"
+import SimpleSlider from "../presentWork/slider.jsx";
 function Partners() {
   const { t } = useTranslation("translation");
   return (
-    <section className={s.partners}>
-      <SimpleSlider s = {s}/>
-    </section>
+    <>
+      <Title text={"Our partners"} style={"title"} styleForContainer={s} />
+      <section className={s.partners}>
+        <SimpleSlider s={s} />
+      </section>
+    </>
+
     // <section className={s.partners}>
     // <div className="container">
     // <div className={s.partners__content}>

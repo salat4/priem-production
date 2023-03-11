@@ -17,6 +17,19 @@
     color: #B00000;
 }
 
+.container__title {
+    z-index: 1;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
 @media screen and (min-width: 1280px) {
 .section {
     background-color: black;
@@ -55,6 +68,16 @@
     padding-left: 38px;
     padding-right: 38px;
     color: #FFFFFF;
+}
+
+.container__title {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: -100px;
+    width: 200px;
+    height: 160px;
+    transform: rotate(-90deg);
 }
 
 }

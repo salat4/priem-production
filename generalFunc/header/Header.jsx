@@ -44,27 +44,27 @@ export default function Header() {
             <ul className={s.navigationMenuList}>
               <li>
                 <Link href="/" prefetch={false} passHref>
-                  {t("navigation.home")}
+                  {"Home"}
                 </Link>
               </li>
               <li>
                 <button id="toAbout" onClick={scrollToSection}>
-                  {t("navigation.about")}
+                  {"About us"}
                 </button>
               </li>
               <li>
                 <button id="toTeam" onClick={scrollToSection}>
-                  {t("navigation.team")}
+                  {"Team"}
                 </button>
               </li>
               <li>
                 <Link href="/courses" prefetch={false} passHref>
-                  {t("navigation.actors")}
+                  {"For actors"}
                 </Link>
               </li>
               <li>
                 <Link href="/works" prefetch={false} passHref>
-                  {t("navigation.works")}
+                  {"Our works"}
                 </Link>
               </li>
             </ul>

@@ -1,15 +1,7 @@
 {
-    "navigation": {
-        "home": "home",
-        "about": "about us",
-        "team": "team",
-        "actors": "for actors",
-        "works": "our works"
-    },
     "homePage": {
         "section": {
             "about": {
-                "title": "about us",
                 "text": {
                     "first": "We are a production company for generating creative and commercial projects. Starting from the idea to its implementation on the screen. From one minute video to full-length pictures. Our own equipment, team and style.",
                     "secondary": "The signature style of our work is in the individual approach to our customer. We create a unique idea and scenario filling it with the concept. We carry out complete pre-production, selecting the team on request. Then we create the best shooting process with confidence at every stage. And we bring the project to its final end – editing, color correction, sound design and the release."
@@ -17,32 +9,38 @@
             },
             "backstage": "",
             "team": {
-                "title": "team",
                 "text": {
                     "first": "We are a married couple of actors with many years of experience on camera. The couple who, craving for development, began to implement their ideas and creative projects on their own, in addition to their main work in the industry, and receive valuable feedback from the audience. Now – starting from the spring of 2022 we act as a director and a producer, being the founders of our own production company.",
                     "secondary": " Having many successful commercial projects behind us, we don’t stop learning and trying new things, making every minute of the footage meaningful."
-                }
+                },
+                "Ira": "Irina Priemnitskaya",
+                "Gleb": "Gleb Mikhaylichenko"
             },
             "partners": {
-                "title": "our partners"
+                "1": "Yuri Konovalsky",
+                "2": "Ruslan Bogdan",
+                "3": "Denis Shyst",
+                "4": "Vladimir Akulov",
+                "5": "Yura Katynsky",
+                "6": "Anna Dovbush",
+                "7": "Vadim Lysak",
+                "8": "Evgeny Vasilchenko",
+                "9": "Alisa Ulyankina",
+                "10": "Mitya Borodin"
             },
             "actors": {
-                "title": "for actors",
                 "text": {
                     "first": "An actor’s portfolio is the fundamental working material when cooperating with casting directors, directors and an agent. After all, this is the only opportunity to see you on camera before meeting you in person.",
                     "secondary": "provides packages with partial or full portfolios. We know the filmmaking market from the inside and know exactly what casting directors and directors pay attention to at the casting stage and we are willing to work with you personally on your presentation, confidence on camera and create high-quality material."
                 }
             },
-            "works": {
-                "title": "our works"
-            },
-            "footer": {
-                "contacts": "Contacts"
+            "works": {},
+            "contacts": {
+                "title": "Contacts"
             }
         }
     },
     "coursesPage": {
-        "title": "for actors",
         "description": "It is possible to implement a single selected service or several of them regardless of the ready-made packages provided below. For more information – leave a request and we will contact you.",
         "card": {
             "0": "Actor's self-introduction video",
@@ -85,5 +83,15 @@
         "requestSuccessResult": "Thank you, we will call you back",
         "requestRejectedResult": "Ooops, something is wrong. Please try again later"
     },
-    "worksPage": {}
+    "worksPage": {
+        "filter": {
+            "allWorks": "All works",
+            "clip": "https://res.cloudinary.com/priem-cloud/image/upload/v1678225538/Filter-works/ClipEng_l10yjb.png",
+            "poetry": "https://res.cloudinary.com/priem-cloud/image/upload/v1678226510/Filter-works/Poetry_flexiq.png",
+            "autors": "https://res.cloudinary.com/priem-cloud/image/upload/v1678278059/Filter-works/Author_s-courseEn_i9hncl.png",
+            "portfolio": "Actor's portfolio",
+            "monologue": "Monologue",
+            "performance": "Performance"
+        }
+    }
 }

@@ -1,17 +1,18 @@
 import Slider from "react-slick";
 import Image from "next/image";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // import s from "./presWorks.module.css";
-import Evgeny_Vasilchenko from '@/images/partners/Evgeny_Vasilchenko.png';
-import Alisa_Ulyankina from "@/images/partners/Alisa_Ulyankina.png"; 
-import Anna_Dovbush from "@/images/partners/Anna_Dovbush.png"; 
-import Denis_Shyst from "@/images/partners/Denis_Shyst.png"; 
-import Mitya_Borodin from "@/images/partners/Mitya_Borodin.png";  
-import Ruslan_Bogdan from "@/images/partners/Ruslan_Bogdan.png"; 
-import Vadim_Lysak from "@/images/partners/Vadim_Lysak.png";    
-import Vladimir_Akulov from "@/images/partners/Vladimir_Akulov.png"; 
-import Yura_Katynsky from "@/images/partners/Yura_Katynsky.png";          
-import Yuri_Konovalsky from "@/images/partners/Yuri_Konovalsky.png"; 
+import Evgeny_Vasilchenko from "@/images/partners/Evgeny_Vasilchenko.png";
+import Alisa_Ulyankina from "@/images/partners/Alisa_Ulyankina.png";
+import Anna_Dovbush from "@/images/partners/Anna_Dovbush.png";
+import Denis_Shyst from "@/images/partners/Denis_Shyst.png";
+import Mitya_Borodin from "@/images/partners/Mitya_Borodin.png";
+import Ruslan_Bogdan from "@/images/partners/Ruslan_Bogdan.png";
+import Vadim_Lysak from "@/images/partners/Vadim_Lysak.png";
+import Vladimir_Akulov from "@/images/partners/Vladimir_Akulov.png";
+import Yura_Katynsky from "@/images/partners/Yura_Katynsky.png";
+import Yuri_Konovalsky from "@/images/partners/Yuri_Konovalsky.png";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -34,7 +35,7 @@ function SamplePrevArrow(props) {
     />
   );
 }
-export default function SimpleSlider({s}) {
+export default function SimpleSlider({ s }) {
   const arr = [
     {
       picture: Yuri_Konovalsky,
@@ -85,27 +86,66 @@ export default function SimpleSlider({s}) {
       picture: Mitya_Borodin,
       name: "Mitya Borodin",
       position: "1 st ass director ",
-    }
+    },
   ];
   const settings = {
-    // dots: true,
-    // infinite: true,
-    // slidesToShow: 3,
-    // slidesToScroll: 1,
-    // autoplay: true,
-    // speed: 4000,
-    // autoplaySpeed: 4000,
-    // cssEase: "linear",
-
-    // dots: true,
+    slidesToShow: 4,
+    slidesToScroll: 10,
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
+    dots: false,
+    speed: 35000,
     autoplaySpeed: 0,
+    autoplay: true,
+    // arrows: false,
     pauseOnHover: false,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 10,
+          lazyLoad: false,
+          infinite: true,
+          dots: false,
+          speed: 30000,
+          autoplaySpeed: 0,
+          arrows: false,
+          pauseOnHover: false,
+          cssEase: "linear",
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 10,
+          lazyLoad: false,
+          infinite: true,
+          dots: false,
+          speed: 30000,
+          autoplaySpeed: 0,
+          arrows: false,
+          pauseOnHover: false,
+          cssEase: "linear",
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 10,
+          lazyLoad: false,
+          infinite: true,
+          dots: false,
+          speed: 30000,
+          autoplaySpeed: 0,
+          arrows: false,
+          pauseOnHover: false,
+          cssEase: "linear",
+        },
+      },
+    ],
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
@@ -115,9 +155,9 @@ export default function SimpleSlider({s}) {
         return (
           <div key={el.name}>
             <div className={s.box}>
-              <Image src={el.picture} alt="person" width={305} height={355} />
+              <Image src={el.picture} alt="person" width={209} height={239} />
               <p className={s.name}>{el.name}</p>
-              <p className={s.position }>{el.position}</p>
+              <p className={s.position}>{el.position}</p>
             </div>
           </div>
         );
