@@ -21,6 +21,17 @@ export default function Contacts() {
 
   useEffect(() => {
     const homeSection = document.getElementById("home");
+    const userAgent = navigator.userAgent;
+    const mobileRegex = /.*Mobile.*/i;
+    if (mobileRegex.test(userAgent) && homeSection) {
+      window.addEventListener(
+        "touchmove",
+        throttle(1000, () =>
+          isSectionOutOfView({ homeSection, setShowButtonUp })
+        )
+      );
+      return;
+    }
     if (homeSection) {
       window.addEventListener(
         "scroll",
@@ -40,12 +51,12 @@ export default function Contacts() {
     <>
       <ul className={showButtonUp ? s.socialListAnim : s.socialList}>
         <li className={s.socialItem}>
-          <a href={`tel:${TEL_IRA}`} rel="noreferrer">
+          <a href={`tel:${TEL_IRA}`}>
             <Image src={Phone} alt="Phone icon" />
           </a>
         </li>
         <li className={s.socialItem}>
-          <a href={INSTAGRAM} target="_blank" rel="noreferrer">
+          <a href={INSTAGRAM} target="_blank" rel="noreferrer noopener">
             <Image src={Insta} alt="Instagram icon" />
           </a>
         </li>
@@ -63,12 +74,14 @@ export default function Contacts() {
             {i18n.language === "ru" ? "en" : "ru"}
           </button>
         </li>
-        <button
-          onClick={() => window.scrollTo(0, 0)}
-          className={showButtonUp ? "buttonUpActive" : "buttonUp"}
-        >
-          <Image src={arrow} alt="Click me and up" />
-        </button>
+        <li className={s.socialItem}>
+          <button
+            onClick={() => window.scrollTo(0, 0)}
+            className={s.buttonUpActive}
+          >
+            <Image src={arrow} alt="Click me and up" />
+          </button>
+        </li>
       </ul>
     </>
   );

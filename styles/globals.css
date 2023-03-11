@@ -126,38 +126,6 @@ font-family: 'Inter';
   line-height: 19px;
   color: #FFFFFF;
 }
-
-.buttonUp {
-  opacity: 0;
-}
-
-.buttonUpActive {
-  position: fixed;
-  right: 5px;
-  border-radius: 50%;
-  background: rgba(227, 6, 19, 0.60);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  width: 27px;
-  height: 27px;
-  padding: 5px;
-  margin-top: 2px;
-  animation: showUp .6s linear forwards;
-}
-
-@keyframes showUp {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: .5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
   
 @media screen and (min-width: 360px) {
   .container {

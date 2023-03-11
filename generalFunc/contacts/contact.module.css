@@ -1,37 +1,37 @@
 .socialList {
   position: fixed;
-  right: 5px;
+  right: 0;
   bottom: 0;
   animation: down .6s linear forwards;
 }
 
 .socialListAnim {
   position: fixed;
-  right: 5px;
+  right: 0;
   bottom: 0;
   animation: up .4s linear forwards;
 }
 
 @keyframes down {
   from {
-    transform: translateY(-20px);
+    transform: translateY(-5px);
   }
 
   to {
-    transform: translateY(20px);
+    transform: translateY(35px);
   }
 }
 
 @keyframes up {
   from {
-    transform: translateY(-5px);
+    transform: translateY(35px);
   }
   to {
-      transform: translateY(-40px);
+      transform: translateY(-10px);
   }
 }
 
-.socialItem {
+.socialItem:not(:last-child) {
   margin-bottom: 10px;
 }
 
@@ -54,19 +54,20 @@
     justify-content: center;
     color: #fff;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.socialItemLang:hover > span {
+.socialItemLang:hover > button {
   transform: scale(1.2);
 }
 
-.socialItemLang:hover  .ChangeLangButtonContainer {
+/* .socialItemLang:hover  .ChangeLangButtonContainer {
     position: absolute;
       right: 30px;
       top: 25%;
       display: flex;
       align-items: center;
-}
+} */
 
 .changeLangButton {
       font-family: 'Montserrat';
@@ -76,4 +77,16 @@
         letter-spacing: 2px;
   padding: 5px;
   text-transform: uppercase;
+}
+
+.buttonUpActive {
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(227, 6, 19, 0.60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  padding: 5px;
 }
