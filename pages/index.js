@@ -39,7 +39,9 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await axios("http://localhost:3000/api/hello");
+  const res = await axios(
+    "https://priem-production-git-partners-image-salat4.vercel.app/api/hello"
+  );
   return {
     props: {
       data: res.data.data.resources,
