@@ -5,13 +5,13 @@ import "slick-carousel/slick/slick-theme.css";
 // import s from "./presWorks.module.css";
 import Evgeny_Vasilchenko from "@/images/partners/Evgeny_Vasilchenko.png";
 import Alisa_Ulyankina from "@/images/partners/Alisa_Ulyankina.png";
-import Anna_Dovbush from "@/images/partners/Anna_Dovbush.png";
-import Denis_Shyst from "@/images/partners/Denis_Shyst.png";
-import Mitya_Borodin from "@/images/partners/Mitya_Borodin.png";
-import Ruslan_Bogdan from "@/images/partners/Ruslan_Bogdan.png";
+import Anna_Dovbush from "@/images/partners/image 25.svg";
+import Denis_Shyst from "@/images/partners/imageTest4x.jpg";
+import Mitya_Borodin from "@/images/partners/image4x.png";
+import Ruslan_Bogdan from "@/images/partners/image4xCom.png";
 import Vadim_Lysak from "@/images/partners/Vadim_Lysak.png";
-import Vladimir_Akulov from "@/images/partners/Vladimir_Akulov.png";
-import Yura_Katynsky from "@/images/partners/Yura_Katynsky.png";
+import Vladimir_Akulov from "@/images/partners/image4x.png";
+import Yura_Katynsky from "@/images/partners/image4xCom.png";
 import Yuri_Konovalsky from "@/images/partners/Yuri_Konovalsky.png";
 
 function SampleNextArrow(props) {
@@ -35,18 +35,18 @@ function SamplePrevArrow(props) {
     />
   );
 }
-export default function SimpleSlider({ s }) {
+export default function SimpleSlider({ s, dataCloud }) {
   const arr = [
-    {
-      picture: Yuri_Konovalsky,
-      name: "Yuri Konovalsky",
-      position: "1AC Focuspuller ",
-    },
-    {
-      picture: Ruslan_Bogdan,
-      name: "Ruslan Bogdan",
-      position: "Dop",
-    },
+    // {
+    //   picture: Yuri_Konovalsky,
+    //   name: "Yuri Konovalsky",
+    //   position: "1AC Focuspuller ",
+    // },
+    // {
+    //   picture: Ruslan_Bogdan,
+    //   name: "Ruslan Bogdan",
+    //   position: "Dop",
+    // },
     {
       picture: Denis_Shyst,
       name: "Denis Shyst",
@@ -67,26 +67,26 @@ export default function SimpleSlider({ s }) {
       name: "Anna Dovbush",
       position: "Art director ",
     },
-    {
-      picture: Vadim_Lysak,
-      name: "Vadim Lysak",
-      position: "Sfx - tornadoSfx ",
-    },
-    {
-      picture: Evgeny_Vasilchenko,
-      name: "Evgeny Vasilchenko",
-      position: "Dop ",
-    },
-    {
-      picture: Alisa_Ulyankina,
-      name: "Alisa Ulyankina",
-      position: "Make up ",
-    },
-    {
-      picture: Mitya_Borodin,
-      name: "Mitya Borodin",
-      position: "1 st ass director ",
-    },
+    // {
+    //   picture: Vadim_Lysak,
+    //   name: "Vadim Lysak",
+    //   position: "Sfx - tornadoSfx ",
+    // },
+    // {
+    //   picture: Evgeny_Vasilchenko,
+    //   name: "Evgeny Vasilchenko",
+    //   position: "Dop ",
+    // },
+    // {
+    //   picture: Alisa_Ulyankina,
+    //   name: "Alisa Ulyankina",
+    //   position: "Make up ",
+    // },
+    // {
+    //   picture: Mitya_Borodin,
+    //   name: "Mitya Borodin",
+    //   position: "1 st ass director ",
+    // },
   ];
   const settings = {
     slidesToShow: 4,
@@ -96,7 +96,7 @@ export default function SimpleSlider({ s }) {
     speed: 35000,
     autoplaySpeed: 0,
     autoplay: true,
-    // arrows: false,
+    arrows: false,
     pauseOnHover: false,
     cssEase: "linear",
     responsive: [
@@ -104,13 +104,13 @@ export default function SimpleSlider({ s }) {
         breakpoint: 500,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 10,
+          slidesToScroll: 1,
           lazyLoad: false,
-          infinite: true,
+          // infinite: true,
           dots: false,
-          speed: 30000,
+          speed: 1000,
           autoplaySpeed: 0,
-          arrows: false,
+          // arrows: false,
           pauseOnHover: false,
           cssEase: "linear",
         },
@@ -119,11 +119,11 @@ export default function SimpleSlider({ s }) {
         breakpoint: 800,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 10,
+          slidesToScroll: 1,
           lazyLoad: false,
           infinite: true,
           dots: false,
-          speed: 30000,
+          speed: 1000,
           autoplaySpeed: 0,
           arrows: false,
           pauseOnHover: false,
@@ -133,14 +133,14 @@ export default function SimpleSlider({ s }) {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 10,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           lazyLoad: false,
-          infinite: true,
+          // infinite: true,
           dots: false,
-          speed: 30000,
-          autoplaySpeed: 0,
-          arrows: false,
+          speed: 1000,
+          // autoplaySpeed: 0,
+          // arrows: false,
           pauseOnHover: false,
           cssEase: "linear",
         },
@@ -151,17 +151,18 @@ export default function SimpleSlider({ s }) {
   };
   return (
     <Slider {...settings}>
-      {arr.map((el) => {
-        return (
-          <div key={el.name}>
-            <div className={s.box}>
-              <Image src={el.picture} alt="person" width={209} height={239} />
-              <p className={s.name}>{el.name}</p>
-              <p className={s.position}>{el.position}</p>
+      {dataCloud &&
+        dataCloud.map((el) => {
+          return (
+            <div key={el.name}>
+              <div className={s.box}>
+                <Image src={el.url} alt="person" width={300} height="369" />
+                {/* <p className={s.name}>{el.name}</p>
+              <p className={s.position}>{el.position}</p> */}
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
       {/* <div>
         <div>
           <Image src={pic1} alt="person" width={305} height={355} />

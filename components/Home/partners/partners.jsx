@@ -10,13 +10,13 @@ import Vladimir from "@/images/Vladimir.png";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import SimpleSlider from "../presentWork/slider.jsx";
-function Partners() {
+function Partners({ dataCloud }) {
   const { t } = useTranslation("translation");
   return (
     <>
       <Title text={"Our partners"} style={"title"} styleForContainer={s} />
       <section className={s.partners}>
-        <SimpleSlider s={s} />
+        <SimpleSlider dataCloud={dataCloud} s={s} />
       </section>
     </>
 

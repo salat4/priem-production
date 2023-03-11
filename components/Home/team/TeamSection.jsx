@@ -6,7 +6,7 @@ import s from "./Team.module.css";
 import Partners from "../partners/partners";
 import { useTranslation } from "react-i18next";
 
-function Team() {
+function Team({ dataCloud }) {
   const { t } = useTranslation("translation");
   return (
     <>
@@ -18,14 +18,25 @@ function Team() {
               <div className={s.imageContainer}>
                 <div className={s.card}>
                   <span>
-                    <Image src={Ira} alt="team section: Ira" />
+                    {/* <Image
+                      src="https://res.cloudinary.com/priem-cloud/image/upload/v1678137039/partners/Ira-producer_gtwyqf.jpg"
+                      alt="team section: Ira"
+                      className={s.asd}
+                      width={209}
+                      height="309"
+                    /> */}
                   </span>
                   <p className={s.position}>Producer</p>
                   <p className={s.name}>{t("homePage.section.team.Ira")}</p>
                 </div>
                 <div>
                   <span>
-                    <Image src={Gleb} alt="team section: Gleb" />
+                    <Image
+                      src={Gleb}
+                      alt="team section: Gleb"
+                      width={209}
+                      height="309"
+                    />
                   </span>
                   <p className={s.position}>Director</p>
                   <p className={s.name}>{t("homePage.section.team.Gleb")}</p>
@@ -36,7 +47,7 @@ function Team() {
                 <p>{t("homePage.section.team.text.secondary")}</p>
               </div>
             </div>
-            <Partners />
+            <Partners dataCloud={dataCloud} />
           </div>
         </div>
       </section>

@@ -11,8 +11,8 @@ export default async function handler(req, res) {
   await cloudinary.v2.api.resources(
     {
       type: "upload",
-      prefix:[ "work-templates/"],
-      resource_type: "video",
+      prefix: ["partners/"],
+      resource_type: "image",
     },
     function (error, result) {
       if (error) {
