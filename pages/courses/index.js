@@ -49,10 +49,7 @@ function PageCourses() {
     }
     setCoursesTitleForSubscribe(arr);
     window.removeEventListener("scroll", isSectionOutOfView);
-    // window.addEventListener("keydown", toggleShowBackdrop);
-    // return () => {
-    //   window.removeEventListener("keydown", toggleShowBackdrop);
-    // };
+    window.removeEventListener("touchmove", isSectionOutOfView);
   }, []);
 
   return (
