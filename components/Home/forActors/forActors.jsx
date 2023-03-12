@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import s from "../about/about.module.css";
 import ss from "./forActors.module.css";
-import { toggleBackdrop, Title, Button } from "@/generalFunc";
+import { Title, Button } from "@/generalFunc";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
@@ -25,7 +25,6 @@ function ForActors() {
           </Button>
         </div>
       </div>
-      {/* {showForm && <FormSubscribe toggleShowBackdrop={toggleShowBackdrop} />} */}
     </section>
   );
 }

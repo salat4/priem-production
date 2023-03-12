@@ -13,7 +13,7 @@ import Head from "next/head";
 import "../18next";
 import axios from "axios";
 
-export default function Home({ data }) {
+export default function Home() {
   return (
     // <I18nextProvider i18n={i18next}>
     <>
@@ -24,7 +24,7 @@ export default function Home({ data }) {
       <Hero />
       {/* <HmM/> */}
       <About />
-      <Team dataCloud={data} />
+      <Team />
       <ForActors />
       {/* <Partners_en /> */}
       {/* <PresWorks /> */}
@@ -38,16 +38,17 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps() {
-  const res = await axios(
-    "https://priem-production-git-partners-image-salat4.vercel.app/api/hello"
-  );
-  return {
-    props: {
-      data: res.data.data.resources,
-    },
-  };
-}
+// export async function getServerSideProps() {
+//   const res = await axios(
+//     "https://priem-production-git-partners-image-salat4.vercel.app/api/hello"
+//   );
+//   console.log(res.data.data);
+//   return {
+//     props: {
+//       data: res.data.data.resources,
+//     },
+//   };
+// }
 
 // import { useRouter } from "next/router";
 // import { useEffect } from "react";

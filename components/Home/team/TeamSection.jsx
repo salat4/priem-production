@@ -1,12 +1,10 @@
 import Image from "next/image";
-import Ira from "@/images/co-founders/teamIra.png";
-import Gleb from "@/images/co-founders/teamGleb.png";
 import { Title } from "@/generalFunc";
 import s from "./Team.module.css";
 import Partners from "../partners/partners";
 import { useTranslation } from "react-i18next";
 
-function Team({ dataCloud }) {
+function Team() {
   const { t } = useTranslation("translation");
   return (
     <>
@@ -18,13 +16,13 @@ function Team({ dataCloud }) {
               <div className={s.imageContainer}>
                 <div className={s.card}>
                   <span>
-                    {/* <Image
-                      src="https://res.cloudinary.com/priem-cloud/image/upload/v1678137039/partners/Ira-producer_gtwyqf.jpg"
+                    <Image
+                      src="https://res.cloudinary.com/priem-cloud/image/upload/v1678660237/partners/Irina_Priemnitskaya_ewiufx.png"
                       alt="team section: Ira"
                       className={s.asd}
                       width={209}
-                      height="309"
-                    /> */}
+                      height="254"
+                    />
                   </span>
                   <p className={s.position}>Producer</p>
                   <p className={s.name}>{t("homePage.section.team.Ira")}</p>
@@ -32,10 +30,10 @@ function Team({ dataCloud }) {
                 <div>
                   <span>
                     <Image
-                      src={Gleb}
+                      src="https://res.cloudinary.com/priem-cloud/image/upload/v1678660237/partners/Gleb_Mikhaylichenko_xa9bge.png"
                       alt="team section: Gleb"
                       width={209}
-                      height="309"
+                      height="254"
                     />
                   </span>
                   <p className={s.position}>Director</p>
@@ -47,7 +45,7 @@ function Team({ dataCloud }) {
                 <p>{t("homePage.section.team.text.secondary")}</p>
               </div>
             </div>
-            <Partners dataCloud={dataCloud} />
+            <Partners />
           </div>
         </div>
       </section>

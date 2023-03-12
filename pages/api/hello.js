@@ -11,9 +11,8 @@ export default async function handler(req, res) {
   try {
     const result = await cloudinary.v2.api.resources({
       type: "upload",
-      prefix: ["partners/"],
+      prefix: "partners",
       resource_type: "image",
-      max_results: 12,
     });
 
     return res.status(200).json({ data: result });

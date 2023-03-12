@@ -2,17 +2,7 @@ import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import s from "./presWorks.module.css";
-import Evgeny_Vasilchenko from "@/images/partners/Evgeny_Vasilchenko.png";
-import Alisa_Ulyankina from "@/images/partners/Alisa_Ulyankina.png";
-import Anna_Dovbush from "@/images/partners/image 25.svg";
-import Denis_Shyst from "@/images/partners/imageTest4x.jpg";
-import Mitya_Borodin from "@/images/partners/image4x.png";
-import Ruslan_Bogdan from "@/images/partners/image4xCom.png";
-import Vadim_Lysak from "@/images/partners/Vadim_Lysak.png";
-import Vladimir_Akulov from "@/images/partners/image4x.png";
-import Yura_Katynsky from "@/images/partners/image4xCom.png";
-import Yuri_Konovalsky from "@/images/partners/Yuri_Konovalsky.png";
+import { useTranslation } from "react-i18next";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -35,66 +25,67 @@ function SamplePrevArrow(props) {
     />
   );
 }
-export default function SimpleSlider({ s, dataCloud }) {
+export default function SimpleSlider({ s }) {
+  const { t } = useTranslation("translation");
   const arr = [
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566879/partners/Yuri_Konovalsky_puchqg.png",
-      name: "Yuri Konovalsky",
+      name: "1",
       position: "1AC Focuspuller ",
     },
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566877/partners/Ruslan_Bogdan_yzmoiq.png",
-      name: "Ruslan Bogdan",
+      name: "2",
       position: "Dop",
     },
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566875/partners/Denis_Shyst_stu1z1.png",
-      name: "Denis Shyst",
+      name: "3",
       position: "Gafer",
     },
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566875/partners/Vladimir_Akulov_inmz2b.png",
-      name: "Vladimir Akulov",
+      name: "4",
       position: "Gafer ",
     },
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566878/partners/Yura_Katynsky_qk42kr.png",
-      name: "Yura Katynsky",
+      name: "5",
       position: "EDIT ",
     },
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566875/partners/Anna_Dovbush_mtmpfa.png",
-      name: "Anna Dovbush",
+      name: "6",
       position: "Art director ",
     },
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566877/partners/Vadim_Lysak_ljhbpb.png",
-      name: "Vadim Lysak",
+      name: "7",
       position: "Sfx - tornadoSfx ",
     },
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566870/partners/Evgeny_Vasilchenko_abeaof.png",
-      name: "Evgeny Vasilchenko",
+      name: "8",
       position: "Dop ",
     },
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566873/partners/Alisa_Ulyankina_ujjcyc.png",
-      name: "Alisa Ulyankina",
+      name: "9",
       position: "Make up ",
     },
     {
       picture:
         "https://res.cloudinary.com/priem-cloud/image/upload/v1678566878/partners/Mitya_Borodin_rs663s.png",
-      name: "Mitya Borodin",
+      name: "10",
       position: "1 st ass director ",
     },
   ];
@@ -161,23 +152,19 @@ export default function SimpleSlider({ s, dataCloud }) {
   };
   return (
     <Slider {...settings}>
-      {dataCloud &&
-        dataCloud.map((el) => {
-          return (
-            <div key={el.name}>
-              <div className={s.box}>
-                <Image
-                  src={el.secure_url}
-                  alt="person"
-                  width={300}
-                  height="369"
-                />
-                {/* <p className={s.name}>{el.name}</p>
-                <p className={s.position}>{el.position}</p> */}
-              </div>
+      {arr.map((el) => {
+        return (
+          <div key={el.name}>
+            <div className={s.box}>
+              <Image src={el.picture} alt="person" width={300} height="369" />
+              <p className={s.name}>
+                {t(`homePage.section.partners.${el.name}`)}
+              </p>
+              <p className={s.position}>{el.position}</p>
             </div>
-          );
-        })}
+          </div>
+        );
+      })}
     </Slider>
   );
 }
