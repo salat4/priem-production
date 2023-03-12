@@ -8,26 +8,39 @@ cloudinary.config({
 });
 export default async function handler(req, res) {
   let data = null;
-  await cloudinary.v2.api.resources(
-    {
+  try {
+    const result = await cloudinary.v2.api.resources({
       type: "upload",
       prefix: ["partners/"],
       resource_type: "image",
-    },
-    function (error, result) {
-      if (error) {
-        data = {
-          code: 404,
-          status: "error",
-          data: null,
-        };
-      } else {
-        data = result;
-      }
-    }
-  );
-  if (data)
-    return res.json({
-      data,
+      max_results: 12,
     });
+
+    return res.status(200).json({ data: result });
+  } catch (error) {
+    return res.status(404).json({ error: error.message });
+  }
+  // await cloudinary.v2.api.resources(
+  //   {
+  //     type: "upload",
+  //     prefix: ["partners/"],
+  //     resource_type: "image",
+  //     max_results: 12,
+  //   },
+  //   function (error, result) {
+  //     if (error) {
+  //       data = {
+  //         code: 404,
+  //         status: "error",
+  //         data: null,
+  //       };
+  //     } else {
+  //       data = result;
+  //     }
+  //   }
+  // );
+  // if (data)
+  //   return res.json({
+  //     data,
+  //   });
 }
