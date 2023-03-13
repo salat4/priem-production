@@ -120,127 +120,95 @@ function HmM() {
           </>
         )}
         <div className={s.HmM__box}>
-          <div className={`${s.HmM__item} `}>
-            <p className={s.HmM__title}>SCRIPT WRITING</p>
-            <ul className={s.HmM__about}>
-              <li className={s.HmM__description}>
-                <p>idea development</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>reference selection</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>script writing</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>detailed storyboard</p>
-              </li>
-            </ul>
+          <div className={s.HmM__box__item}>
+            <div className={s.HmM__item}>
+              <p className={s.HmM__title}>Разработка сценария</p>
+              <ul className={s.HmM__about}>
+                <li className={s.HmM__description}>
+                  <p>разработка идеи</p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>подбор референсов</p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>написание сценария</p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>подробная раскадровка</p>
+                </li>
+              </ul>
+            </div>
+            <div className={s.HmM__item}>
+              <p className={s.HmM__title}>Команда</p>
+              <ul className={s.HmM__about}>
+                <li className={s.HmM__description}>
+                  <p>подбор команды под запрос</p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>работа с лучшими в стране </p>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className={s.HmM__item}>
-            <p className={s.HmM__title}>TRITMENT WRITING</p>
-            <ul className={s.HmM__about}>
-              <li className={s.HmM__description}>
-                <p>Logline / plot</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>reference per frame</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>color palette solution</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>camera movement</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>makeup / costume</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>dreamcast</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>synopsis</p>
-              </li>
-            </ul>
+          <div className={s.HmM__box__item}>
+
+            <div className={s.HmM__item}>
+              <p className={s.HmM__title}>Камера / свет</p>
+              <p>Мы имеем:</p>
+              <ul className={s.HmM__about}>
+                <li className={s.HmM__description}>
+                  <p>Blackmagic 4k </p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>2 LED  </p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>2 Softbox  </p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>1 Godox  </p>
+                </li>
+              </ul>
+            </div>
+            <div className={s.HmM__item}>
+              <p className={s.HmM__title}>Монтаж / цветокоррекция / саунд дизайн</p>
+              <ul className={s.HmM__about}>
+                <li className={s.HmM__description}>
+                  <p>коллаборация с командой на больших проектах</p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>базовая обработка видео на локальных проектах</p>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className={s.HmM__item}>
-            <p className={s.HmM__title}>TEAM</p>
-            <ul className={s.HmM__about}>
-              <li className={s.HmM__description}>
-                <p>selection of a team on request</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>work with the best in the country</p>
-              </li>
-            </ul>
-          </div>
-          <div className={s.HmM__item}>
-            <p className={s.HmM__title}>CAMERA + LIGHT</p>
-            <p>Have our</p>
-            <ul className={s.HmM__about}>
-              <li className={s.HmM__description}>
-                <p>Blackmagic 4k</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>2 LED</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>2 Softbox</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>1 Godox</p>
-              </li>
-            </ul>
-          </div>
-          <div className={s.HmM__item}>
-            <p className={s.HmM__title}>STYLE</p>
-            <ul className={s.HmM__about}>
-              <li className={s.HmM__description}>
-                <p>creating an image</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>make-up selection</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>working with a stylist</p>
-              </li>
-            </ul>
-          </div>
-          <div className={s.HmM__item}>
-            <p className={s.HmM__title}>ACTING COACHING</p>
-            <ul className={s.HmM__about}>
-              <li className={s.HmM__description}>
-                <p>working with an acting coach</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>rehearsals with the director before filming</p>
-              </li>
-            </ul>
-          </div>
-          <div className={s.HmM__item}>
-            <p className={s.HmM__title}>VIDEO EDIT / COLOR / SOUND DESIGN</p>
-            <ul className={s.HmM__about}>
-              <li className={s.HmM__description}>
-                <p>collaboration with the team</p>
-              </li>
-            </ul>
-          </div>
-          <div className={s.HmM__item}>
-            <p className={s.HmM__title}>OUR STUDIO</p>
-            <ul className={s.HmM__about}>
-              <li className={s.HmM__description}>
-                <p>70 sq/m</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>with equipment</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>makeup area</p>
-              </li>
-              <li className={s.HmM__description}>
-                <p>terrace overlooking the city</p>
-              </li>
-            </ul>
+          <div className={s.HmM__box__item}>
+
+            <div className={s.HmM__item}>
+              <p className={s.HmM__title}>Актерская подготовка</p>
+              <ul className={s.HmM__about}>
+                <li className={s.HmM__description}>
+                  <p>работа с коучем по актёрскому мастерству  </p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>репетиции с режиссером перед съемкой  </p>
+                </li>
+              </ul>
+            </div>
+            <div className={s.HmM__item}>
+              <p className={s.HmM__title}>Костюм / Грим  дизайн</p>
+              <ul className={s.HmM__about}>
+                <li className={s.HmM__description}>
+                  <p>работа с нашим стилистом </p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>базоработа с нашим гримером </p>
+                </li>
+                <li className={s.HmM__description}>
+                  <p>подбор и разработка образа </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
