@@ -5,8 +5,9 @@ import Image from "next/image";
 import facebook from "@/images/icons/facebook.png";
 import instagram from "@/images/icons/instagram.png";
 import youtube from "@/images/icons/youtube.png";
-import { Button } from "@/generalFunc";
+import { Button,scrollToSection } from "@/generalFunc";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 function Footer() {
   const { t } = useTranslation("translation");
@@ -25,23 +26,35 @@ function Footer() {
                 />
               </div>
 
-              <Button text={"Оставить заяку"}></Button>
+              <Button style = {s.footer__button}>
+                      <p>Оставить заяку</p>
+                    </Button>
             </li>
             <li className={s.footer__list__center}>
               <ul className={s.footer__nav__list}>
                 <li className={s.footer__nav__list__item}>
-                  <p>{"Home"}</p>
+                  <Link href="/" passHref>{"Home"}</Link>
                 </li>
                 <li className={s.footer__nav__list__item}>
-                  <p>{"About us"}</p>
+                  <button id="toAbout" onClick={scrollToSection}>
+                    {"About us"}
+                  </button>
                 </li>
                 <li className={s.footer__nav__list__item}>
-                  <p>{"Team"}</p>
+                  <button id="toTeam" onClick={scrollToSection}>
+                    {"Team"}
+                  </button>
                 </li>
                 <li className={s.footer__nav__list__item}>
-                  <p>{"For actors"}</p>
+                  <Link href="/courses" prefetch={false} passHref>
+                    {"For actors"}
+                  </Link>
                 </li>
-                <li className={s.footer__nav__list__item}>{"Our works"}</li>
+                <li className={s.footer__nav__list__item}>
+                  <Link href="/works" prefetch={false} passHref>
+                    {"Our works"}
+                  </Link>  
+                </li>
               </ul>
             </li>
             <li className={s.footer__list__right}>
@@ -74,7 +87,7 @@ function Footer() {
                 <li className={s.footer__list__item}>
                   <div>
                     <ul className={s.footer__list__link}>
-                      <li className={s.footer__list__link__item}>
+                      {/* <li className={s.footer__list__link__item}>
                         <Image
                           className={s.footer__image}
                           src={facebook}
@@ -82,7 +95,7 @@ function Footer() {
                           height={25}
                           alt="Logo footer"
                         ></Image>
-                      </li>
+                      </li> */}
                       <li className={s.footer__list__link__item}>
                         <Image
                           className={s.footer__image}
@@ -102,7 +115,9 @@ function Footer() {
                         ></Image>
                       </li>
                     </ul>
-                    <Button text={"Оставить заяку"}></Button>
+                    <Button style = {s.footer__button}>
+                      <p>Оставить заяку</p>
+                    </Button>
                   </div>
                 </li>
               </ul>

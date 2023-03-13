@@ -6,6 +6,7 @@ import {
   Hero,
   Team,
   PresWorks,
+  HmM
 } from "@/components/Home";
 // import { HmM_en } from "@/components/HmM";
 // import Partners_en from "@/components/partners/partners_en/partners_en";
@@ -17,22 +18,22 @@ export default function Home() {
   return (
     // <I18nextProvider i18n={i18next}>
     <>
-      <Head>
+      {/* <Head>
         <title>Priem production</title>
-      </Head>
-      <Header />
-      <Hero />
-      {/* <HmM/> */}
-      <About />
-      <Team />
-      <ForActors />
+      </Head> */}
+      {/* <Header /> */}
+      {/* <Hero /> */}
+      <HmM/>
+      {/* <About /> */}
+      {/* <Team /> */}
+      {/* <ForActors /> */}
       {/* <Partners_en /> */}
       {/* <PresWorks /> */}
       {/* <Works /> */}
-      <Contacts />
-      <footer id="footer">
+      {/* <Contacts /> */}
+      {/* <footer id="footer">
         <Footer />
-      </footer>
+      </footer> */}
     </>
     // </I18nextProvider>
   );
