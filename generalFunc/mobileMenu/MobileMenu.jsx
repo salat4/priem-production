@@ -1,14 +1,11 @@
 import Link from "next/link";
 import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { scrollToSection } from "@/generalFunc";
 import Text from "@/images/background/Text-rotate-mobile.png";
 import s from "./mobMenu.module.css";
 import Image from "next/image";
 
 function MobileMenu({ toggleShowBackdrop, show }) {
-  const { t } = useTranslation("translation");
-
   useEffect(() => {
     if (show === "one") {
       return;
@@ -32,27 +29,27 @@ function MobileMenu({ toggleShowBackdrop, show }) {
       <ul className={s.menuList}>
         <li className={s.menuItem}>
           <Link href="/" prefetch={false} passHref>
-            {t("navigation.home")}
+            Home
           </Link>
         </li>
         <li className={s.menuItem}>
           <button id="toAbout" data-close="close" onClick={scrollAndCloseMenu}>
-            {t("navigation.about")}
+            About us
           </button>
         </li>
         <li className={s.menuItem}>
           <button id="toTeam" data-close="close" onClick={scrollAndCloseMenu}>
-            {t("navigation.team")}
+            Team
           </button>
         </li>
         <li className={s.menuItem}>
           <Link href="/courses" prefetch={false} passHref>
-            {t("navigation.actors")}
+            For actors
           </Link>
         </li>
         <li className={s.menuItem}>
           <Link href="/works" prefetch={false} passHref>
-            {t("navigation.works")}
+            Our works
           </Link>
         </li>
       </ul>

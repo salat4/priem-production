@@ -30,6 +30,26 @@
     color: #FFFFFF;
 }
 
+.forActorsButtonMore {
+    width: 163px;
+    background-color: #B00000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.forActorsButtonMore>a {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    display: inline-block;
+    padding-left: 38px;
+    padding-right: 38px;
+    color: #FFFFFF;
+}
+
 @media screen and (min-width: 1280px) {
 .section {
     background-color: black;

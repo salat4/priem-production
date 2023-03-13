@@ -11,6 +11,7 @@ import {
 // import Partners_en from "@/components/partners/partners_en/partners_en";
 import Head from "next/head";
 import "../18next";
+import axios from "axios";
 
 export default function Home() {
   return (
@@ -37,20 +38,16 @@ export default function Home() {
   );
 }
 
-// export async function getStaticProps() {
-//   // const res = await fetch('https://drive.google.com/drive/folders/1fxqd9hhnhPNHuUQ70r_1nXqoH4lt8AXO?usp=share_link')
-//   // const snapshot = await res.json()
-//   // console.log(res);
-//   // if (!res) {
-//   //   return {
-//   //     notFound:true
-//   //   }
-//   // }
-//   // return {
-//   //   props: {
-//   //     res
-//   //   }
-//   // }
+// export async function getServerSideProps() {
+//   const res = await axios(
+//     "https://priem-production-git-partners-image-salat4.vercel.app/api/hello"
+//   );
+//   console.log(res.data.data);
+//   return {
+//     props: {
+//       data: res.data.data.resources,
+//     },
+//   };
 // }
 
 // import { useRouter } from "next/router";

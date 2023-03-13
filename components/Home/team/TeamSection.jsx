@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Ira from "@/images/co-founders/teamIra.png";
-import Gleb from "@/images/co-founders/teamGleb.png";
 import { Title } from "@/generalFunc";
 import s from "./Team.module.css";
 import Partners from "../partners/partners";
@@ -18,14 +16,25 @@ function Team() {
               <div className={s.imageContainer}>
                 <div className={s.card}>
                   <span>
-                    <Image src={Ira} alt="team section: Ira" />
+                    <Image
+                      src="https://res.cloudinary.com/priem-cloud/image/upload/v1678660237/partners/Irina_Priemnitskaya_ewiufx.png"
+                      alt="team section: Ira"
+                      className={s.asd}
+                      width={209}
+                      height="254"
+                    />
                   </span>
                   <p className={s.position}>Producer</p>
                   <p className={s.name}>{t("homePage.section.team.Ira")}</p>
                 </div>
                 <div>
                   <span>
-                    <Image src={Gleb} alt="team section: Gleb" />
+                    <Image
+                      src="https://res.cloudinary.com/priem-cloud/image/upload/v1678660237/partners/Gleb_Mikhaylichenko_xa9bge.png"
+                      alt="team section: Gleb"
+                      width={209}
+                      height="254"
+                    />
                   </span>
                   <p className={s.position}>Director</p>
                   <p className={s.name}>{t("homePage.section.team.Gleb")}</p>
