@@ -1,0 +1,164 @@
+.teamSection {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(180deg, #050402 0%, #222222 99.84%);
+}
+
+.sectionContainer {
+    position: relative;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContainer {
+  margin-top: 16px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.position {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    text-transform: uppercase;
+    color: #B00000;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.descriptionContainer {
+   margin-top: 26px;
+}
+
+.descriptionContainer>p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.container__title {
+    z-index: 1;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 1280px) {
+.teamSection {
+    padding-top: 85px;
+    padding-bottom: 10px;
+    background: linear-gradient(180deg, #050402 0%, #222222 99.84%);
+}
+
+.contentContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.imageContainer {
+    display: flex;
+    position: relative;
+    margin-top: 0;
+}
+
+.imageContainer > div:first-child {
+    margin-right: 57px;
+}
+
+.card {
+    margin-bottom: 0px;
+}
+
+.asd {
+   width: 200px;
+   height: 200px;
+}
+
+.name {
+font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.position {
+font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    text-transform: uppercase;
+    color: #B00000;
+        text-align: center;
+        margin-top: 3px;
+        margin-bottom: 3px;
+}
+
+.descriptionContainer {
+    max-width: 606px;
+    margin-top: 0;
+}
+
+.descriptionContainer > p {
+    font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 33.1px;    
+        color: #FFFFFF;
+}
+
+.descriptionContainer>p:first-child {
+   margin-bottom: 20px;
+}
+
+.container__title {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: -100px;
+    width: 200px;
+    height: 160px;
+    transform: rotate(-90deg);
+}
+   
+}

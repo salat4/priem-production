@@ -1,0 +1,119 @@
+@media screen and (min-width: 300px) {
+    .formContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 20%;
+    min-height: 10%;
+    background-color: #A6010B;
+    border-radius: 2px;
+    padding: 100px 39px 100px 39px;
+    }
+
+.buttonForm {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    background: #FFFFFF;
+    padding: 11px 11px;
+    text-align: center;
+}
+}
+
+@media screen and (min-width: 800px) {
+.formContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 50%;
+    min-height: 50%;
+    background-color: #A6010B;
+    border-radius: 5px;
+    padding: 129px 89px 100px 89px;
+} 
+
+.buttonForm {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    background: #FFFFFF;
+    padding: 11px 11px;
+    text-align: center;
+    width: 163px;
+}
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.labelForm {
+    position: relative;
+width: 100%;
+margin-bottom: 26px;
+}
+
+.formInput {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+    background: transparent;
+    outline: none;
+    border: none;
+    height: 25px;
+border-bottom: 1px solid #fff;
+padding: 4px 6px;
+color: #fff;
+}
+
+.formInputName {
+    width: 265px;
+    margin-bottom: 3px;
+}
+
+.formInputPhone {
+width: 100%;
+}
+
+.formInput::placeholder {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: rgba(244, 244, 244, 0.4);
+}
+
+.errorMessage {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 14px;
+color: #fff;
+}
+
+.resultRequestMessage {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: rgba(244, 244, 244, 0.4);
+margin-top: 20px;
+}
