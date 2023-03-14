@@ -7,7 +7,44 @@
                     "secondary": "The signature style of our work is in the individual approach to our customer. We create a unique idea and scenario filling it with the concept. We carry out complete pre-production, selecting the team on request. Then we create the best shooting process with confidence at every stage. And we bring the project to its final end – editing, color correction, sound design and the release."
                 }
             },
-            "backstage": "",
+            "backstage": {
+                "block1": {
+                    "title": "SCRIPT WRITING",
+                    "point1": "Idea development",
+                    "point2": "Finding references",
+                    "point3": "Script writing",
+                    "point4": "Detailed camera report"
+                },
+                "block2": {
+                    "title": "TEAM",
+                    "point1": "Finding team on request",
+                    "point2": "Work with the best in the country"
+                },
+                "block3": {
+                    "title": "CAMERA + LIGHT",
+                    "point1": "We have our own:",
+                    "point2": "Blackmagic 4k",
+                    "point3": "2 LED",
+                    "point4": "2 Softbox",
+                    "point5": "1 Godox"
+                },
+                "block4": {
+                    "title": "EDIT/COLOR/SOUND DESIGN",
+                    "point1": "Collaboration with the team in big projects",
+                    "point2": "Our independent work"
+                },
+                "block5": {
+                    "title": "ACTING COACHING",
+                    "point1": "Work with an acting coach",
+                    "point2": "Rehearsals with the director before shooting"
+                },
+                "block6": {
+                    "title": "STYLE",
+                    "point1": "Work with our stylist",
+                    "point2": "Work with our makeup artist",
+                    "point3": "Image selection and development"
+                }
+            },
             "team": {
                 "text": {
                     "first": "We are a married couple of actors with many years of experience on camera. The couple who, craving for development, began to implement their ideas and creative projects on their own, in addition to their main work in the industry, and receive valuable feedback from the audience. Now – starting from the spring of 2022 we act as a director and a producer, being the founders of our own production company.",

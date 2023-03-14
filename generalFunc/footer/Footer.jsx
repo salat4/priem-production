@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./footer.module.css";
 import image from "@/images/background/Logo.png";
 import Image from "next/image";
 import facebook from "@/images/icons/facebook.png";
 import instagram from "@/images/icons/instagram.png";
 import youtube from "@/images/icons/youtube.png";
-import { Button,scrollToSection } from "@/generalFunc";
+import {
+  Button,
+  scrollToSection,
+  FormSubscribe,
+  toggleBackdrop,
+} from "@/generalFunc";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
 function Footer() {
+  const [showForm, setShowForm] = useState(false);
+
   const { t } = useTranslation("translation");
+
+  const toggleShowBackdrop = (e) => {
+    const DoClose = toggleBackdrop(e);
+    if (`${DoClose}` === "false") {
+      setShowForm(toggleBackdrop(e));
+    }
+  };
+
   return (
     <div className={`${s.background}`}>
       <div className="container">
@@ -26,14 +41,19 @@ function Footer() {
                 />
               </div>
 
-              <Button style = {s.footer__button}>
-                      <p>Оставить заяку</p>
-                    </Button>
+              <Button
+                style={s.footer__button}
+                showForm={() => setShowForm(true)}
+              >
+                <p>{t("buttonLeave")}</p>
+              </Button>
             </li>
             <li className={s.footer__list__center}>
               <ul className={s.footer__nav__list}>
                 <li className={s.footer__nav__list__item}>
-                  <Link href="/" passHref>{"Home"}</Link>
+                  <Link href="/" passHref>
+                    {"Home"}
+                  </Link>
                 </li>
                 <li className={s.footer__nav__list__item}>
                   <button id="toAbout" onClick={scrollToSection}>
@@ -53,7 +73,7 @@ function Footer() {
                 <li className={s.footer__nav__list__item}>
                   <Link href="/works" prefetch={false} passHref>
                     {"Our works"}
-                  </Link>  
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -115,8 +135,11 @@ function Footer() {
                         ></Image>
                       </li>
                     </ul>
-                    <Button style = {s.footer__button}>
-                      <p>Оставить заяку</p>
+                    <Button
+                      style={s.footer__button}
+                      showForm={() => setShowForm(true)}
+                    >
+                      <p>{t("buttonLeave")}</p>
                     </Button>
                   </div>
                 </li>
@@ -128,6 +151,7 @@ function Footer() {
           <p>PRIЁMproduction © 2023 Все права защищены</p>
         </div>
       </div>
+      {showForm && <FormSubscribe toggleShowBackdrop={toggleShowBackdrop} />}
     </div>
   );
 }

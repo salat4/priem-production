@@ -1,15 +1,5 @@
 import { Contacts, Header, Footer } from "@/generalFunc";
-import {
-  ForActors,
-  Works,
-  About,
-  Hero,
-  Team,
-  PresWorks,
-  HmM
-} from "@/components/Home";
-// import { HmM_en } from "@/components/HmM";
-// import Partners_en from "@/components/partners/partners_en/partners_en";
+import { ForActors, Works, About, Hero, Team, HmM } from "@/components/Home";
 import Head from "next/head";
 import "../18next";
 import axios from "axios";
@@ -18,22 +8,20 @@ export default function Home() {
   return (
     // <I18nextProvider i18n={i18next}>
     <>
-      {/* <Head>
+      <Head>
         <title>Priem production</title>
-      </Head> */}
-      {/* <Header /> */}
-      {/* <Hero /> */}
-      <HmM/>
-      {/* <About /> */}
-      {/* <Team /> */}
-      {/* <ForActors /> */}
-      {/* <Partners_en /> */}
-      {/* <PresWorks /> */}
+      </Head>
+      <Header />
+      <Hero />
+      <HmM />
+      <About />
+      <Team />
+      <ForActors />
       {/* <Works /> */}
-      {/* <Contacts /> */}
-      {/* <footer id="footer">
+      <Contacts />
+      <footer id="footer">
         <Footer />
-      </footer> */}
+      </footer>
     </>
     // </I18nextProvider>
   );

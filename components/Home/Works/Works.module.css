@@ -18,7 +18,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
+
+.works__list__item:hover {
+   opacity: .5;
+}
+
 .works__list__item__description{
     position: absolute;
     display: flex;
@@ -40,6 +46,17 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
 }
-.container__tilte{
-    
+
+.container__title {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: -100px;
+    width: 200px;
+    height: 160px;
+    transform: rotate(-90deg);
+}
+
+.video {
+    height: 320px;
 }

@@ -6,6 +6,7 @@ import { useState } from "react";
 function About() {
   const { t } = useTranslation("translation");
   const [showForm, setShowForm] = useState(false);
+
   const toggleShowBackdrop = (e) => {
     const DoClose = toggleBackdrop(e);
     if (`${DoClose}` === "false") {

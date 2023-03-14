@@ -1,5 +1,5 @@
 .section {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 1);
     background-image: url("../../../images/background/forAct-backG.png");
     background-size: cover;
     background-position: center;

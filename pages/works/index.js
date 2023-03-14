@@ -15,7 +15,7 @@ import allW from "@/images/filters/All-worksEn.png";
 import authC from "@/images/filters/Auth-courseEn.png";
 import poetry from "@/images/filters/PoetryEn.png";
 import short from "@/images/filters/FilmEn.png";
-import rec from "@/images/filters/AdverstEn.png";
+import rec from "@/images/filters/AdverstingEn.png";
 import actPort from "@/images/filters/Act-portEn.png";
 
 function Works(props) {
@@ -34,7 +34,7 @@ function Works(props) {
         <div className="container">
           <ul className={s.filterList}>
             {/* <li>{t("worksPage.filter.allWorks")}</li> */}
-            <li>
+            {/* <li>
               <Image
                 // src={t("worksPage.filter.clip")}
                 src={allW}
@@ -43,7 +43,7 @@ function Works(props) {
                 // width={40}
                 // height="20"
               />
-            </li>
+            </li> */}
             <li>
               <Image
                 // src={t("worksPage.filter.poetry")}
