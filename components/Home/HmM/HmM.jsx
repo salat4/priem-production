@@ -3,12 +3,15 @@ import ReactPlayer from "react-player";
 import { useEffect, useState } from "react";
 import { isMobileSafari } from "react-device-detect";
 import { isSafari } from "react-device-detect";
+import { useTranslation } from "react-i18next";
 
 function HmM() {
   const [size, setSize] = useState("");
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
   const [orientation, setOrientation] = useState();
+  const { t } = useTranslation("translation");
+
   const detect = () => {
     if (isMobileSafari) {
       setOrientation(window.orientation);
@@ -18,9 +21,11 @@ function HmM() {
       setOrientation(screen.orientation.type);
     }
   };
+
   useEffect(() => {
     const oriental = window.addEventListener("resize", detect);
   }, []);
+
   useEffect(() => {
     setHeight(window.innerHeight);
     setWidth(window.innerWidth);
@@ -122,98 +127,112 @@ function HmM() {
         <div className={s.HmM__box}>
           <div className={s.HmM__box__item}>
             <div className={s.HmM__item}>
-              <p className={s.HmM__title}>Разработка сценария</p>
+              <p className={s.HmM__title}>
+                {t("homePage.section.backstage.block1.title")}
+              </p>
               <ul className={s.HmM__about}>
                 <li className={s.HmM__description}>
-                  <p>разработка идеи</p>
+                  <span>{t("homePage.section.backstage.block1.point1")}</span>
                 </li>
                 <li className={s.HmM__description}>
-                  <p>подбор референсов</p>
+                  <span>{t("homePage.section.backstage.block1.point2")}</span>
                 </li>
                 <li className={s.HmM__description}>
-                  <p>написание сценария</p>
+                  <span>{t("homePage.section.backstage.block1.point3")}</span>
                 </li>
                 <li className={s.HmM__description}>
-                  <p>подробная раскадровка</p>
+                  <span>{t("homePage.section.backstage.block1.point4")}</span>
                 </li>
               </ul>
             </div>
             <div className={s.HmM__item}>
-              <p className={s.HmM__title}>Команда</p>
+              <p className={s.HmM__title}>
+                {t("homePage.section.backstage.block2.title")}
+              </p>
               <ul className={s.HmM__about}>
                 <li className={s.HmM__description}>
-                  <p>подбор команды под запрос</p>
+                  <span>{t("homePage.section.backstage.block2.point1")}</span>
                 </li>
                 <li className={s.HmM__description}>
-                  <p>работа с лучшими в стране </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={s.HmM__box__item}>
-
-            <div className={s.HmM__item}>
-              <p className={s.HmM__title}>Камера / свет</p>
-              <p>Мы имеем:</p>
-              <ul className={s.HmM__about}>
-                <li className={s.HmM__description}>
-                  <p>Blackmagic 4k </p>
-                </li>
-                <li className={s.HmM__description}>
-                  <p>2 LED  </p>
-                </li>
-                <li className={s.HmM__description}>
-                  <p>2 Softbox  </p>
-                </li>
-                <li className={s.HmM__description}>
-                  <p>1 Godox  </p>
-                </li>
-              </ul>
-            </div>
-            <div className={s.HmM__item}>
-              <p className={s.HmM__title}>Монтаж / цветокоррекция / саунд дизайн</p>
-              <ul className={s.HmM__about}>
-                <li className={s.HmM__description}>
-                  <p>коллаборация с командой на больших проектах</p>
-                </li>
-                <li className={s.HmM__description}>
-                  <p>базовая обработка видео на локальных проектах</p>
+                  <span>{t("homePage.section.backstage.block2.point2")}</span>
                 </li>
               </ul>
             </div>
           </div>
+          <hr className={s.separator} />
           <div className={s.HmM__box__item}>
-
             <div className={s.HmM__item}>
-              <p className={s.HmM__title}>Актерская подготовка</p>
+              <p className={s.HmM__title}>
+                {t("homePage.section.backstage.block3.title")}
+              </p>
+              {/* <p className={s.HmM__title}>
+                {t("homePage.section.backstage.block3.point1")}
+              </p> */}
               <ul className={s.HmM__about}>
                 <li className={s.HmM__description}>
-                  <p>работа с коучем по актёрскому мастерству  </p>
+                  <span>{t("homePage.section.backstage.block3.point2")}</span>
                 </li>
                 <li className={s.HmM__description}>
-                  <p>репетиции с режиссером перед съемкой  </p>
+                  <span>{t("homePage.section.backstage.block3.point3")}</span>
+                </li>
+                <li className={s.HmM__description}>
+                  <span>{t("homePage.section.backstage.block3.point4")}</span>
+                </li>
+                <li className={s.HmM__description}>
+                  <span>{t("homePage.section.backstage.block3.point5")}</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className={s.HmM__item}>
+              <p className={s.HmM__title}>
+                {t("homePage.section.backstage.block4.title")}
+              </p>
+              <ul className={s.HmM__about}>
+                <li className={s.HmM__description}>
+                  <span>{t("homePage.section.backstage.block4.point1")}</span>
+                </li>
+                <li className={s.HmM__description}>
+                  <span>{t("homePage.section.backstage.block4.point2")}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr className={s.separator} />
+          <div className={s.HmM__box__item}>
+            <div className={s.HmM__item}>
+              <p className={s.HmM__title}>
+                {t("homePage.section.backstage.block5.title")}
+              </p>
+              <ul className={s.HmM__about}>
+                <li className={s.HmM__description}>
+                  <span>{t("homePage.section.backstage.block5.point1")}</span>
+                </li>
+                <li className={s.HmM__description}>
+                  <span>{t("homePage.section.backstage.block5.point2")}</span>
                 </li>
               </ul>
             </div>
             <div className={s.HmM__item}>
-              <p className={s.HmM__title}>Костюм / Грим  дизайн</p>
+              <p className={s.HmM__title}>
+                {t("homePage.section.backstage.block6.title")}
+              </p>
               <ul className={s.HmM__about}>
                 <li className={s.HmM__description}>
-                  <p>работа с нашим стилистом </p>
+                  <span>{t("homePage.section.backstage.block6.point1")}</span>
                 </li>
                 <li className={s.HmM__description}>
-                  <p>базоработа с нашим гримером </p>
+                  <span>{t("homePage.section.backstage.block6.point2")}</span>
                 </li>
                 <li className={s.HmM__description}>
-                  <p>подбор и разработка образа </p>
+                  <span>{t("homePage.section.backstage.block6.point3")}</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-
-        </>
+    </>
   );
 }
 

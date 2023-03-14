@@ -3,7 +3,6 @@ export default function scrollToSection(e) {
   if (document) {
     let hookForAboutSection = document.getElementById("about");
     let hookForTeamSection = document.getElementById("team");
-
     if (!hookForAboutSection || !hookForTeamSection) return;
 
     switch (id) {

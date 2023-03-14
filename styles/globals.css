@@ -111,7 +111,7 @@
 }
 
 footer{
-  background-color: black;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .buttonForm {
@@ -196,3 +196,7 @@ font-family: 'Inter';
       bottom: -11px;
       left: 0;
     }
+
+.slick-dots li button:before {
+    color: white !important;
+  }
