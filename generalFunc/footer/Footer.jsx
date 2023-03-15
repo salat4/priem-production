@@ -95,11 +95,7 @@ function Footer() {
                 </li>
                 <li className={s.footer__list__item}>
                   <p className={s.footer__list__tel}>
-                    <a
-                      target="_blank"
-                      href="tel:+38 063 531 22 15"
-                      rel="noreferrer"
-                    >
+                    <a href="tel:+38 063 531 22 15" rel="noreferrer">
                       +38 063 531 22 15
                     </a>
                   </p>

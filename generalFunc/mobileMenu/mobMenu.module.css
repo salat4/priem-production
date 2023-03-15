@@ -8,7 +8,7 @@
         top: 0;
         bottom: 0;
         right: 0px;
-        width: 224px;
+        min-width: 280px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -97,7 +97,7 @@
 }
 
 .textContainer > span {
-   width: 60px !important;
+   max-width: 150px !important;
    position: static !important;
 }
 

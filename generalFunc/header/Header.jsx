@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   MobileMenu,
   Backdrop,
@@ -15,6 +15,19 @@ import s from "./Header.module.css";
 export default function Header() {
   const [show, setShow] = useState("one");
   const { t } = useTranslation("translation");
+
+  useEffect(() => {
+    if (window.innerWidth < 800) {
+      window.addEventListener("resize", qwe);
+    }
+  }, []);
+
+  const qwe = () => {
+    if (window.innerWidth > 800) {
+      setShow("close");
+      return;
+    }
+  };
 
   const toggleShowBackdrop = (e) => {
     if (typeof toggleBackdrop(e) === "undefined") {
@@ -73,7 +86,11 @@ export default function Header() {
       </header>
       {show === "show" && (
         <Backdrop toggleShowBackdrop={toggleShowBackdrop}>
-          <MobileMenu toggleShowBackdrop={toggleShowBackdrop} show={show} />
+          <MobileMenu
+            toggleShowBackdrop={toggleShowBackdrop}
+            show={show}
+            qwe={qwe}
+          />
         </Backdrop>
       )}
     </>

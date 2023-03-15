@@ -1,20 +1,20 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { scrollToSection } from "@/generalFunc";
-import Text from "@/images/background/Text-rotate-mobile.png";
+import Text from "@/images/background/Text-rotateMob.png";
 import s from "./mobMenu.module.css";
 import Image from "next/image";
 
-function MobileMenu({ toggleShowBackdrop, show }) {
+function MobileMenu({ toggleShowBackdrop, show, qwe }) {
   useEffect(() => {
-    if (show === "one") {
-      return;
-    }
+    // if (show === "one") {
+    //   return;
+    // }
     window.addEventListener("keydown", toggleShowBackdrop);
     return () => {
       window.removeEventListener("keydown", toggleShowBackdrop);
     };
-  }, [toggleShowBackdrop, show]);
+  }, [toggleShowBackdrop]);
 
   const scrollAndCloseMenu = (e) => {
     scrollToSection(e);
