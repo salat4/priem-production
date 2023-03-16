@@ -78,12 +78,7 @@ function FormSubscribe({ toggleShowBackdrop, course }) {
   return (
     <Backdrop toggleShowBackdrop={toggleShowBackdrop}>
       <div className={s.formContainer}>
-        <form
-          onSubmit={sendSubscribe}
-          className={s.form}
-          autoComplete="off"
-          data-close="close"
-        >
+        <form onSubmit={sendSubscribe} className={s.form} autoComplete="off">
           <label className={s.labelForm}>
             <input
               className={`${s.formInput} ${s.formInputName}`}

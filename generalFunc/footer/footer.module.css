@@ -149,7 +149,7 @@ transform: scale(1.2);
    }
    .footer__list{
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
    }
 
    .footer__list__left > div{
