@@ -123,12 +123,12 @@
     "worksPage": {
         "filter": {
             "allWorks": "All works",
-            "clip": "https://res.cloudinary.com/priem-cloud/image/upload/v1678225538/Filter-works/ClipEng_l10yjb.png",
-            "poetry": "https://res.cloudinary.com/priem-cloud/image/upload/v1678226510/Filter-works/Poetry_flexiq.png",
-            "autors": "https://res.cloudinary.com/priem-cloud/image/upload/v1678278059/Filter-works/Author_s-courseEn_i9hncl.png",
+            "clip": "Clip",
+            "poetry": "Video-poetry",
+            "autors": "Author's course",
             "portfolio": "Actor's portfolio",
-            "monologue": "Monologue",
-            "performance": "Performance"
+            "film": "film",
+            "adversting": "Adversting"
         }
     }
 }

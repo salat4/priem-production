@@ -1,18 +1,6 @@
-/* .forMarina {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        color: #FFFFFF;
-    text-align: center;
-    margin-top: 100px;
-}
-
-@media screen and (min-width: 360px) {
 .worksPage {
         min-height: 100vh;
-        padding-top: 45px;
+        padding-top: 50px;
         background-color: #222222;
         
 }
@@ -27,18 +15,18 @@
 .filterList>li {
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
+        font-weight: 900;
+        font-size: 22px;
         line-height: 14px;
         color: #FFFFFF;
         padding: 5px;
         cursor: pointer;
+        text-transform: uppercase;
     }
 
     .filterList>li:not(:last-child) {
-        margin-bottom: 5px;
+        margin-bottom: 18px;
     }
-}
 
 @media screen and (min-width: 800px) {
 .worksPage {
@@ -57,59 +45,32 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 24px;
         line-height: 19px;
         color: #FFFFFF;
         padding: 7px;
         cursor: pointer;
+        margin-bottom: 18px;
     }
 
     .filterList>li:not(:last-child) {
-        margin-bottom: 0;
-        margin-right: 15px;
+        margin-right: 10px;
     }
-} */
+}
 
 @media screen and (min-width: 1280px) {
     .worksPage {
-         min-height: 100vh;
-        background-color: #222222;
         padding-top: 150px;
     }
 
     .filterList {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
     }
+    
     .filterList>li {
-        /* height: 20px !important; */
-        /* padding: 5px; */
-        /* height: 28px; */
-        /* height: 15px; */
-        cursor: pointer;
-    /* width: 50px; */
+        margin-bottom: 30px;
     }
-        /* .filterList>li>span {
-           height: 30px !important;
-        }
-
-        .filterList>li>span>span {
-        height: 30px !important;
-    }
-
-        .filterList>li>span>span>image {
-        height: 30px !important;
-    } */
-
-    .filterList>li:not(:last-child) {
-        /* margin-right: 15px; */
-    }
-
-/* .qwe {
-    display: inline-block;
-width: 150px;
-height: auto;
-} */
-
+    
 }

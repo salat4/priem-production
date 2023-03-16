@@ -7,9 +7,6 @@ import Image from "next/image";
 
 function MobileMenu({ toggleShowBackdrop, show, qwe }) {
   useEffect(() => {
-    // if (show === "one") {
-    //   return;
-    // }
     window.addEventListener("keydown", toggleShowBackdrop);
     return () => {
       window.removeEventListener("keydown", toggleShowBackdrop);
