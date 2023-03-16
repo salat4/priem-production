@@ -42,79 +42,60 @@ function Works(props) {
           <ul className={s.filterList}>
             {/* <li>{t("worksPage.filter.allWorks")}</li> */}
             <li>
-              <Image
-                // src={t("worksPage.filter.clip")}
+              {/* <Image
+                src={t("worksPage.filter.clip")}
                 src={allWRu}
                 alt="Clip"
-                // width={130}
-                // width={40}
-                // height="20"
-              />
+              /> */}
+              {t("worksPage.filter.allWorks")}
             </li>
             <li>
-              <Image
-                // src={t("worksPage.filter.poetry")}
+              {/* <Image
+                src={t("worksPage.filter.poetry")}
                 src={clipRu}
                 alt="Clip"
-                // width={50}
-                // width={85}
-                // height="30"
-                // height="20"
-              />
+              /> */}
+              {t("worksPage.filter.autors")}
             </li>
             <li>
-              <Image
-                // src={t("worksPage.filter.poetry")}
+              {/* <Image
+                src={t("worksPage.filter.poetry")}
                 src={authCRu}
                 alt="Clip"
-                // width={130}
-                // width={85}
-                // height="40"
-                // height="20"
-              />
+              /> */}
+              {t("worksPage.filter.clip")}
             </li>
             <li>
-              <Image
-                // src={t("worksPage.filter.poetry")}
+              {/* <Image
+                src={t("worksPage.filter.poetry")}
                 src={poetryRu}
                 alt="Clip"
-                // width={130}
-                // width={85}
-                // height="40"
-                // height="20"
-              />
+              /> */}
+              {t("worksPage.filter.adversting")}
             </li>
             <li>
-              <Image
-                // src={t("worksPage.filter.poetry")}
+              {/* <Image
+                src={t("worksPage.filter.poetry")}
                 src={shortRu}
                 alt="Clip"
-                // width={130}
-                // width={85}
-                // height="40"
-              />
+              /> */}
+              {t("worksPage.filter.portfolio")}
             </li>
             <li>
-              <Image
-                // src={t("worksPage.filter.poetry")}
+              {/* <Image
+                src={t("worksPage.filter.poetry")}
                 src={recRu}
                 alt="Clip"
-                // width={130}
-                // width={85}
-                // height="40"
-                // height="20"
-              />
+              /> */}
+              {t("worksPage.filter.film")}
             </li>
             <li>
-              <Image
-                // src={t("worksPage.filter.poetry")}
+              {/* <Image
+                src={t("worksPage.filter.poetry")}
                 src={actPortRu}
                 alt="Clip"
-                // width={130}
-                // width={85}
-                // height="40"
-                // height="20"
-              />
+              /> */}
+              {t("worksPage.filter.poetry")}
             </li>
             {/* <li>
               <Image

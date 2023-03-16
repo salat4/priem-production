@@ -38,7 +38,7 @@
     .navigationMenuList {
         display: flex;
         align-items: center;
-        background: #252525;      
+        /* background: #252525;       */
         padding: 20px 28px;
     }
 
@@ -106,7 +106,7 @@
     .navigationMenuList {
         display: flex;
         align-items: center;
-        background: #252525;      
+        /* background: #252525;       */
         padding: 20px 28px;
     }
 

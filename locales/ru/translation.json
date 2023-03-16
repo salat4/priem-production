@@ -123,12 +123,12 @@
     "worksPage": {
         "filter": {
             "allWorks": "Все работы",
-            "clip": "https://res.cloudinary.com/priem-cloud/image/upload/v1678225538/Filter-works/ClipRu_itr4yb.png",
-            "poetry": "https://res.cloudinary.com/priem-cloud/image/upload/v1678226326/Filter-works/%D0%9F%D0%BE%D0%B5%D0%B7%D0%B8%D1%8F_djucvk.png",
-            "autors": "https://res.cloudinary.com/priem-cloud/image/upload/v1678278059/Filter-works/Author_s-courseRu_cd1d5y.png",
+            "clip": "Клип",
+            "poetry": "Видео-поезия",
+            "autors": "Авторские курсы",
             "portfolio": "Актерское портфолио",
-            "monologue": "Монолог",
-            "performance": "Реклама"
+            "film": "Фильм",
+            "adversting": "Реклама"
         }
     }
 }
