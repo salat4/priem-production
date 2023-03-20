@@ -57,7 +57,7 @@ function HmM() {
                 autoPlay
                 loop
                 muted
-                src={require("../../../Video/IMG_5834.mp4")}
+                src="https://res.cloudinary.com/priem-cloud/video/upload/v1679328919/work-templates/BackStage_zesec6.mov"
               />
             </div>
           </>
@@ -72,7 +72,7 @@ function HmM() {
                   autoPlay
                   loop
                   muted
-                  src={require("../../../Video/IMG_5834.mp4")}
+                  src="https://res.cloudinary.com/priem-cloud/video/upload/v1679328919/work-templates/BackStage_zesec6.mov"
                 />
               </div>
               <div className={s.videoContainer__2__2}>
@@ -82,7 +82,7 @@ function HmM() {
                   autoPlay
                   loop
                   muted
-                  src={require("../../../Video/IMG_5834.mp4")}
+                  src="https://res.cloudinary.com/priem-cloud/video/upload/v1679328919/work-templates/BackStage_zesec6.mov"
                 />
               </div>
             </div>
@@ -98,7 +98,7 @@ function HmM() {
                   autoPlay
                   loop
                   muted
-                  src={require("../../../Video/IMG_5834.mp4")}
+                  src="https://res.cloudinary.com/priem-cloud/video/upload/v1679328919/work-templates/BackStage_zesec6.mov"
                 />
               </div>
               <div className={s.videoContainer__3__2}>
@@ -108,7 +108,7 @@ function HmM() {
                   autoPlay
                   loop
                   muted
-                  src={require("../../../Video/IMG_5834.mp4")}
+                  src="https://res.cloudinary.com/priem-cloud/video/upload/v1679328919/work-templates/BackStage_zesec6.mov"
                 />
               </div>
               <div className={s.videoContainer__3__3}>
@@ -118,7 +118,7 @@ function HmM() {
                   autoPlay
                   loop
                   muted
-                  src={require("../../../Video/IMG_5834.mp4")}
+                  src="https://res.cloudinary.com/priem-cloud/video/upload/v1679328919/work-templates/BackStage_zesec6.mov"
                 />
               </div>
             </div>
