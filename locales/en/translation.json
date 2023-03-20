@@ -71,7 +71,14 @@
                     "secondary": "provides packages with partial or full portfolios. We know the filmmaking market from the inside and know exactly what casting directors and directors pay attention to at the casting stage and we are willing to work with you personally on your presentation, confidence on camera and create high-quality material."
                 }
             },
-            "works": {},
+            "works": {
+                "clip": "https://res.cloudinary.com/priem-cloud/image/upload/v1679314677/Filter-works/Clip5_tcui65.png",
+                "poetry": "https://res.cloudinary.com/priem-cloud/image/upload/v1679315609/Filter-works/Poetry5_jkafe0.png",
+                "autors": "https://res.cloudinary.com/priem-cloud/image/upload/v1679314677/Filter-works/Auth-course5_icsvpj.png",
+                "portfolio": "https://res.cloudinary.com/priem-cloud/image/upload/v1679315609/Filter-works/Act-port5_wwobbv.png",
+                "short": "https://res.cloudinary.com/priem-cloud/image/upload/v1679315609/Filter-works/Short5_cerfc0.png",
+                "adversting": "https://res.cloudinary.com/priem-cloud/image/upload/v1679315609/Filter-works/Adversting5_kvhagt.png"
+            },
             "contacts": {
                 "title": "Contacts"
             }

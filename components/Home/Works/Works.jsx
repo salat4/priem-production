@@ -1,24 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Works.module.css";
 import { Title } from "@/generalFunc";
-import AuthEn from "@/images/filters/Auth-courseEn.png";
-import ActPortEn from "@/images/filters/Act-portEn.png";
-import AdverstEn from "@/images/filters/AdverstingEn.png";
-import PoetryEn from "@/images/filters/PoetryEn.png";
-import Short from "@/images/filters/ShortEn.png";
-import ClipEn from "@/images/filters/ClipEn.png";
-import AuthRu from "@/images/filters/Auth-courseRu.png";
-import ActPortRu from "@/images/filters/Act-portRu.png";
-import AdverstRu from "@/images/filters/AdverstingRu.png";
-import PoetryRu from "@/images/filters/PoetryRu.png";
-import ShortRu from "@/images/filters/ShortRu1x.png";
-import ClipRu from "@/images/filters/ClipRu.png";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 function Works() {
-  const { t } = useTranslation("translation");
+  const { t, i18n } = useTranslation("translation");
   const [first, setFirst] = useState(false);
+
+  useEffect(() => {}, [i18n.language]);
 
   const playVideo = (e) => {
     const { id } = e.target;
@@ -59,7 +49,12 @@ function Works() {
               />
               <div className={s.works__list__item__description}>
                 <p className={s.works__list__item__text}>
-                  <Image className={s.qwe} src={AuthEn} alt="Test" />
+                  <Image
+                    width="241"
+                    height="36"
+                    src={t("homePage.section.works.autors")}
+                    alt="Test"
+                  />
                 </p>
               </div>
             </li>
@@ -76,11 +71,16 @@ function Works() {
                 loop
                 muted
                 type="video/mp4"
-                src="https://res.cloudinary.com/priem-cloud/video/upload/v1679088866/work-templates/Clip_jvgh92.mov"
+                src="https://res.cloudinary.com/priem-cloud/video/upload/c_scale,h_348,w_620/v1679088866/work-templates/Clip_jvgh92.mp4"
               />
               <div className={s.works__list__item__description}>
                 <p className={s.works__list__item__text}>
-                  <Image src={ClipEn} alt="Test" />
+                  <Image
+                    width="75"
+                    height="36"
+                    src={t("homePage.section.works.clip")}
+                    alt="Test"
+                  />
                 </p>
               </div>
             </li>
@@ -102,7 +102,12 @@ function Works() {
               />
               <div className={s.works__list__item__description}>
                 <p className={s.works__list__item__text}>
-                  <Image src={AdverstEn} alt="Test" />
+                  <Image
+                    width="200"
+                    height="36"
+                    src={t("homePage.section.works.adversting")}
+                    alt="Test"
+                  />
                 </p>
               </div>
             </li>
@@ -123,7 +128,12 @@ function Works() {
               />
               <div className={s.works__list__item__description}>
                 <p className={s.works__list__item__text}>
-                  <Image src={ActPortEn} alt="Test" />
+                  <Image
+                    width="319"
+                    height="36"
+                    src={t("homePage.section.works.portfolio")}
+                    alt="Test"
+                  />
                 </p>
               </div>
             </li>
@@ -140,11 +150,16 @@ function Works() {
                 loop
                 muted
                 type="video/mp4"
-                src="https://res.cloudinary.com/priem-cloud/video/upload/v1679087559/work-templates/SHORT_cj3kam.mov"
+                src="https://res.cloudinary.com/priem-cloud/video/upload/v1679307906/work-templates/SHORT_ihtbbs.mov"
               />
               <div className={s.works__list__item__description}>
                 <p className={s.works__list__item__text}>
-                  <Image src={Short} alt="Test" />
+                  <Image
+                    width={i18n.language === "ru" ? 200 : 100}
+                    height="36"
+                    src={t("homePage.section.works.short")}
+                    alt="Test"
+                  />
                 </p>
               </div>
             </li>
@@ -161,11 +176,16 @@ function Works() {
                 loop
                 muted
                 type="video/mp4"
-                src="https://res.cloudinary.com/priem-cloud/video/upload/v1679087014/work-templates/Poetry_sctvc1.mov"
+                src="https://res.cloudinary.com/priem-cloud/video/upload/c_scale,h_348,w_620/v1679311275/work-templates/POETRY_mt8pm1.mov"
               />
               <div className={s.works__list__item__description}>
                 <p className={s.works__list__item__text}>
-                  <Image src={PoetryEn} alt="Test" />
+                  <Image
+                    width="228"
+                    height="36"
+                    src={t("homePage.section.works.poetry")}
+                    alt="Test"
+                  />
                 </p>
               </div>
             </li>
