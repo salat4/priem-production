@@ -9,7 +9,7 @@ import {
   toggleBackdrop,
 } from "@/generalFunc";
 import LogoHeader from "@/images/background/Logo.png";
-import MobileBurgerMenu from "@/images/icons/burger-menu.png";
+import MobileBurgerMenu from "@/images/background/Logo5.png";
 import s from "./Header.module.css";
 
 export default function Header() {
@@ -35,7 +35,7 @@ export default function Header() {
     }
     setShow(toggleBackdrop(e));
   };
-
+  // change size
   return (
     <>
       <header className={s.headerSection}>
@@ -52,7 +52,7 @@ export default function Header() {
               className={s.burgetMenuButton}
               onClick={() => setShow("show")}
             >
-              <Image src={MobileBurgerMenu} alt="Menu" />
+              <Image src={MobileBurgerMenu} width="40" height="30" alt="Menu" />
             </button>
             <ul className={s.navigationMenuList}>
               <li>

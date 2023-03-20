@@ -18,6 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 620px;
+    min-width: 320px;
     cursor: pointer;
 }
 
@@ -28,20 +30,11 @@
 .works__list__item__description{
     position: absolute;
     display: flex;
-    /* align-items: center;
+    align-items: center;
     justify-content: center;
-    top: 40%;
-    left: 30%; */
-}
-.works__list__item__text{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 36px;
-    color: #FFFFFF;
 
 }
+
 .works__list__item__image{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
@@ -58,5 +51,6 @@
 }
 
 .video {
-    height: 320px;
+    max-width: 620px;
+    min-width: 320px;
 }

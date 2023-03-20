@@ -16,25 +16,25 @@ function Team() {
               <div className={s.imageContainer}>
                 <div className={s.card}>
                   <span>
-                    {/* <Image
+                    <Image
                       src="https://res.cloudinary.com/priem-cloud/image/upload/v1678660237/partners/Irina_Priemnitskaya_ewiufx.png"
                       alt="team section: Ira"
                       className={s.asd}
                       width={209}
                       height="254"
-                    /> */}
+                    />
                   </span>
                   <p className={s.position}>Producer</p>
                   <p className={s.name}>{t("homePage.section.team.Ira")}</p>
                 </div>
                 <div>
                   <span>
-                    {/* <Image
+                    <Image
                       src="https://res.cloudinary.com/priem-cloud/image/upload/v1678660237/partners/Gleb_Mikhaylichenko_xa9bge.png"
                       alt="team section: Gleb"
                       width={209}
                       height="254"
-                    /> */}
+                    />
                   </span>
                   <p className={s.position}>Director</p>
                   <p className={s.name}>{t("homePage.section.team.Gleb")}</p>
@@ -45,7 +45,7 @@ function Team() {
                 <p>{t("homePage.section.team.text.secondary")}</p>
               </div>
             </div>
-            {/* <Partners /> */}
+            <Partners />
           </div>
         </div>
       </section>

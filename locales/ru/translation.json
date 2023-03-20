@@ -71,7 +71,14 @@
                     "secondary": " предоставляет пакеты услуг с частичным или полным портфолио. Мы знаем рынок кинематографа изнутри и знаем, на что именно обращают внимание кастинг-директора, и режиссеры на этапе отбора и готовы поработать с тобой лично над твоей подачей, уверенностью в кадре и создать качественные материалы."
                 }
             },
-            "works": {},
+            "works": {
+                "clip": "https://res.cloudinary.com/priem-cloud/image/upload/v1679316584/Filter-works/ClipRu5_zixxu6.png",
+                "poetry": "https://res.cloudinary.com/priem-cloud/image/upload/v1679316584/Filter-works/PoetryRu5_mcs0cy.png",
+                "autors": "https://res.cloudinary.com/priem-cloud/image/upload/v1679317011/Filter-works/Auth-courseRu5_a1ss2p.png",
+                "portfolio": "https://res.cloudinary.com/priem-cloud/image/upload/v1679316585/Filter-works/Act-portRu5_arbrps.png",
+                "short": "https://res.cloudinary.com/priem-cloud/image/upload/v1679316584/Filter-works/ShortRu5_o645wx.png",
+                "adversting": "https://res.cloudinary.com/priem-cloud/image/upload/v1679316585/Filter-works/AdverstingRu5_bnhj1u.png"
+            },
             "contacts": {
                 "title": "Контакты"
             }

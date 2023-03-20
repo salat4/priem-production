@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Works.module.css";
 import { Title } from "@/generalFunc";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 function Works() {
-  const { t } = useTranslation("translation");
+  const { t, i18n } = useTranslation("translation");
   const [first, setFirst] = useState(false);
+
+  useEffect(() => {}, [i18n.language]);
 
   const playVideo = (e) => {
     const { id } = e.target;
@@ -42,10 +45,17 @@ function Works() {
                 loop
                 muted
                 type="video/mp4"
-                src="https://res.cloudinary.com/priem-cloud/video/upload/v1677976430/work-templates/work-templates_author-course-c_scale_q_auto_good_w_568_mp4_eoyz1o.mp4"
+                src="https://res.cloudinary.com/priem-cloud/video/upload/v1679087563/work-templates/AUTH-COURSE_qwgxen.mov"
               />
               <div className={s.works__list__item__description}>
-                <p className={s.works__list__item__text}>Авторский курс</p>
+                <p className={s.works__list__item__text}>
+                  <Image
+                    width="241"
+                    height="36"
+                    src={t("homePage.section.works.autors")}
+                    alt="Test"
+                  />
+                </p>
               </div>
             </li>
             <li
@@ -61,10 +71,17 @@ function Works() {
                 loop
                 muted
                 type="video/mp4"
-                src="https://res.cloudinary.com/priem-cloud/video/upload/v1677976430/work-templates/work-templates_clip_vjtshx.mp4"
+                src="https://res.cloudinary.com/priem-cloud/video/upload/c_scale,h_348,w_620/v1679088866/work-templates/Clip_jvgh92.mp4"
               />
               <div className={s.works__list__item__description}>
-                <p className={s.works__list__item__text}>Клип</p>
+                <p className={s.works__list__item__text}>
+                  <Image
+                    width="75"
+                    height="36"
+                    src={t("homePage.section.works.clip")}
+                    alt="Test"
+                  />
+                </p>
               </div>
             </li>
 
@@ -81,10 +98,17 @@ function Works() {
                 loop
                 muted
                 type="video/mp4"
-                src="https://res.cloudinary.com/priem-cloud/video/upload/v1677976431/work-templates/work-templates_reclama-c_scale_q_auto_good_w_568_mp4_mtrnio.mp4"
+                src="https://res.cloudinary.com/priem-cloud/video/upload/v1679087596/work-templates/ADVENT_z35zft.mov"
               />
               <div className={s.works__list__item__description}>
-                <p className={s.works__list__item__text}>Реклама</p>
+                <p className={s.works__list__item__text}>
+                  <Image
+                    width="150"
+                    height="36"
+                    src={t("homePage.section.works.adversting")}
+                    alt="Test"
+                  />
+                </p>
               </div>
             </li>
             <li
@@ -100,10 +124,17 @@ function Works() {
                 loop
                 muted
                 type="video/mp4"
-                src="https://res.cloudinary.com/priem-cloud/video/upload/v1677976429/work-templates/work-templates_actors-port-c_scale_co_rgb_ffffff_h_320_q_auto_good_w_568_mp4_y9w637.mp4"
+                src="https://res.cloudinary.com/priem-cloud/video/upload/v1679087596/work-templates/ACT-PORT_mztfbc.mov"
               />
               <div className={s.works__list__item__description}>
-                <p className={s.works__list__item__text}> Актерское порфолио</p>
+                <p className={s.works__list__item__text}>
+                  <Image
+                    width="319"
+                    height="36"
+                    src={t("homePage.section.works.portfolio")}
+                    alt="Test"
+                  />
+                </p>
               </div>
             </li>
             <li
@@ -119,10 +150,17 @@ function Works() {
                 loop
                 muted
                 type="video/mp4"
-                src="https://res.cloudinary.com/priem-cloud/video/upload/v1677976430/work-templates/work-templates_short-metr-c_scale_q_auto_best_w_568_mp4_tm7ni6.mp4"
+                src="https://res.cloudinary.com/priem-cloud/video/upload/v1679307906/work-templates/SHORT_ihtbbs.mov"
               />
               <div className={s.works__list__item__description}>
-                <p className={s.works__list__item__text}>Короткий метр</p>
+                <p className={s.works__list__item__text}>
+                  <Image
+                    width={i18n.language === "ru" ? 200 : 100}
+                    height="36"
+                    src={t("homePage.section.works.short")}
+                    alt="Test"
+                  />
+                </p>
               </div>
             </li>
             <li
@@ -138,10 +176,17 @@ function Works() {
                 loop
                 muted
                 type="video/mp4"
-                src="https://res.cloudinary.com/priem-cloud/video/upload/v1677976429/work-templates/work-templates_video-poetica-c_scale_q_auto_good_w_568_mp4_npvw0l.mp4"
+                src="https://res.cloudinary.com/priem-cloud/video/upload/c_scale,h_348,w_620/v1679311275/work-templates/POETRY_mt8pm1.mov"
               />
               <div className={s.works__list__item__description}>
-                <p className={s.works__list__item__text}>Видео - поезия</p>
+                <p className={s.works__list__item__text}>
+                  <Image
+                    width="228"
+                    height="36"
+                    src={t("homePage.section.works.poetry")}
+                    alt="Test"
+                  />
+                </p>
               </div>
             </li>
           </ul>

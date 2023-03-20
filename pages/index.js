@@ -17,7 +17,7 @@ export default function Home() {
       <About />
       <Team />
       <ForActors />
-      {/* <Works /> */}
+      <Works />
       <Contacts />
       <footer id="footer">
         <Footer />
