@@ -103,7 +103,7 @@ function Works() {
               <div className={s.works__list__item__description}>
                 <p className={s.works__list__item__text}>
                   <Image
-                    width="200"
+                    width="150"
                     height="36"
                     src={t("homePage.section.works.adversting")}
                     alt="Test"
