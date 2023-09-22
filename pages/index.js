@@ -18,24 +18,24 @@ export default function Home() {
   return (
     // <I18nextProvider i18n={i18next}>
     <>
-      {/* <Head>
+      <Head>
         <title>Priem production</title>
-      </Head> */}
-      {/* <Header /> */}
-      {/* <Hero /> */}
+      </Head>
+      <Header />
+      <Hero />
       <HmM/>
-      {/* <About /> */}
-      {/* <Team /> */}
-      {/* <ForActors /> */}
+      <About />
+      <Team />
+      <ForActors />
       {/* <Partners_en /> */}
       {/* <PresWorks /> */}
       {/* <Works /> */}
       {/* <Contacts /> */}
-      {/* <footer id="footer">
+      <footer id="footer">
         <Footer />
-      </footer> */}
+      </footer>
     </>
-    // </I18nextProvider>
+    //  </I18nextProvider>
   );
 }
 
